@@ -1,0 +1,10 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\bin\Release\DownloadValutCourses-Form.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\bin\Release\DownloadValutCourses-Form.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\bin\Release\DownloadValutCourses-Form.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses-Form.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses_Form.formValutCourses.resources
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses_Form.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses-Form.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses-Form.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses-Form.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\DownloadValutCourses\DownloadValutCourses-Form\obj\Release\DownloadValutCourses-Form.pdb
