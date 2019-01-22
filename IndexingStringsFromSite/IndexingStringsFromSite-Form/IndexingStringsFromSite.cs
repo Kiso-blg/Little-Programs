@@ -111,12 +111,13 @@ namespace IndexingStringsFromSite_Form
             using (StreamWriter file = File.CreateText(@"C:\Users\User\Desktop\IndexedStrings.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                foreach (KeyValuePair<string, int> kvp in stringsCountsDict)
+                foreach (KeyValuePair<string, int> kvp in stringsCountsDict.OrderByDescending(element => element.Value))
                 {
-                    //string elements = string.Format($"{kvp.Key}");
                     serializer.Serialize(file, kvp);
                 }
             }
+
+            MessageBox.Show("Information saved to a file IndexedStrings.json");
         }
 
         private void BtnDownloadSite_Click(object sender, EventArgs e)
