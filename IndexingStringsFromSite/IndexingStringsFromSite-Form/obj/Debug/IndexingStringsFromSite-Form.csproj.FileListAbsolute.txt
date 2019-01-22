@@ -8,3 +8,15 @@ C:\Users\User\Documents\Visual Studio 2017\Projects\IndexingStringsFromSite\Inde
 C:\Users\User\Documents\Visual Studio 2017\Projects\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\Visual Studio 2017\Projects\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.exe
 C:\Users\User\Documents\Visual Studio 2017\Projects\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.pdb
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\bin\Debug\IndexingStringsFromSite-Form.exe.config
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\bin\Debug\IndexingStringsFromSite-Form.exe
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\bin\Debug\IndexingStringsFromSite-Form.pdb
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite_Form.formIndexingStringsFromSite.resources
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite_Form.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.exe
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.pdb
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\GitHub\Little-Programs\IndexingStringsFromSite\IndexingStringsFromSite-Form\obj\Debug\IndexingStringsFromSite-Form.csproj.CopyComplete

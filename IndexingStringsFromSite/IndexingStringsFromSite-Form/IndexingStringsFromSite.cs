@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,6 +25,7 @@ namespace IndexingStringsFromSite_Form
         private Label lblProccessing = new Label();
         private TableLayoutPanel tlpStringsPanel = new TableLayoutPanel();
         private TableLayoutPanel tlpPagesPanel = new TableLayoutPanel();
+        private Button btnToJsonFile = new Button();
 
         static int textLength = 11;
         static string proccessingStr = "Proccessing.....";
@@ -60,6 +63,15 @@ namespace IndexingStringsFromSite_Form
             this.btnDownloadSite.Size = new Size(150, 25);
             this.btnDownloadSite.Click += new EventHandler(BtnDownloadSite_Click);
 
+            this.btnToJsonFile.Font = new Font("Microsoft Sans Serif", 10);
+            this.btnToJsonFile.TextAlign = ContentAlignment.MiddleCenter;
+            this.btnToJsonFile.Text = "Save to JSON file";
+            this.btnToJsonFile.FlatStyle = FlatStyle.Standard;
+            this.btnToJsonFile.Visible = false;
+            this.btnToJsonFile.Location = new Point(190, 70);
+            this.btnToJsonFile.Size = new Size(150, 25);
+            this.btnToJsonFile.Click += new EventHandler(BtnToJsonFile_Click);
+
             this.lblProccessing.Visible = false;
             this.lblProccessing.BackColor = Color.LightGray;
             this.lblProccessing.Font = new Font("Microsoft Sans Serif", 8);
@@ -86,9 +98,25 @@ namespace IndexingStringsFromSite_Form
             Controls.Add(labelIformation);
             Controls.Add(textBoxInputWebsite);
             Controls.Add(btnDownloadSite);
+            Controls.Add(btnToJsonFile);
             Controls.Add(lblProccessing);
             Controls.Add(tlpStringsPanel);
             Controls.Add(tlpPagesPanel);
+        }
+
+        private void BtnToJsonFile_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(@"C:\Users\User\Desktop\IndexedStrings.json", JsonConvert.SerializeObject(stringsCountsDict));
+
+            using (StreamWriter file = File.CreateText(@"C:\Users\User\Desktop\IndexedStrings.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                foreach (KeyValuePair<string, int> kvp in stringsCountsDict)
+                {
+                    //string elements = string.Format($"{kvp.Key}");
+                    serializer.Serialize(file, kvp);
+                }
+            }
         }
 
         private void BtnDownloadSite_Click(object sender, EventArgs e)
@@ -96,6 +124,7 @@ namespace IndexingStringsFromSite_Form
             this.timer.Start();
             this.tlpStringsPanel.Visible = false;
             this.tlpPagesPanel.Visible = false;
+            this.tlpPagesPanel.Controls.Clear();
 
             WebClient client = new WebClient();
             string siteInput = this.textBoxInputWebsite.Text;
@@ -108,6 +137,7 @@ namespace IndexingStringsFromSite_Form
             StopTimer();
             this.tlpStringsPanel.Visible = true;
             this.tlpPagesPanel.Visible = true;
+            this.btnToJsonFile.Visible = true;
         }
 
         private Point GetPagesPanelLocation()
@@ -262,7 +292,7 @@ namespace IndexingStringsFromSite_Form
             this.lblProccessing.Visible = false;
         }
 
-        private void Enter(object sender, KeyPressEventArgs e)
+        private new void Enter(object sender, KeyPressEventArgs e)
         {
 
         }
