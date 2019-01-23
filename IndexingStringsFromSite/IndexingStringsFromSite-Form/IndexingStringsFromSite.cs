@@ -9,6 +9,8 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace IndexingStringsFromSite_Form
 {
@@ -26,6 +28,7 @@ namespace IndexingStringsFromSite_Form
         private TableLayoutPanel tlpStringsPanel = new TableLayoutPanel();
         private TableLayoutPanel tlpPagesPanel = new TableLayoutPanel();
         private Button btnToJsonFile = new Button();
+        private Button btnToXmlFile = new Button();
 
         static int textLength = 11;
         static string proccessingStr = "Proccessing.....";
@@ -72,6 +75,15 @@ namespace IndexingStringsFromSite_Form
             this.btnToJsonFile.Size = new Size(150, 25);
             this.btnToJsonFile.Click += new EventHandler(BtnToJsonFile_Click);
 
+            this.btnToXmlFile.Font = new Font("Microsoft Sans Serif", 10);
+            this.btnToXmlFile.TextAlign = ContentAlignment.MiddleCenter;
+            this.btnToXmlFile.Text = "Save to XML file";
+            this.btnToXmlFile.FlatStyle = FlatStyle.Standard;
+            this.btnToXmlFile.Visible = false;
+            this.btnToXmlFile.Location = new Point(360, 70);
+            this.btnToXmlFile.Size = new Size(150, 25);
+            this.btnToXmlFile.Click += new EventHandler(BtnToXmlFile_Click);
+
             this.lblProccessing.Visible = false;
             this.lblProccessing.BackColor = Color.LightGray;
             this.lblProccessing.Font = new Font("Microsoft Sans Serif", 8);
@@ -99,9 +111,32 @@ namespace IndexingStringsFromSite_Form
             Controls.Add(textBoxInputWebsite);
             Controls.Add(btnDownloadSite);
             Controls.Add(btnToJsonFile);
+            Controls.Add(btnToXmlFile);
             Controls.Add(lblProccessing);
             Controls.Add(tlpStringsPanel);
             Controls.Add(tlpPagesPanel);
+        }
+
+        private void BtnToXmlFile_Click(object sender, EventArgs e)
+        {
+            string filePath = @"C:\Users\User\Desktop\IndexedStrings.xml";
+            XmlWriterSettings xmlSettings = new XmlWriterSettings()
+            {
+                Indent = true,
+                NewLineOnAttributes = true,
+                OmitXmlDeclaration = true
+            };
+
+            using (XmlWriter xmlWriter = XmlWriter.Create(filePath, xmlSettings))
+            {
+                XElement root = new XElement("Root",
+                    from keyValue in stringsCountsDict
+                    select new XElement("element", $"{keyValue.Key} repeats {keyValue.Value} times")
+                );
+                root.Save(xmlWriter);
+            }
+
+            MessageBox.Show("Information saved to a file IndexedStrings.xml");
         }
 
         private void BtnToJsonFile_Click(object sender, EventArgs e)
@@ -136,6 +171,7 @@ namespace IndexingStringsFromSite_Form
             this.tlpStringsPanel.Visible = true;
             this.tlpPagesPanel.Visible = true;
             this.btnToJsonFile.Visible = true;
+            this.btnToXmlFile.Visible = true;
         }
 
         private Point GetPagesPanelLocation()
@@ -211,7 +247,9 @@ namespace IndexingStringsFromSite_Form
         private Dictionary<string, int> ExtractStringsFromContent(string site)
         {
             List<string> splitedSite = site.Split(
-                new char[] { '\n', '.', ',', '?', '!', '_', '#', '@', '\0', '\'', ':', '|', '"', ' ', '$', ';', '(', ')', '[', ']', '{', '}', '+', '=', '/', '\\', '-', '&' },
+                new char[] { '\n', '.', ',', '?', '!', '_', '#', '@', '\0', '\'', ':', '|', '"',
+                    ' ', '$', ';', '(', ')', '[', ']', '{', '}', '+', '=', '/', '\\', '-', '&',
+                    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '%', '<', '>', '`', '^', '*'},
                 StringSplitOptions.RemoveEmptyEntries)
                 .Select(element => element.Trim())
                 .Where(element => element != string.Empty)
