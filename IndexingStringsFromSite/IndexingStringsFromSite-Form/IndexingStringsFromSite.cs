@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -29,6 +30,7 @@ namespace IndexingStringsFromSite_Form
         private TableLayoutPanel tlpPagesPanel = new TableLayoutPanel();
         private Button btnToJsonFile = new Button();
         private Button btnToXmlFile = new Button();
+        private Button btnToCsvFile = new Button();
 
         static int textLength = 11;
         static string proccessingStr = "Proccessing.....";
@@ -84,6 +86,15 @@ namespace IndexingStringsFromSite_Form
             this.btnToXmlFile.Size = new Size(150, 25);
             this.btnToXmlFile.Click += new EventHandler(BtnToXmlFile_Click);
 
+            this.btnToCsvFile.Font = new Font("Microsoft Sans Serif", 10);
+            this.btnToCsvFile.TextAlign = ContentAlignment.MiddleCenter;
+            this.btnToCsvFile.Text = "Save to CSV file";
+            this.btnToCsvFile.FlatStyle = FlatStyle.Standard;
+            this.btnToCsvFile.Visible = false;
+            this.btnToCsvFile.Location = new Point(530, 70);
+            this.btnToCsvFile.Size = new Size(150, 25);
+            this.btnToCsvFile.Click += new EventHandler(BtnToCsvFile_Click);
+
             this.lblProccessing.Visible = false;
             this.lblProccessing.BackColor = Color.LightGray;
             this.lblProccessing.Font = new Font("Microsoft Sans Serif", 8);
@@ -112,9 +123,29 @@ namespace IndexingStringsFromSite_Form
             Controls.Add(btnDownloadSite);
             Controls.Add(btnToJsonFile);
             Controls.Add(btnToXmlFile);
+            Controls.Add(btnToCsvFile);
             Controls.Add(lblProccessing);
             Controls.Add(tlpStringsPanel);
             Controls.Add(tlpPagesPanel);
+        }
+
+        private void BtnToCsvFile_Click(object sender, EventArgs e)
+        {
+            string filePath = @"C:\Users\User\Desktop\IndexedStrings.csv";
+            string csv = string.Join(Environment.NewLine, stringsCountsDict
+                .OrderByDescending(element => element.Value)
+                .Select(data => $"{data.Key},{data.Value},"));
+            File.WriteAllText(filePath, csv);
+
+            //using (StreamWriter sWriter = new StreamWriter(filePath))
+            //{
+            //    sWriter.Write(string.Join(Environment.NewLine, stringsCountsDict
+            //        .OrderByDescending(element => element.Value)
+            //        .Select(data => $"{data.Key},{data.Value},"))
+            //    );
+            //}
+
+            MessageBox.Show("Information saved to a file IndexedStrings.csv");
         }
 
         private void BtnToXmlFile_Click(object sender, EventArgs e)
@@ -172,6 +203,7 @@ namespace IndexingStringsFromSite_Form
             this.tlpPagesPanel.Visible = true;
             this.btnToJsonFile.Visible = true;
             this.btnToXmlFile.Visible = true;
+            this.btnToCsvFile.Visible = true;
         }
 
         private Point GetPagesPanelLocation()
