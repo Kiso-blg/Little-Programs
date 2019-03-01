@@ -30,13 +30,15 @@ namespace DownloadValutCourses_Form
 
         internal static TableLayoutPanel DrawTableLayoutPanel(ValutCoursesList valutCourses, Point location)
         {
-            TableLayoutPanel panel = new TableLayoutPanel();
-            panel.Location = location;
-            panel.Name = "TableLayoutPanelValutCourses";
-            panel.RowCount = valutCourses.Count + 1;
-            panel.ColumnCount = valutCourses.ElementsCount;
-            panel.Font = new Font("Microsoft Sans Serif", 10);
-            panel.AutoSize = true;
+            TableLayoutPanel panel = new TableLayoutPanel
+            {
+                Location = location,
+                Name = "TableLayoutPanelValutCourses",
+                RowCount = valutCourses.Count + 1,
+                ColumnCount = valutCourses.ElementsCount,
+                Font = new Font("Microsoft Sans Serif", 10),
+                AutoSize = true
+            };
             panel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));

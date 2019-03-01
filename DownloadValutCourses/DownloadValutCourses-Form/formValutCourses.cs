@@ -18,7 +18,7 @@ namespace DownloadValutCourses_Form
         string proccessingStr = string.Empty;
         int timeCounter = 0;
 
-        private void buttonDownloadCourses_Click(object sender, EventArgs e)
+        private void ButtonDownloadCourses_Click(object sender, EventArgs e)
         {
             this.timer.Start();
             WebClient client = new WebClient();
@@ -29,18 +29,17 @@ namespace DownloadValutCourses_Form
             valutCourses.GetValutCourses(site);
 
             Point labelProccessingPosition = this.labelProccessing.Location;
-            TableLayoutPanel dynamicTable = new TableLayoutPanel();
-            dynamicTable.Visible = false;
-            dynamicTable = Executor.DrawTableLayoutPanel(valutCourses, labelProccessingPosition);
+            this.valutCoursesTable = new TableLayoutPanel();
+            this.valutCoursesTable = Executor.DrawTableLayoutPanel(valutCourses, labelProccessingPosition);
 
             this.timer.Stop();
             this.labelProccessing.Visible = false;
-            dynamicTable.CellPaint += dynamicTable_CellPaint;
-            dynamicTable.Visible = true;
-            Controls.Add(dynamicTable);
+            this.valutCoursesTable.CellPaint += DynamicTable_CellPaint;
+            this.valutCoursesTable.Visible = true;
+            Controls.Add(this.valutCoursesTable);
         }
 
-        private void dynamicTable_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        private void DynamicTable_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
             Rectangle rectangle = e.CellBounds;
             rectangle.Inflate(-1, 1);
@@ -48,7 +47,7 @@ namespace DownloadValutCourses_Form
             ControlPaint.DrawBorder3D(e.Graphics, rectangle, Border3DStyle.RaisedInner, Border3DSide.All);
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             this.labelProccessing.Visible = true;
             this.labelProccessing.Text = proccessingStr.Substring(0, textLength);
@@ -70,13 +69,19 @@ namespace DownloadValutCourses_Form
             }
         }
 
-        private void formValutCourses_Load(object sender, EventArgs e)
+        private void FormValutCourses_Load(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
             this.labelProccessing.Visible = false;
             proccessingStr = this.labelProccessing.Text;
             this.labelProccessing.Text = string.Empty;           
+        }
+
+        private void buttonClearTable_Click(object sender, EventArgs e)
+        {
+            this.valutCoursesTable.Visible = false;
+            this.valutCoursesTable.Controls.Clear();
         }
     }
 }
