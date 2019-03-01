@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace DownloadValutCourses_Form
 {
+    [Serializable()]
     public class ValutCoursesList
     {
+        [XmlArray("ValutCourses")]
         private readonly List<ValutCourse> valutCourses = new List<ValutCourse>();
 
         public int Count
@@ -89,7 +92,7 @@ namespace DownloadValutCourses_Form
                 {
                     if (IsUpperString(splitedSite[i + 1]))
                     {
-                        if (isElementInt(splitedSite[i + 2]))
+                        if (IsElementInt(splitedSite[i + 2]))
                         {
                             if (IsElementDecimal(splitedSite[i + 3]))
                             {
@@ -106,7 +109,7 @@ namespace DownloadValutCourses_Form
             return -1;
         }
 
-        private static bool isElementInt(string element)
+        private static bool IsElementInt(string element)
         {
             byte intValue;
 

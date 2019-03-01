@@ -32,7 +32,7 @@ namespace DownloadValutCourses_Form
         {
             TableLayoutPanel panel = new TableLayoutPanel
             {
-                Location = location,
+                Location = new Point(location.X, location.Y + 25),
                 Name = "TableLayoutPanelValutCourses",
                 RowCount = valutCourses.Count + 1,
                 ColumnCount = valutCourses.ElementsCount,

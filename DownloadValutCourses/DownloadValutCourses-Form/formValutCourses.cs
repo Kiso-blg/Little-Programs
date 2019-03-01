@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Net;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -17,6 +20,7 @@ namespace DownloadValutCourses_Form
         int textLength = 11;
         string proccessingStr = string.Empty;
         int timeCounter = 0;
+        ValutCoursesList valutCourses = new ValutCoursesList();
 
         private void ButtonDownloadCourses_Click(object sender, EventArgs e)
         {
@@ -24,8 +28,7 @@ namespace DownloadValutCourses_Form
             WebClient client = new WebClient();
             string site = string.Empty;
             site = Executor.DownloadSite(client);
-
-            ValutCoursesList valutCourses = new ValutCoursesList();
+            
             valutCourses.GetValutCourses(site);
 
             Point labelProccessingPosition = this.labelProccessing.Location;
@@ -82,6 +85,22 @@ namespace DownloadValutCourses_Form
         {
             this.valutCoursesTable.Visible = false;
             this.valutCoursesTable.Controls.Clear();
+        }
+
+        private void ButtonSaveToBin_Click(object sender, EventArgs e)
+        {
+            Stream streamFile = File.Open("../Valut Courses.bin", FileMode.Create);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(streamFile, valutCourses);
+            streamFile.Close();
+        }
+
+        private void buttonSaveToXml_Click(object sender, EventArgs e)
+        {
+            Stream streamFile = File.Open("../Valut Courses.xml", FileMode.Create);
+            SoapFormatter formatter = new SoapFormatter();
+            formatter.Serialize(streamFile, valutCourses);
+            streamFile.Close();
         }
     }
 }

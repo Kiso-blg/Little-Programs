@@ -1,5 +1,8 @@
-﻿namespace DownloadValutCourses_Form
+﻿using System;
+
+namespace DownloadValutCourses_Form
 {
+    [Serializable()]
     public class ValutCourse
     {
         public ValutCourse(string country, string countryCode, string unitsCount, string unitRate, string reversedUnitRate)
