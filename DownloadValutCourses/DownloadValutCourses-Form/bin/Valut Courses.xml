@@ -1,1 +1,37 @@
-<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+<?xml version="1.0" encoding="utf-8"?>
+<ValutCoursesList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.yoursite.com">
+  <ValutCourses>
+    <ValutCourse Country="Австралийски долар" CountryCode="AUD" UnitsCount="1" UnitRate="1.22011" ReversedUnitRate="0.819598" />
+    <ValutCourse Country="Бразилски реал" CountryCode="BRL" UnitsCount="10" UnitRate="4.5138" ReversedUnitRate="2.21543" />
+    <ValutCourse Country="Канадски долар" CountryCode="CAD" UnitsCount="1" UnitRate="1.29749" ReversedUnitRate="0.770719" />
+    <ValutCourse Country="Швейцарски франк" CountryCode="CHF" UnitsCount="1" UnitRate="1.72305" ReversedUnitRate="0.580366" />
+    <ValutCourse Country="Китайски ренминби юан" CountryCode="CNY" UnitsCount="10" UnitRate="2.574" ReversedUnitRate="3.885" />
+    <ValutCourse Country="Чешка крона" CountryCode="CZK" UnitsCount="100" UnitRate="7.61972" ReversedUnitRate="13.1238" />
+    <ValutCourse Country="Датска крона" CountryCode="DKK" UnitsCount="10" UnitRate="2.62091" ReversedUnitRate="3.81547" />
+    <ValutCourse Country="Британска лира" CountryCode="GBP" UnitsCount="1" UnitRate="2.29482" ReversedUnitRate="0.435764" />
+    <ValutCourse Country="Хонконгски  долар" CountryCode="HKD" UnitsCount="10" UnitRate="2.20586" ReversedUnitRate="4.53338" />
+    <ValutCourse Country="Хърватска куна" CountryCode="HRK" UnitsCount="10" UnitRate="2.63539" ReversedUnitRate="3.7945" />
+    <ValutCourse Country="Унгарски форинт" CountryCode="HUF" UnitsCount="1000" UnitRate="6.22024" ReversedUnitRate="160.766" />
+    <ValutCourse Country="Индонезийска рупия" CountryCode="IDR" UnitsCount="10000" UnitRate="1.21101" ReversedUnitRate="8257.57" />
+    <ValutCourse Country="Израелски шекел" CountryCode="ILS" UnitsCount="10" UnitRate="4.80902" ReversedUnitRate="2.07943" />
+    <ValutCourse Country="Индийска рупия" CountryCode="INR" UnitsCount="100" UnitRate="2.49236" ReversedUnitRate="40.1226" />
+    <ValutCourse Country="Исландска крона" CountryCode="ISK" UnitsCount="100" UnitRate="1.46066" ReversedUnitRate="68.4622" />
+    <ValutCourse Country="Японска йена" CountryCode="JPY" UnitsCount="100" UnitRate="1.55114" ReversedUnitRate="64.4687" />
+    <ValutCourse Country="Южнокорейски вон" CountryCode="KRW" UnitsCount="1000" UnitRate="1.52368" ReversedUnitRate="656.306" />
+    <ValutCourse Country="Мексиканско песо" CountryCode="MXN" UnitsCount="100" UnitRate="8.93791" ReversedUnitRate="11.1883" />
+    <ValutCourse Country="Малайзийски рингит" CountryCode="MYR" UnitsCount="10" UnitRate="4.23523" ReversedUnitRate="2.36115" />
+    <ValutCourse Country="Норвежка крона" CountryCode="NOK" UnitsCount="10" UnitRate="2.0131" ReversedUnitRate="4.96746" />
+    <ValutCourse Country="Новозеландски долар" CountryCode="NZD" UnitsCount="1" UnitRate="1.17928" ReversedUnitRate="0.847975" />
+    <ValutCourse Country="Филипинско песо" CountryCode="PHP" UnitsCount="100" UnitRate="3.28154" ReversedUnitRate="30.4735" />
+    <ValutCourse Country="Полска злота" CountryCode="PLN" UnitsCount="10" UnitRate="4.54506" ReversedUnitRate="2.20019" />
+    <ValutCourse Country="Нова румънска лея" CountryCode="RON" UnitsCount="10" UnitRate="4.10458" ReversedUnitRate="2.4363" />
+    <ValutCourse Country="Руска рубла" CountryCode="RUB" UnitsCount="100" UnitRate="2.64569" ReversedUnitRate="37.7973" />
+    <ValutCourse Country="Шведска крона" CountryCode="SEK" UnitsCount="10" UnitRate="1.8561" ReversedUnitRate="5.38764" />
+    <ValutCourse Country="Сингапурски долар" CountryCode="SGD" UnitsCount="1" UnitRate="1.27623" ReversedUnitRate="0.783558" />
+    <ValutCourse Country="Тайландски бат" CountryCode="THB" UnitsCount="100" UnitRate="5.4486" ReversedUnitRate="18.3533" />
+    <ValutCourse Country="Нова турска лира" CountryCode="TRY" UnitsCount="10" UnitRate="3.16262" ReversedUnitRate="3.16194" />
+    <ValutCourse Country="Щатски долар" CountryCode="USD" UnitsCount="1" UnitRate="1.73159" ReversedUnitRate="0.577504" />
+    <ValutCourse Country="Южноафрикански ранд" CountryCode="ZAR" UnitsCount="10" UnitRate="1.19389" ReversedUnitRate="8.37598" />
+    <ValutCourse Country="Злато (в трой унции)" CountryCode="XAU" UnitsCount="1" UnitRate="2242.22" ReversedUnitRate="" />
+  </ValutCourses>
+</ValutCoursesList>

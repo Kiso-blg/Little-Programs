@@ -18,7 +18,7 @@ namespace DownloadValutCourses_Form
             {
                 site = client.DownloadString("http://bnb.bg/Statistics/StExternalSector/StExchangeRates/StERForeignCurrencies/index.htm");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new FieldAccessException("Erroe! Wrong address!");
             }

@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Threading;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace DownloadValutCourses_Form
 {
@@ -95,12 +96,13 @@ namespace DownloadValutCourses_Form
             streamFile.Close();
         }
 
-        private void buttonSaveToXml_Click(object sender, EventArgs e)
+        private void ButtonSaveToXml_Click(object sender, EventArgs e)
         {
-            Stream streamFile = File.Open("../Valut Courses.xml", FileMode.Create);
-            SoapFormatter formatter = new SoapFormatter();
-            formatter.Serialize(streamFile, valutCourses);
-            streamFile.Close();
+            XmlSerializer serializer = new XmlSerializer(typeof(ValutCoursesList));
+            TextWriter writer = new StreamWriter("../Valut Courses.xml");
+            serializer.Serialize(writer, valutCourses);
+            writer.Close();
+            MessageBox.Show("Clas serialized to Valut Courses.xml.");
         }
     }
 }

@@ -111,9 +111,9 @@
             this.buttonSaveToXml.Name = "buttonSaveToXml";
             this.buttonSaveToXml.Size = new System.Drawing.Size(75, 20);
             this.buttonSaveToXml.TabIndex = 6;
-            this.buttonSaveToXml.Text = "Save to XML";
+            this.buttonSaveToXml.Text = "Save to Xml";
             this.buttonSaveToXml.UseVisualStyleBackColor = true;
-            this.buttonSaveToXml.Click += new System.EventHandler(this.buttonSaveToXml_Click);
+            this.buttonSaveToXml.Click += new System.EventHandler(this.ButtonSaveToXml_Click);
             // 
             // formValutCourses
             // 

@@ -6,11 +6,19 @@ using System.Xml.Serialization;
 
 namespace DownloadValutCourses_Form
 {
-    [Serializable()]
+    [XmlRoot("ValutCoursesList", Namespace = "http://www.yoursite.com", IsNullable = false)]
     public class ValutCoursesList
     {
-        [XmlArray("ValutCourses")]
+        [XmlArray("ValutCoursesList"), XmlArrayItem(typeof(ValutCourse), ElementName = "ValutCourse")]
         private readonly List<ValutCourse> valutCourses = new List<ValutCourse>();
+
+        public List<ValutCourse> ValutCourses
+        {
+            get
+            {
+                return this.valutCourses;
+            }
+        }
 
         public int Count
         {
@@ -111,9 +119,7 @@ namespace DownloadValutCourses_Form
 
         private static bool IsElementInt(string element)
         {
-            byte intValue;
-
-            if (byte.TryParse(element, out intValue))
+            if (byte.TryParse(element, out byte intValue))
             {
                 return true;
             }
@@ -123,9 +129,7 @@ namespace DownloadValutCourses_Form
 
         private static bool IsElementDecimal(string element)
         {
-            decimal decValue;
-
-            if (decimal.TryParse(element, out decValue))
+            if (decimal.TryParse(element, out decimal decValue))
             {
                 return true;
             }
