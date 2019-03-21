@@ -3,6 +3,7 @@ using System.Xml.Serialization;
 
 namespace DownloadValutCourses_Form
 {  
+    [Serializable()]
     public class ValutCourse
     {
         public ValutCourse()
@@ -19,19 +20,14 @@ namespace DownloadValutCourses_Form
             this.ReversedUnitRate = reversedUnitRate;
         }
 
-        [XmlAttribute]
         public string Country { get; set; }
 
-        [XmlAttribute]
         public string CountryCode { get; set; }
 
-        [XmlAttribute]
         public string UnitsCount { get; set; }
 
-        [XmlAttribute]
         public string UnitRate { get; set; }
 
-        [XmlAttribute]
         public string ReversedUnitRate { get; set; }
     }
 }

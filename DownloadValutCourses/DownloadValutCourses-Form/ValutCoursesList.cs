@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 
 namespace DownloadValutCourses_Form
 {
+    [Serializable()]
     [XmlRoot("ValutCoursesList", Namespace = "http://www.yoursite.com", IsNullable = false)]
     public class ValutCoursesList
     {

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValutCoursesList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.yoursite.com">
+  <ValutCourses>
+    <ValutCourse>
+      <Country>Австралийски долар</Country>
+      <CountryCode>AUD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.22247</UnitRate>
+      <ReversedUnitRate>0.818016</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Бразилски реал</Country>
+      <CountryCode>BRL</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.54717</UnitRate>
+      <ReversedUnitRate>2.19917</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Канадски долар</Country>
+      <CountryCode>CAD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.29311</UnitRate>
+      <ReversedUnitRate>0.773329</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Швейцарски франк</Country>
+      <CountryCode>CHF</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.72502</UnitRate>
+      <ReversedUnitRate>0.579703</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Китайски ренминби юан</Country>
+      <CountryCode>CNY</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.57299</UnitRate>
+      <ReversedUnitRate>3.88653</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Чешка крона</Country>
+      <CountryCode>CZK</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>7.62626</UnitRate>
+      <ReversedUnitRate>13.1126</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Датска крона</Country>
+      <CountryCode>DKK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.62091</UnitRate>
+      <ReversedUnitRate>3.81547</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Британска лира</Country>
+      <CountryCode>GBP</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>2.26684</UnitRate>
+      <ReversedUnitRate>0.441143</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Хонконгски  долар</Country>
+      <CountryCode>HKD</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.19441</UnitRate>
+      <ReversedUnitRate>4.55703</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Хърватска куна</Country>
+      <CountryCode>HRK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.63667</UnitRate>
+      <ReversedUnitRate>3.79266</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Унгарски форинт</Country>
+      <CountryCode>HUF</CountryCode>
+      <UnitsCount>1000</UnitsCount>
+      <UnitRate>6.24287</UnitRate>
+      <ReversedUnitRate>160.183</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Индонезийска рупия</Country>
+      <CountryCode>IDR</CountryCode>
+      <UnitsCount>10000</UnitsCount>
+      <UnitRate>1.21609</UnitRate>
+      <ReversedUnitRate>8223.08</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Израелски шекел</Country>
+      <CountryCode>ILS</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.77334</UnitRate>
+      <ReversedUnitRate>2.09497</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Индийска рупия</Country>
+      <CountryCode>INR</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>2.50311</UnitRate>
+      <ReversedUnitRate>39.9503</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Исландска крона</Country>
+      <CountryCode>ISK</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>1.47166</UnitRate>
+      <ReversedUnitRate>67.9505</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Японска йена</Country>
+      <CountryCode>JPY</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>1.54452</UnitRate>
+      <ReversedUnitRate>64.745</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Южнокорейски вон</Country>
+      <CountryCode>KRW</CountryCode>
+      <UnitsCount>1000</UnitsCount>
+      <UnitRate>1.52566</UnitRate>
+      <ReversedUnitRate>655.454</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Мексиканско песо</Country>
+      <CountryCode>MXN</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>9.08978</UnitRate>
+      <ReversedUnitRate>11.0014</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Малайзийски рингит</Country>
+      <CountryCode>MYR</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.24175</UnitRate>
+      <ReversedUnitRate>2.35752</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Норвежка крона</Country>
+      <CountryCode>NOK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.01809</UnitRate>
+      <ReversedUnitRate>4.95518</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Новозеландски долар</Country>
+      <CountryCode>NZD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.18056</UnitRate>
+      <ReversedUnitRate>0.847056</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Филипинско песо</Country>
+      <CountryCode>PHP</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>3.25744</UnitRate>
+      <ReversedUnitRate>30.699</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Полска злота</Country>
+      <CountryCode>PLN</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.56607</UnitRate>
+      <ReversedUnitRate>2.19007</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Нова румънска лея</Country>
+      <CountryCode>RON</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.10759</UnitRate>
+      <ReversedUnitRate>2.43452</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Руска рубла</Country>
+      <CountryCode>RUB</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>2.67907</UnitRate>
+      <ReversedUnitRate>37.3264</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Шведска крона</Country>
+      <CountryCode>SEK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>1.87502</UnitRate>
+      <ReversedUnitRate>5.33328</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Сингапурски долар</Country>
+      <CountryCode>SGD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.2754</UnitRate>
+      <ReversedUnitRate>0.784068</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Тайландски бат</Country>
+      <CountryCode>THB</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>5.42804</UnitRate>
+      <ReversedUnitRate>18.4229</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Нова турска лира</Country>
+      <CountryCode>TRY</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>3.14685</UnitRate>
+      <ReversedUnitRate>3.17778</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Щатски долар</Country>
+      <CountryCode>USD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.72259</UnitRate>
+      <ReversedUnitRate>0.580521</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Южноафрикански ранд</Country>
+      <CountryCode>ZAR</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>1.19416</UnitRate>
+      <ReversedUnitRate>8.37409</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Злато (в трой унции)</Country>
+      <CountryCode>XAU</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>2244.86</UnitRate>
+      <ReversedUnitRate />
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Австралийски долар</Country>
+      <CountryCode>AUD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.22247</UnitRate>
+      <ReversedUnitRate>0.818016</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Бразилски реал</Country>
+      <CountryCode>BRL</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.54717</UnitRate>
+      <ReversedUnitRate>2.19917</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Канадски долар</Country>
+      <CountryCode>CAD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.29311</UnitRate>
+      <ReversedUnitRate>0.773329</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Швейцарски франк</Country>
+      <CountryCode>CHF</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.72502</UnitRate>
+      <ReversedUnitRate>0.579703</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Китайски ренминби юан</Country>
+      <CountryCode>CNY</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.57299</UnitRate>
+      <ReversedUnitRate>3.88653</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Чешка крона</Country>
+      <CountryCode>CZK</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>7.62626</UnitRate>
+      <ReversedUnitRate>13.1126</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Датска крона</Country>
+      <CountryCode>DKK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.62091</UnitRate>
+      <ReversedUnitRate>3.81547</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Британска лира</Country>
+      <CountryCode>GBP</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>2.26684</UnitRate>
+      <ReversedUnitRate>0.441143</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Хонконгски  долар</Country>
+      <CountryCode>HKD</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.19441</UnitRate>
+      <ReversedUnitRate>4.55703</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Хърватска куна</Country>
+      <CountryCode>HRK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.63667</UnitRate>
+      <ReversedUnitRate>3.79266</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Унгарски форинт</Country>
+      <CountryCode>HUF</CountryCode>
+      <UnitsCount>1000</UnitsCount>
+      <UnitRate>6.24287</UnitRate>
+      <ReversedUnitRate>160.183</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Индонезийска рупия</Country>
+      <CountryCode>IDR</CountryCode>
+      <UnitsCount>10000</UnitsCount>
+      <UnitRate>1.21609</UnitRate>
+      <ReversedUnitRate>8223.08</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Израелски шекел</Country>
+      <CountryCode>ILS</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.77334</UnitRate>
+      <ReversedUnitRate>2.09497</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Индийска рупия</Country>
+      <CountryCode>INR</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>2.50311</UnitRate>
+      <ReversedUnitRate>39.9503</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Исландска крона</Country>
+      <CountryCode>ISK</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>1.47166</UnitRate>
+      <ReversedUnitRate>67.9505</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Японска йена</Country>
+      <CountryCode>JPY</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>1.54452</UnitRate>
+      <ReversedUnitRate>64.745</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Южнокорейски вон</Country>
+      <CountryCode>KRW</CountryCode>
+      <UnitsCount>1000</UnitsCount>
+      <UnitRate>1.52566</UnitRate>
+      <ReversedUnitRate>655.454</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Мексиканско песо</Country>
+      <CountryCode>MXN</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>9.08978</UnitRate>
+      <ReversedUnitRate>11.0014</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Малайзийски рингит</Country>
+      <CountryCode>MYR</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.24175</UnitRate>
+      <ReversedUnitRate>2.35752</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Норвежка крона</Country>
+      <CountryCode>NOK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>2.01809</UnitRate>
+      <ReversedUnitRate>4.95518</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Новозеландски долар</Country>
+      <CountryCode>NZD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.18056</UnitRate>
+      <ReversedUnitRate>0.847056</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Филипинско песо</Country>
+      <CountryCode>PHP</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>3.25744</UnitRate>
+      <ReversedUnitRate>30.699</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Полска злота</Country>
+      <CountryCode>PLN</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.56607</UnitRate>
+      <ReversedUnitRate>2.19007</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Нова румънска лея</Country>
+      <CountryCode>RON</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>4.10759</UnitRate>
+      <ReversedUnitRate>2.43452</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Руска рубла</Country>
+      <CountryCode>RUB</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>2.67907</UnitRate>
+      <ReversedUnitRate>37.3264</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Шведска крона</Country>
+      <CountryCode>SEK</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>1.87502</UnitRate>
+      <ReversedUnitRate>5.33328</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Сингапурски долар</Country>
+      <CountryCode>SGD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.2754</UnitRate>
+      <ReversedUnitRate>0.784068</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Тайландски бат</Country>
+      <CountryCode>THB</CountryCode>
+      <UnitsCount>100</UnitsCount>
+      <UnitRate>5.42804</UnitRate>
+      <ReversedUnitRate>18.4229</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Нова турска лира</Country>
+      <CountryCode>TRY</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>3.14685</UnitRate>
+      <ReversedUnitRate>3.17778</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Щатски долар</Country>
+      <CountryCode>USD</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>1.72259</UnitRate>
+      <ReversedUnitRate>0.580521</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Южноафрикански ранд</Country>
+      <CountryCode>ZAR</CountryCode>
+      <UnitsCount>10</UnitsCount>
+      <UnitRate>1.19416</UnitRate>
+      <ReversedUnitRate>8.37409</ReversedUnitRate>
+    </ValutCourse>
+    <ValutCourse>
+      <Country>Злато (в трой унции)</Country>
+      <CountryCode>XAU</CountryCode>
+      <UnitsCount>1</UnitsCount>
+      <UnitRate>2244.86</UnitRate>
+      <ReversedUnitRate />
+    </ValutCourse>
+  </ValutCourses>
+</ValutCoursesList>

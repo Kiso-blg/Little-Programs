@@ -37,6 +37,9 @@
             this.buttonClearTable = new System.Windows.Forms.Button();
             this.buttonSaveToBin = new System.Windows.Forms.Button();
             this.buttonSaveToXml = new System.Windows.Forms.Button();
+            this.buttonLoadFromBin = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonLoadFromXml = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelInformation
@@ -93,7 +96,7 @@
             this.buttonClearTable.TabIndex = 4;
             this.buttonClearTable.Text = "Clear";
             this.buttonClearTable.UseVisualStyleBackColor = true;
-            this.buttonClearTable.Click += new System.EventHandler(this.buttonClearTable_Click);
+            this.buttonClearTable.Click += new System.EventHandler(this.ButtonClearTable_Click);
             // 
             // buttonSaveToBin
             // 
@@ -115,10 +118,36 @@
             this.buttonSaveToXml.UseVisualStyleBackColor = true;
             this.buttonSaveToXml.Click += new System.EventHandler(this.ButtonSaveToXml_Click);
             // 
+            // buttonLoadFromBin
+            // 
+            this.buttonLoadFromBin.Location = new System.Drawing.Point(425, 35);
+            this.buttonLoadFromBin.Name = "buttonLoadFromBin";
+            this.buttonLoadFromBin.Size = new System.Drawing.Size(75, 20);
+            this.buttonLoadFromBin.TabIndex = 7;
+            this.buttonLoadFromBin.Text = "Load .bin";
+            this.buttonLoadFromBin.UseVisualStyleBackColor = true;
+            this.buttonLoadFromBin.Click += new System.EventHandler(this.ButtonLoadFromBin_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // buttonLoadFromXml
+            // 
+            this.buttonLoadFromXml.Location = new System.Drawing.Point(510, 35);
+            this.buttonLoadFromXml.Name = "buttonLoadFromXml";
+            this.buttonLoadFromXml.Size = new System.Drawing.Size(75, 20);
+            this.buttonLoadFromXml.TabIndex = 8;
+            this.buttonLoadFromXml.Text = "Load .xml";
+            this.buttonLoadFromXml.UseVisualStyleBackColor = true;
+            this.buttonLoadFromXml.Click += new System.EventHandler(this.ButtonLoadFromXml_Click);
+            // 
             // formValutCourses
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(792, 391);
+            this.Controls.Add(this.buttonLoadFromXml);
+            this.Controls.Add(this.buttonLoadFromBin);
             this.Controls.Add(this.buttonSaveToXml);
             this.Controls.Add(this.buttonSaveToBin);
             this.Controls.Add(this.buttonClearTable);
@@ -143,6 +172,9 @@
         private System.Windows.Forms.Button buttonClearTable;
         private System.Windows.Forms.Button buttonSaveToBin;
         private System.Windows.Forms.Button buttonSaveToXml;
+        private System.Windows.Forms.Button buttonLoadFromBin;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonLoadFromXml;
     }
 }
 

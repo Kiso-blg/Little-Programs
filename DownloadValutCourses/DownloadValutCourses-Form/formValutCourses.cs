@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization.Formatters.Soap;
+using System.Security;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -22,6 +22,7 @@ namespace DownloadValutCourses_Form
         string proccessingStr = string.Empty;
         int timeCounter = 0;
         ValutCoursesList valutCourses = new ValutCoursesList();
+        string filePath = AppDomain.CurrentDomain.BaseDirectory;
 
         private void ButtonDownloadCourses_Click(object sender, EventArgs e)
         {
@@ -82,7 +83,7 @@ namespace DownloadValutCourses_Form
             this.labelProccessing.Text = string.Empty;           
         }
 
-        private void buttonClearTable_Click(object sender, EventArgs e)
+        private void ButtonClearTable_Click(object sender, EventArgs e)
         {
             this.valutCoursesTable.Visible = false;
             this.valutCoursesTable.Controls.Clear();
@@ -90,19 +91,104 @@ namespace DownloadValutCourses_Form
 
         private void ButtonSaveToBin_Click(object sender, EventArgs e)
         {
-            Stream streamFile = File.Open("../Valut Courses.bin", FileMode.Create);
+            Stream streamFile = File.Open(filePath + "Valut Courses.bin", FileMode.Create);
             BinaryFormatter formatter = new BinaryFormatter();
             formatter.Serialize(streamFile, valutCourses);
             streamFile.Close();
+            MessageBox.Show("Data savet to Valut Courses.bin");
         }
 
         private void ButtonSaveToXml_Click(object sender, EventArgs e)
-        {
+        {            
             XmlSerializer serializer = new XmlSerializer(typeof(ValutCoursesList));
-            TextWriter writer = new StreamWriter("../Valut Courses.xml");
+            TextWriter writer = new StreamWriter(filePath + "Valut Courses.xml");
             serializer.Serialize(writer, valutCourses);
             writer.Close();
-            MessageBox.Show("Clas serialized to Valut Courses.xml.");
+            MessageBox.Show("Class serialized to Valut Courses.xml.");
+        }
+
+        private void ButtonLoadFromBin_Click(object sender, EventArgs e)
+        {
+            this.valutCoursesTable.Visible = false;
+            this.valutCoursesTable.Controls.Clear();
+
+            this.openFileDialog1 = new OpenFileDialog()
+            {
+                InitialDirectory = filePath,
+                Title = "Browse Bin file",
+                CheckFileExists = true,
+                CheckPathExists = true,
+                DefaultExt = "bin",
+                Filter = "bin file (*.bin)|*.bin",
+                FilterIndex = 2,
+                RestoreDirectory = true,                
+                ShowReadOnly = true
+            };
+
+            BinaryFormatter bf = new BinaryFormatter();
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
+
+                try
+                {
+                    valutCourses = (ValutCoursesList)bf.Deserialize(stream);
+                }
+                catch (SecurityException ex)
+                {
+                    MessageBox.Show($"Security error!\n\nError message: {ex.Message}\n\nDetails: \n\n{ex.StackTrace}");
+                }
+
+                stream.Close();
+                this.valutCoursesTable = Executor.DrawTableLayoutPanel(valutCourses, this.labelProccessing.Location);
+                this.labelProccessing.Visible = false;
+                this.valutCoursesTable.CellPaint += DynamicTable_CellPaint;
+                this.valutCoursesTable.Visible = true;
+                Controls.Add(this.valutCoursesTable);
+            }            
+        }
+
+        private void ButtonLoadFromXml_Click(object sender, EventArgs e)
+        {
+            this.valutCoursesTable.Visible = false;
+            this.valutCoursesTable.Controls.Clear();
+
+            this.openFileDialog1 = new OpenFileDialog()
+            {
+                InitialDirectory = filePath,
+                Title = "Browse Bin file",
+                CheckFileExists = true,
+                CheckPathExists = true,
+                DefaultExt = "xml",
+                Filter = "xml file (*.xml)|*.xml",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+                ShowReadOnly = true
+            };
+
+            XmlSerializer xmlSer = new XmlSerializer(typeof(ValutCoursesList));
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
+
+                try
+                {
+                    valutCourses = (ValutCoursesList)xmlSer.Deserialize(stream);
+                }
+                catch (SecurityException ex)
+                {
+                    MessageBox.Show($"Security error!\n\nError message: {ex.Message}\n\nDetails: \n\n{ex.StackTrace}");
+                }
+
+                stream.Close();
+                this.valutCoursesTable = Executor.DrawTableLayoutPanel(valutCourses, this.labelProccessing.Location);
+                this.labelProccessing.Visible = false;
+                this.valutCoursesTable.CellPaint += DynamicTable_CellPaint;
+                this.valutCoursesTable.Visible = true;
+                Controls.Add(this.valutCoursesTable);
+            }
         }
     }
 }

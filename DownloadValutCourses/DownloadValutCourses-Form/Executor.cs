@@ -18,9 +18,9 @@ namespace DownloadValutCourses_Form
             {
                 site = client.DownloadString("http://bnb.bg/Statistics/StExternalSector/StExchangeRates/StERForeignCurrencies/index.htm");
             }
-            catch (Exception)
+            catch (WebException webEx)
             {
-                throw new FieldAccessException("Erroe! Wrong address!");
+                MessageBox.Show($"Erroe!Wrong address!\n\nError message: {webEx.Message}\n\nDetails: \n{webEx.StackTrace}");
             }
 
             site = Regex.Replace(site, "<.*?>", string.Empty);
