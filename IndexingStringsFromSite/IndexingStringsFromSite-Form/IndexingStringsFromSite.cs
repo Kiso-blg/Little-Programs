@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -218,6 +219,7 @@ namespace IndexingStringsFromSite_Form
             }
             catch (Exception)
             {
+                isBreak = true;
                 MessageBox.Show("File content does not concur to Dictionary<string, int> type!");
             }
         }
@@ -296,8 +298,14 @@ namespace IndexingStringsFromSite_Form
 
         private void BtnToJsonFile_Click(object sender, EventArgs e)
         {
+            JObject jObj = new JObject();
+
+            foreach (KeyValuePair<string, int> kvp in stringsCountsDict.OrderByDescending(kvp => kvp.Value))
+            {
+                jObj.Add(kvp.Key, kvp.Value);
+            }
             File.WriteAllText(filePath + "IndexedStrings.json",
-                JsonConvert.SerializeObject(stringsCountsDict, Newtonsoft.Json.Formatting.Indented));
+                JsonConvert.SerializeObject(jObj, Newtonsoft.Json.Formatting.Indented));
 
             MessageBox.Show("Information saved to a file IndexedStrings.json");
         }
@@ -306,6 +314,7 @@ namespace IndexingStringsFromSite_Form
         {
             this.timer.Start();
             this.tlpStringsPanel.Visible = false;
+            this.tlpStringsPanel.Controls.Clear();
             this.tlpPagesPanel.Visible = false;
             this.tlpPagesPanel.Controls.Clear();
 
@@ -339,19 +348,19 @@ namespace IndexingStringsFromSite_Form
 
             for (int i = 0; i < columnsCount; i++)
             {
-                Button button = new Button()
+                Button buttonPage = new Button()
                 {
                     Name = "button" + (i + 1),
                     Text = (i + 1).ToString(),
                     Size = new Size(30, 20),
                     TextAlign = ContentAlignment.MiddleCenter
                 };
-                button.Click += new EventHandler(Button_Click);
-                tlpPagesPanel.Controls.Add(button, i, 0);
+                buttonPage.Click += new EventHandler(ButtonPage_Click);
+                tlpPagesPanel.Controls.Add(buttonPage, i, 0);
             }
         }
 
-        private void Button_Click(object sender, EventArgs e)
+        private void ButtonPage_Click(object sender, EventArgs e)
         {
             this.tlpStringsPanel.Visible = false;
             this.timer.Start();
@@ -427,7 +436,7 @@ namespace IndexingStringsFromSite_Form
         }
 
         private string DownloadSiteContent(WebClient client, string siteInput)
-        {
+        {                     
             client.Encoding = Encoding.UTF8;
             string site = string.Empty;
 
