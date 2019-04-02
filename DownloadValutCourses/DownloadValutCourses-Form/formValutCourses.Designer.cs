@@ -40,6 +40,8 @@
             this.buttonLoadFromBin = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.buttonLoadFromXml = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.SuspendLayout();
             // 
             // labelInformation
@@ -142,10 +144,25 @@
             this.buttonLoadFromXml.UseVisualStyleBackColor = true;
             this.buttonLoadFromXml.Click += new System.EventHandler(this.ButtonLoadFromXml_Click);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(425, 10);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(75, 20);
+            this.buttonPrint.TabIndex = 9;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // formValutCourses
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(792, 391);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonLoadFromXml);
             this.Controls.Add(this.buttonLoadFromBin);
             this.Controls.Add(this.buttonSaveToXml);
@@ -175,6 +192,8 @@
         private System.Windows.Forms.Button buttonLoadFromBin;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button buttonLoadFromXml;
+        private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
 

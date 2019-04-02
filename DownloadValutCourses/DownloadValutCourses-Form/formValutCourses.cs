@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
 using System.Net;
@@ -76,7 +77,7 @@ namespace DownloadValutCourses_Form
 
         private void FormValutCourses_Load(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;            
 
             this.labelProccessing.Visible = false;
             proccessingStr = this.labelProccessing.Text;
@@ -189,6 +190,40 @@ namespace DownloadValutCourses_Form
                 this.valutCoursesTable.Visible = true;
                 Controls.Add(this.valutCoursesTable);
             }
+        }
+
+        private void ButtonPrint_Click(object sender, EventArgs e)
+        {
+            if (this.valutCoursesTable.Controls == null || this.valutCoursesTable.Visible == false)
+            {
+                MessageBox.Show("The list is empty! Download the list first!");
+            }
+            else
+            {
+                PrintDocument docToPrint = new PrintDocument()
+                {
+                    DocumentName = "Print Document"
+                };
+                docToPrint.PrintPage += new PrintPageEventHandler(Document_PrintPage);
+
+                this.printDialog1.Document = docToPrint;
+                this.printDialog1.AllowSelection = true;
+                this.printDialog1.AllowSomePages = true;
+
+                DialogResult dResult = this.printDialog1.ShowDialog();
+
+                if (dResult == DialogResult.OK)
+                {
+                    docToPrint.Print();
+                }
+            }            
+        }
+
+        private void Document_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
+
+            e.Graphics.DrawString(valutCourses.ToString(), printFont, Brushes.Black, 10, 10);
         }
     }
 }
