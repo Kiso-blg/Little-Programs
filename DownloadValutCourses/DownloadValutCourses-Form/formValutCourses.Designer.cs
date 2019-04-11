@@ -42,6 +42,7 @@
             this.buttonLoadFromXml = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.buttonPrintTable = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelInformation
@@ -158,10 +159,21 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // buttonPrintTable
+            // 
+            this.buttonPrintTable.Location = new System.Drawing.Point(510, 10);
+            this.buttonPrintTable.Name = "buttonPrintTable";
+            this.buttonPrintTable.Size = new System.Drawing.Size(75, 20);
+            this.buttonPrintTable.TabIndex = 10;
+            this.buttonPrintTable.Text = "Print table";
+            this.buttonPrintTable.UseVisualStyleBackColor = true;
+            this.buttonPrintTable.Click += new System.EventHandler(this.ButtonPrintTable_Click);
+            // 
             // formValutCourses
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(792, 391);
+            this.Controls.Add(this.buttonPrintTable);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonLoadFromXml);
             this.Controls.Add(this.buttonLoadFromBin);
@@ -194,6 +206,7 @@
         private System.Windows.Forms.Button buttonLoadFromXml;
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Button buttonPrintTable;
     }
 }
 

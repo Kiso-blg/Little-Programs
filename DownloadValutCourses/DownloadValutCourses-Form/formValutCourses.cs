@@ -31,12 +31,13 @@ namespace DownloadValutCourses_Form
             WebClient client = new WebClient();
             string site = string.Empty;
             site = Executor.DownloadSite(client);
-            
+
             valutCourses.GetValutCourses(site);
 
             Point labelProccessingPosition = this.labelProccessing.Location;
             this.valutCoursesTable = new TableLayoutPanel();
             this.valutCoursesTable = Executor.DrawTableLayoutPanel(valutCourses, labelProccessingPosition);
+            string asd = this.valutCoursesTable.ToString();
 
             this.timer.Stop();
             this.labelProccessing.Visible = false;
@@ -57,7 +58,7 @@ namespace DownloadValutCourses_Form
         {
             this.labelProccessing.Visible = true;
             this.labelProccessing.Text = proccessingStr.Substring(0, textLength);
-            textLength++;  
+            textLength++;
             timeCounter++;
 
             if (textLength > proccessingStr.Length)
@@ -77,11 +78,11 @@ namespace DownloadValutCourses_Form
 
         private void FormValutCourses_Load(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;            
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
             this.labelProccessing.Visible = false;
             proccessingStr = this.labelProccessing.Text;
-            this.labelProccessing.Text = string.Empty;           
+            this.labelProccessing.Text = string.Empty;
         }
 
         private void ButtonClearTable_Click(object sender, EventArgs e)
@@ -100,7 +101,7 @@ namespace DownloadValutCourses_Form
         }
 
         private void ButtonSaveToXml_Click(object sender, EventArgs e)
-        {            
+        {
             XmlSerializer serializer = new XmlSerializer(typeof(ValutCoursesList));
             TextWriter writer = new StreamWriter(filePath + "Valut Courses.xml");
             serializer.Serialize(writer, valutCourses);
@@ -122,7 +123,7 @@ namespace DownloadValutCourses_Form
                 DefaultExt = "bin",
                 Filter = "bin file (*.bin)|*.bin",
                 FilterIndex = 2,
-                RestoreDirectory = true,                
+                RestoreDirectory = true,
                 ShowReadOnly = true
             };
 
@@ -147,7 +148,7 @@ namespace DownloadValutCourses_Form
                 this.valutCoursesTable.CellPaint += DynamicTable_CellPaint;
                 this.valutCoursesTable.Visible = true;
                 Controls.Add(this.valutCoursesTable);
-            }            
+            }
         }
 
         private void ButtonLoadFromXml_Click(object sender, EventArgs e)
@@ -216,14 +217,50 @@ namespace DownloadValutCourses_Form
                 {
                     docToPrint.Print();
                 }
-            }            
+            }
         }
 
         private void Document_PrintPage(object sender, PrintPageEventArgs e)
         {
             Font printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
 
-            e.Graphics.DrawString(valutCourses.ToString(), printFont, Brushes.Black, 10, 10);
+            e.Graphics.DrawString(this.valutCoursesTable.ToString(), printFont, Brushes.Black, 10, 10);
+        }
+
+        private void ButtonPrintTable_Click(object sender, EventArgs e)
+        {
+            if (this.valutCoursesTable.Controls == null || this.valutCoursesTable.Visible == false)
+            {
+                MessageBox.Show("The list is empty! Download the list first!");
+            }
+            else
+            {
+                PrintDocument docToPrint = new PrintDocument()
+                {
+                    DocumentName = "Print Document"
+                };                
+
+                this.printDialog1.Document = docToPrint;
+                this.printDialog1.ShowHelp = true;
+                this.printDialog1.AllowSelection = true;
+                this.printDialog1.AllowSomePages = true;
+                docToPrint.PrintPage += new PrintPageEventHandler(Document2_PrintPage);
+
+                DialogResult dResult = this.printDialog1.ShowDialog();
+
+                if (dResult == DialogResult.OK)
+                {
+                    docToPrint.Print();
+                }
+            }
+        }
+
+        private void Document2_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap printImage = new Bitmap(this.valutCoursesTable.Width, this.valutCoursesTable.Height);
+            this.valutCoursesTable.DrawToBitmap(printImage, new Rectangle(0, 0, printImage.Width, printImage.Height));
+            e.Graphics.DrawImage(printImage, 10, 10, printImage.Width, printImage.Height);
+            printImage.Dispose();
         }
     }
 }
