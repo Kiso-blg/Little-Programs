@@ -11,9 +11,9 @@ namespace DownloadValutCourses_Form
     public class ValutCoursesList
     {
         [XmlArray("ValutCoursesList"), XmlArrayItem(typeof(ValutCourse), ElementName = "ValutCourse")]
-        private readonly List<ValutCourse> valutCourses = new List<ValutCourse>();
+        private readonly IList<ValutCourse> valutCourses = new List<ValutCourse>();
 
-        public List<ValutCourse> ValutCourses
+        public IList<ValutCourse> ValutCourses
         {
             get
             {
@@ -47,9 +47,9 @@ namespace DownloadValutCourses_Form
             this.valutCourses.Add(course);
         }
 
-        public void GetValutCourses(string text)
+        public void ExtractValutCourses(string text)
         {
-            List<string> splitedSite = text.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries)
+            IList<string> splitedSite = text.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(element => element.Trim())
                 .Where(element => element != string.Empty)
                 .ToList();
@@ -75,7 +75,7 @@ namespace DownloadValutCourses_Form
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine('|' + "Country".PadRight(25) +
+            sb.AppendLine('|' + "Name".PadRight(25) +
                 '\0' + "Code".PadLeft(5) +
                 '\0' + "Units count".PadLeft(11) +
                 '\0' + "Leva".PadLeft(10) +
@@ -93,7 +93,7 @@ namespace DownloadValutCourses_Form
             return sb.ToString();
         }
 
-        private static int FindCollectionsStart(List<string> splitedSite)
+        private static int FindCollectionsStart(IList<string> splitedSite)
         {
             for (int i = 0; i < splitedSite.Count; i++)
             {

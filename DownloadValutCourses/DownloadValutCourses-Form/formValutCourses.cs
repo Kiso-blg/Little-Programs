@@ -9,6 +9,7 @@ using System.Security;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.Linq;
 
 namespace DownloadValutCourses_Form
 {
@@ -22,21 +23,22 @@ namespace DownloadValutCourses_Form
         int textLength = 11;
         string proccessingStr = string.Empty;
         int timeCounter = 0;
-        ValutCoursesList valutCourses = new ValutCoursesList();
+        ValutCoursesList valutCourses;
         string filePath = AppDomain.CurrentDomain.BaseDirectory;
 
         private void ButtonDownloadCourses_Click(object sender, EventArgs e)
         {
             this.timer.Start();
+            valutCourses = new ValutCoursesList();
             WebClient client = new WebClient();
             string site = string.Empty;
             site = Executor.DownloadSite(client);
 
-            valutCourses.GetValutCourses(site);
+            this.valutCourses.ExtractValutCourses(site);
 
             Point labelProccessingPosition = this.labelProccessing.Location;
             this.valutCoursesTable = new TableLayoutPanel();
-            this.valutCoursesTable = Executor.DrawTableLayoutPanel(valutCourses, labelProccessingPosition);
+            this.valutCoursesTable = Executor.DrawTableLayoutPanel(this.valutCourses, labelProccessingPosition);
             string asd = this.valutCoursesTable.ToString();
 
             this.timer.Stop();
@@ -201,30 +203,17 @@ namespace DownloadValutCourses_Form
             }
             else
             {
-                PrintDocument docToPrint = new PrintDocument()
-                {
-                    DocumentName = "Print Document"
-                };
-                docToPrint.PrintPage += new PrintPageEventHandler(Document_PrintPage);
+                this.printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
 
-                this.printDialog1.Document = docToPrint;
-                this.printDialog1.AllowSelection = true;
-                this.printDialog1.AllowSomePages = true;
+                this.printDialog1.Document = this.printDocument;
 
                 DialogResult dResult = this.printDialog1.ShowDialog();
 
                 if (dResult == DialogResult.OK)
                 {
-                    docToPrint.Print();
+                    this.printDocument.Print();
                 }
             }
-        }
-
-        private void Document_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Font printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
-
-            e.Graphics.DrawString(this.valutCoursesTable.ToString(), printFont, Brushes.Black, 10, 10);
         }
 
         private void ButtonPrintTable_Click(object sender, EventArgs e)
@@ -242,8 +231,6 @@ namespace DownloadValutCourses_Form
 
                 this.printDialog1.Document = docToPrint;
                 this.printDialog1.ShowHelp = true;
-                this.printDialog1.AllowSelection = true;
-                this.printDialog1.AllowSomePages = true;
                 docToPrint.PrintPage += new PrintPageEventHandler(Document2_PrintPage);
 
                 DialogResult dResult = this.printDialog1.ShowDialog();
@@ -261,6 +248,104 @@ namespace DownloadValutCourses_Form
             this.valutCoursesTable.DrawToBitmap(printImage, new Rectangle(0, 0, printImage.Width, printImage.Height));
             e.Graphics.DrawImage(printImage, 10, 10, printImage.Width, printImage.Height);
             printImage.Dispose();
+        }
+
+        private void ButtonPrintPreview_Click(object sender, EventArgs e)
+        {
+            this.printPreviewDialog1.Document = this.printDocument;
+            this.printPreviewDialog1.ClientSize = new Size(500, 700);
+            this.printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
+            this.printPreviewDialog1.ShowDialog();
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
+            //e.Graphics.DrawString(this.valutCourses.ToString(), printFont, Brushes.Black, 20, 20);
+
+            try
+            {
+                int dash1Position = 20;
+                int rowPosition = 20;
+                int rowHeight = TextRenderer.MeasureText("|", printFont).Height + 5;
+                int dashWidth = TextRenderer.MeasureText("|", printFont).Width;
+                int width1 = TextRenderer.MeasureText(
+                    this.valutCourses.ValutCourses.OrderByDescending(x => x.Country.Length).First().Country, printFont).Width;
+                int column1Width = width1 + 2 * dashWidth;
+
+                int dash2Position = dash1Position + column1Width;
+                int codeWidth = TextRenderer.MeasureText("Code", printFont).Width;
+                int column2Width = codeWidth + 6 * dashWidth;
+
+                int dash3Position = dash2Position + column2Width;
+                int unitCountWidth = TextRenderer.MeasureText("Unit count", printFont).Width;
+                int column3Width = unitCountWidth + 2 * dashWidth;
+
+                int dash4Position = dash3Position + column3Width;
+                int levaWidth = TextRenderer.MeasureText("Leva rate", printFont).Width;
+                int column4Width = levaWidth + 3 * dashWidth;
+
+                int dash5Position = dash4Position + column4Width;
+                int reversedWidth = TextRenderer.MeasureText("Reverse rate", printFont).Width;
+                int column5Width = reversedWidth + 3 * dashWidth;
+                int dash6Position = dash5Position + column5Width;
+
+                e.Graphics.DrawString("|", printFont, Brushes.Black, dash1Position, rowPosition);
+                e.Graphics.DrawString("Name", printFont, Brushes.Black, dash1Position + dashWidth, rowPosition);
+                e.Graphics.DrawString("|", printFont, Brushes.Black, dash2Position, rowPosition);
+
+                int pointY = dash2Position + ((dash3Position - dash2Position - codeWidth) / 2) + dashWidth / 2;
+                int column2Space = (column2Width - codeWidth) / 2;
+                e.Graphics.DrawString("Code", printFont, Brushes.Black, pointY, rowPosition);
+                e.Graphics.DrawString("|", printFont, Brushes.Black, dash3Position, rowPosition);
+
+                e.Graphics.DrawString("Unit count", printFont, Brushes.Black, dash4Position - unitCountWidth, rowPosition);
+                e.Graphics.DrawString("|", printFont, Brushes.Black, dash4Position, rowPosition);
+
+                e.Graphics.DrawString("Leva rate", printFont, Brushes.Black, dash5Position - levaWidth, rowPosition);
+                e.Graphics.DrawString("|", printFont, Brushes.Black, dash5Position, rowPosition);
+
+                e.Graphics.DrawString("Reverse rate", printFont, Brushes.Black, dash6Position - reversedWidth, rowPosition);
+                e.Graphics.DrawString("|", printFont, Brushes.Black, dash6Position, rowPosition);
+                rowPosition += rowHeight;
+
+                int rowWidth = dash6Position - dash1Position;
+                int tireWidth = TextRenderer.MeasureText("-", printFont).Width; 
+                e.Graphics.DrawString(new string('-', (int)(rowWidth / tireWidth * 2.54)), printFont, Brushes.Black, dash1Position, rowPosition);
+                rowPosition += rowHeight;
+
+                foreach (ValutCourse vc in this.valutCourses.ValutCourses)
+                {
+                    e.Graphics.DrawString("|", printFont, Brushes.Black, dash1Position, rowPosition);
+                    e.Graphics.DrawString(vc.Country, printFont, Brushes.Black, dash1Position + dashWidth, rowPosition);
+                    e.Graphics.DrawString("|", printFont, Brushes.Black, dash2Position, rowPosition);
+
+                    codeWidth = TextRenderer.MeasureText(vc.CountryCode, printFont).Width;
+                    pointY = dash2Position + ((dash3Position - dash2Position - codeWidth) / 2) + dashWidth / 2;
+                    column2Space = (column2Width - codeWidth) / 2;
+                    e.Graphics.DrawString(vc.CountryCode, printFont, Brushes.Black, pointY, rowPosition);
+                    e.Graphics.DrawString("|", printFont, Brushes.Black, dash3Position, rowPosition);
+
+                    unitCountWidth = TextRenderer.MeasureText(vc.UnitsCount, printFont).Width;
+                    e.Graphics.DrawString(vc.UnitsCount, printFont, Brushes.Black, dash4Position - unitCountWidth, rowPosition);
+                    e.Graphics.DrawString("|", printFont, Brushes.Black, dash4Position, rowPosition);
+
+                    levaWidth = TextRenderer.MeasureText(vc.UnitRate, printFont).Width;
+                    e.Graphics.DrawString(vc.UnitRate, printFont, Brushes.Black, dash5Position - levaWidth, rowPosition);
+                    e.Graphics.DrawString("|", printFont, Brushes.Black, dash5Position, rowPosition);
+
+                    reversedWidth = TextRenderer.MeasureText(vc.ReversedUnitRate, printFont).Width;
+                    e.Graphics.DrawString(vc.ReversedUnitRate, printFont, Brushes.Black, dash6Position - reversedWidth, rowPosition);
+                    e.Graphics.DrawString("|", printFont, Brushes.Black, dash6Position, rowPosition);
+
+                    rowPosition += rowHeight;
+                }
+            }
+            catch (Exception ex)
+            {
+                e.Graphics.DrawString("Download valut courses first :).", printFont, Brushes.Black, 0, 0);
+                e.Graphics.DrawString(ex.Message, printFont, Brushes.Red, 0, 30);
+            }
         }
     }
 }

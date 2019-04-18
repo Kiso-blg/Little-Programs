@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formValutCourses));
             this.labelInformation = new System.Windows.Forms.Label();
             this.buttonDownloadCourses = new System.Windows.Forms.Button();
             this.labelProccessing = new System.Windows.Forms.Label();
@@ -43,6 +44,9 @@
             this.buttonPrint = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.buttonPrintTable = new System.Windows.Forms.Button();
+            this.buttonPrintPreview = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
             // labelInformation
@@ -147,7 +151,7 @@
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(425, 10);
+            this.buttonPrint.Location = new System.Drawing.Point(510, 10);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(75, 20);
             this.buttonPrint.TabIndex = 9;
@@ -161,7 +165,7 @@
             // 
             // buttonPrintTable
             // 
-            this.buttonPrintTable.Location = new System.Drawing.Point(510, 10);
+            this.buttonPrintTable.Location = new System.Drawing.Point(590, 10);
             this.buttonPrintTable.Name = "buttonPrintTable";
             this.buttonPrintTable.Size = new System.Drawing.Size(75, 20);
             this.buttonPrintTable.TabIndex = 10;
@@ -169,10 +173,35 @@
             this.buttonPrintTable.UseVisualStyleBackColor = true;
             this.buttonPrintTable.Click += new System.EventHandler(this.ButtonPrintTable_Click);
             // 
+            // buttonPrintPreview
+            // 
+            this.buttonPrintPreview.Location = new System.Drawing.Point(425, 10);
+            this.buttonPrintPreview.Name = "buttonPrintPreview";
+            this.buttonPrintPreview.Size = new System.Drawing.Size(75, 20);
+            this.buttonPrintPreview.TabIndex = 11;
+            this.buttonPrintPreview.Text = "Previe&w";
+            this.buttonPrintPreview.UseVisualStyleBackColor = true;
+            this.buttonPrintPreview.Click += new System.EventHandler(this.ButtonPrintPreview_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument
+            // 
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
+            // 
             // formValutCourses
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(792, 391);
+            this.Controls.Add(this.buttonPrintPreview);
             this.Controls.Add(this.buttonPrintTable);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonLoadFromXml);
@@ -207,6 +236,9 @@
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Button buttonPrintTable;
+        private System.Windows.Forms.Button buttonPrintPreview;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument;
     }
 }
 

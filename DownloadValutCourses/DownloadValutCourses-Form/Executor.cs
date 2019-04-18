@@ -44,7 +44,7 @@ namespace DownloadValutCourses_Form
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             panel.Controls.Add(new Label()
             {
-                Text = "Country", AutoSize = true, TextAlign = ContentAlignment.MiddleLeft
+                Text = "Name", AutoSize = true, TextAlign = ContentAlignment.MiddleLeft
             }, 0, 0);
 
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
