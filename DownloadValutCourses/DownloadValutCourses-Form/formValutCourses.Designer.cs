@@ -47,6 +47,7 @@
             this.buttonPrintPreview = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.buttonOpenDirectory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelInformation
@@ -198,10 +199,21 @@
             // 
             this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
             // 
+            // buttonOpenDirectory
+            // 
+            this.buttonOpenDirectory.Location = new System.Drawing.Point(590, 35);
+            this.buttonOpenDirectory.Name = "buttonOpenDirectory";
+            this.buttonOpenDirectory.Size = new System.Drawing.Size(84, 20);
+            this.buttonOpenDirectory.TabIndex = 12;
+            this.buttonOpenDirectory.Text = "Open directory";
+            this.buttonOpenDirectory.UseVisualStyleBackColor = true;
+            this.buttonOpenDirectory.Click += new System.EventHandler(this.ButtonOpenDirectory_Click);
+            // 
             // formValutCourses
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(792, 391);
+            this.Controls.Add(this.buttonOpenDirectory);
             this.Controls.Add(this.buttonPrintPreview);
             this.Controls.Add(this.buttonPrintTable);
             this.Controls.Add(this.buttonPrint);
@@ -240,6 +252,7 @@
         private System.Windows.Forms.Button buttonPrintPreview;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument;
+        private System.Windows.Forms.Button buttonOpenDirectory;
     }
 }
 

@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.Linq;
+using System.Diagnostics;
 
 namespace DownloadValutCourses_Form
 {
@@ -378,6 +379,11 @@ namespace DownloadValutCourses_Form
                     this.printDocument.Print();
                 }
             }
+        }
+
+        private void ButtonOpenDirectory_Click(object sender, EventArgs e)
+        {
+            Process.Start(filePath);
         }
     }
 }
