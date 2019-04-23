@@ -253,8 +253,7 @@ namespace DownloadValutCourses_Form
         private void ButtonPrintPreview_Click(object sender, EventArgs e)
         {
             this.printPreviewDialog1.Document = this.printDocument;
-            this.printPreviewDialog1.ClientSize = new Size(500, 700);
-            this.printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
+            this.printPreviewDialog1.ClientSize = new Size(500, 700);            
             this.printPreviewDialog1.ShowDialog();
         }
 
@@ -345,6 +344,39 @@ namespace DownloadValutCourses_Form
             {
                 e.Graphics.DrawString("Download valut courses first :).", printFont, Brushes.Black, 0, 0);
                 e.Graphics.DrawString(ex.Message, printFont, Brushes.Red, 0, 30);
+            }
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+            ToolStripButton btnPrint = new ToolStripButton()
+            {
+                Image = ((ToolStrip)(this.printPreviewDialog1.Controls[1])).ImageList.Images[0],
+                DisplayStyle = ToolStripItemDisplayStyle.Image
+            };
+            btnPrint.Click += new EventHandler(PrintPreview_PrintClick);
+            ((ToolStrip)this.printPreviewDialog1.Controls[1]).Items.RemoveAt(0);
+            ((ToolStrip)this.printPreviewDialog1.Controls[1]).Items.Insert(0, btnPrint);
+        }
+
+        private void PrintPreview_PrintClick(object sender, EventArgs e)
+        {
+            if (this.valutCoursesTable.Controls == null || this.valutCoursesTable.Visible == false)
+            {
+                MessageBox.Show("The list is empty! Download the list first!");
+            }
+            else
+            {
+                this.printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
+
+                this.printDialog1.Document = this.printDocument;
+
+                DialogResult dResult = this.printDialog1.ShowDialog();
+
+                if (dResult == DialogResult.OK)
+                {
+                    this.printDocument.Print();
+                }
             }
         }
     }
