@@ -383,7 +383,15 @@ namespace DownloadValutCourses_Form
 
         private void ButtonOpenDirectory_Click(object sender, EventArgs e)
         {
-            Process.Start(filePath);
+            try
+            {
+                Process.Start(filePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Directory not found" + Environment.NewLine +
+                    ex.Message);
+            }
         }
     }
 }
