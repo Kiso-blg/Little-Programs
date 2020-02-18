@@ -21,3 +21,13 @@ C:\Users\User\Documents\Visual Studio 2019\Projects\MyDictionary\MyDictionary\ob
 C:\Users\User\Documents\Visual Studio 2019\Projects\MyDictionary\MyDictionary\obj\Debug\MyDictionary.pdb
 C:\Users\User\Documents\Visual Studio 2019\Projects\MyDictionary\MyDictionary\bin\Debug\MyDictionaryDatabase.mdf
 C:\Users\User\Documents\Visual Studio 2019\Projects\MyDictionary\MyDictionary\bin\Debug\MyDictionaryDatabase_log.ldf
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\bin\Debug\MyDictionary.exe.config
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\bin\Debug\MyDictionary.exe
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\bin\Debug\MyDictionary.pdb
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.AddItemForm.resources
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.MyDictionaryForm.resources
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.exe
+C:\Users\User\Documents\GitHub\Little-Programs\MyDictionary\MyDictionary\obj\Debug\MyDictionary.pdb

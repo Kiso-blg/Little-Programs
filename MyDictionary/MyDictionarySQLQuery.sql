@@ -1,6 +1,6 @@
-﻿PRINT N'Creating MyDictionaryDatabase...'
+﻿PRINT N'Creating MyDictionaryDB...'
 GO
-CREATE SCHEMA [MyDictionaryDatabase]
+CREATE SCHEMA [MyDictionaryDB]
 GO
 
 PRINT N'Creating MyDictionaryTable...'
@@ -11,9 +11,9 @@ CREATE TABLE [MyDictionaryTable] (
 	[IsWritten] BIT NOT NULL DEFAULT(0)
 );
 
-PRINT N'Creating MyDictionaryDatabase.uspAddItem...'
+PRINT N'Creating MyDictionaryDB.uspAddItem...'
 GO
-CREATE PROCEDURE [MyDictionaryDatabase].[uspAddItem]
+CREATE PROCEDURE [MyDictionaryDB].[uspAddItem]
 (
 	@Word NVARCHAR(40),
 	@WordTranslation NVARCHAR(MAX)
@@ -27,9 +27,9 @@ COMMIT TRANSACTION
 END
 GO
 
-PRINT N'Creating MyDictionaryDatabase.uspSelectWord...'
+PRINT N'Creating MyDictionaryDB.uspSelectWord...'
 GO
-CREATE PROCEDURE [MyDictionaryDatabase].[uspSelectWord]
+CREATE PROCEDURE [MyDictionaryDB].[uspSelectWord]
 AS
 BEGIN
 BEGIN TRANSACTION
@@ -39,9 +39,9 @@ COMMIT TRANSACTION
 END
 GO
 
-PRINT N'Creating MyDictionaryDatabase.uspSelectCurrentItem...'
+PRINT N'Creating MyDictionaryDB.uspSelectCurrentItem...'
 GO
-CREATE PROCEDURE [MyDictionaryDatabase].[uspSelectCurrentItem]
+CREATE PROCEDURE [MyDictionaryDB].[uspSelectCurrentItem]
 (
 	@Word NVARCHAR(40)
 )
@@ -55,9 +55,9 @@ COMMIT TRANSACTION
 END
 GO
 
-PRINT N'Creating MyDictionaryDatabase.uspUpdateItem...'
+PRINT N'Creating MyDictionaryDB.uspUpdateItem...'
 GO
-CREATE PROCEDURE [MyDictionaryDatabase].[uspUpdateItem]
+CREATE PROCEDURE [MyDictionaryDB].[uspUpdateItem]
 (
 	@Word NVARCHAR(40)
 )
@@ -71,9 +71,9 @@ COMMIT TRANSACTION
 END
 GO
 
-PRINT N'cREATING MyDictionaryDatabase.uspEditItem...'
+PRINT N'cREATING MyDictionaryDB.uspEditItem...'
 GO
-CREATE PROCEDURE [MyDictionaryDatabase].[uspEditItem]
+CREATE PROCEDURE [MyDictionaryDB].[uspEditItem]
 (
 	@Word NVARCHAR(40),
 	@WordTranslation NVARCHAR(MAX),
@@ -89,9 +89,9 @@ COMMIT TRANSACTION
 END
 GO
 
-PRINT N'Creating MyDictionaryDatabase.uspDeleteItem...'
+PRINT N'Creating MyDictionaryDB.uspDeleteItem...'
 GO
-CREATE PROCEDURE [MyDictionaryDatabase].[uspDeleteItem]
+CREATE PROCEDURE [MyDictionaryDB].[uspDeleteItem]
 (
 	@Word NVARCHAR(40)
 )

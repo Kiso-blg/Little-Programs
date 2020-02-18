@@ -26,8 +26,8 @@ namespace MyDictionary.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=MyDictionaryDB;Integrated Securi" +
-            "ty=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KISO-DESKTOP\\SQLEXPRESS;Initial Catalog=MyDictionaryDB;Integrated Sec" +
+            "urity=True;Pooling=False")]
         public string connString {
             get {
                 return ((string)(this["connString"]));
