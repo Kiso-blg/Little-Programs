@@ -308,6 +308,10 @@ namespace MyDictionary
 
         private void MarkAsWrittenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //string sqlUpdateQuery = $@"UPDATE [MyDictionaryTable]
+            //                           SET [IsWritten] = 1
+            //                           WHERE Word = '{this.word}'";
+
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
             {
                 using (SqlCommand sqlComand = new SqlCommand("MyDictionaryDB.uspUpdateItem", connection))

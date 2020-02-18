@@ -66,7 +66,7 @@ BEGIN
 BEGIN TRANSACTION
 UPDATE [MyDictionaryTable]
 SET [IsWritten] = 1
-WHERE Word = '@Word'
+WHERE Word = @Word
 COMMIT TRANSACTION
 END
 GO
