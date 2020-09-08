@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Management.Smo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,15 @@ namespace MyDictionary
 {
     public partial class MyDictionaryForm : Form
     {
+        private string _connectionString;
+        private string _connectionStringMaster;
+        private string _serverName;
+        private readonly string _backupPath = AppDomain.CurrentDomain.BaseDirectory + "BackupMyDictionaryDB.bak";
+
+        private const string CONNECTIONSTRING_TEMPLATE = "Data Source=<servername>;Initial Catalog=<databasename>;Integrated Security=SSPI";
+        private const string DATABASE_NAME = "MyDictionaryDB";
+        private const string DATABASE_NAME_MASTER = "master";
+
         private string word;
         private string wordTranslation;
         private bool isWritten;
@@ -24,8 +34,34 @@ namespace MyDictionary
 
         private void MyDictionaryForm_Load(object sender, EventArgs e)
         {
+            CreateConnectionStrings();
             RefreshListBox();
             this.lblIsWritten.BackColor = this.BackColor;
+        }
+
+        private void CreateConnectionStrings()
+        {
+            DataTable dataTable = SmoApplication.EnumAvailableSqlServers(true);
+            DataRow dataRow = dataTable.Rows[0];
+            this._serverName = dataRow["Name"].ToString();
+            string temporaryString = CONNECTIONSTRING_TEMPLATE;
+
+            if (!string.IsNullOrEmpty(this._serverName))
+            {
+                temporaryString = temporaryString.Replace("<servername>", this._serverName);
+            }
+            else
+            {
+                MessageBox.Show("Could not find SQL Server!!" +
+                                Environment.NewLine +
+                                "The program will close.");
+                this.Close();
+            }
+
+            this._connectionString = temporaryString.Replace("<databasename>", DATABASE_NAME);
+            this._connectionStringMaster = temporaryString.Replace("<databasename>", DATABASE_NAME_MASTER);
+            dataRow.Delete();
+            dataTable.Dispose();
         }
 
         private void RefreshIsWrittenLabel()
@@ -59,7 +95,7 @@ namespace MyDictionary
 
         private void RefreshListBox()
         {
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
             {
                 using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("MyDictionaryDB.uspSelectWord", connection))
                 {
@@ -85,6 +121,7 @@ namespace MyDictionary
                         }
 
                         this.listBoxDictionary.DataSource = listWords;
+                        table.Dispose();
                     }
                     catch (Exception ex)
                     {
@@ -112,7 +149,7 @@ namespace MyDictionary
             {
                 List<string> list = new List<string>();
 
-                using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+                using (SqlConnection connection = new SqlConnection(this._connectionString))
                 {
                     using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspSelectWord", connection))
                     {
@@ -160,7 +197,7 @@ namespace MyDictionary
 
                 if (addItemForm.CanProceed)
                 {
-                    using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+                    using (SqlConnection connection = new SqlConnection(this._connectionString))
                     {
                         using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspAddItem", connection))
                         {
@@ -232,7 +269,7 @@ namespace MyDictionary
         {
             string currentItem = this.listBoxDictionary.SelectedItem.ToString();
 
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
             {
                 using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspSelectCurrentItem", connection))
                 {
@@ -255,6 +292,7 @@ namespace MyDictionary
                         }
 
                         this.lblTranslation.Text = this.wordTranslation;
+                        sqlReader.Close();
                     }
                     catch (Exception ex)
                     {
@@ -312,7 +350,7 @@ namespace MyDictionary
             //                           SET [IsWritten] = 1
             //                           WHERE Word = '{this.word}'";
 
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
             {
                 using (SqlCommand sqlComand = new SqlCommand("MyDictionaryDB.uspUpdateItem", connection))
                 {
@@ -355,7 +393,7 @@ namespace MyDictionary
 
                 if (addItemForm.CanProceed)
                 {
-                    using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+                    using (SqlConnection connection = new SqlConnection(this._connectionString))
                     {
                         using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspEditItem", connection))
                         {
@@ -398,7 +436,7 @@ namespace MyDictionary
 
         private void DeleteItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
             {
                 using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspDeleteItem", connection))
                 {
