@@ -183,6 +183,7 @@
             this.Name = "MyDictionaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Dictionary";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MyDictionaryForm_FormClosing);
             this.Load += new System.EventHandler(this.MyDictionaryForm_Load);
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);

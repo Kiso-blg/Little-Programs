@@ -1,10 +1,12 @@
-﻿using Microsoft.SqlServer.Management.Smo;
+﻿using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MyDictionary
@@ -41,27 +43,36 @@ namespace MyDictionary
 
         private void CreateConnectionStrings()
         {
-            DataTable dataTable = SmoApplication.EnumAvailableSqlServers(true);
-            DataRow dataRow = dataTable.Rows[0];
-            this._serverName = dataRow["Name"].ToString();
-            string temporaryString = CONNECTIONSTRING_TEMPLATE;
-
-            if (!string.IsNullOrEmpty(this._serverName))
+            try
             {
-                temporaryString = temporaryString.Replace("<servername>", this._serverName);
+                DataTable dataTable = SmoApplication.EnumAvailableSqlServers(true);
+                DataRow dataRow = dataTable.Rows[0];
+                this._serverName = dataRow["Name"].ToString();
+                string temporaryString = CONNECTIONSTRING_TEMPLATE;
+
+                if (!string.IsNullOrEmpty(this._serverName))
+                {
+                    temporaryString = temporaryString.Replace("<servername>", this._serverName);
+                }
+                else
+                {
+                    MessageBox.Show("Could not find SQL Server!!" +
+                                    Environment.NewLine +
+                                    "The program will close.");
+                    this.Close();
+                }
+
+                this._connectionString = temporaryString.Replace("<databasename>", DATABASE_NAME);
+                this._connectionStringMaster = temporaryString.Replace("<databasename>", DATABASE_NAME_MASTER);
+                dataRow.Delete();
+                dataTable.Dispose();
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Could not find SQL Server!!" +
-                                Environment.NewLine +
-                                "The program will close.");
-                this.Close();
+                                    Environment.NewLine +
+                                    "The program will close.");
             }
-
-            this._connectionString = temporaryString.Replace("<databasename>", DATABASE_NAME);
-            this._connectionStringMaster = temporaryString.Replace("<databasename>", DATABASE_NAME_MASTER);
-            dataRow.Delete();
-            dataTable.Dispose();
         }
 
         private void RefreshIsWrittenLabel()
@@ -469,6 +480,39 @@ namespace MyDictionary
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MyDictionaryForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                ServerConnection serverConnection = new ServerConnection(this._serverName);
+                Server server = new Server(serverConnection);
+                Backup backupSourse = new Backup()
+                {
+                    Action = BackupActionType.Database,
+                    Database = DATABASE_NAME,
+                    Incremental = CheckIfBackupFileExists()
+                };
+                BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
+                backupSourse.Devices.Add(destination);
+                backupSourse.SqlBackup(server);
+                serverConnection.Disconnect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private bool CheckIfBackupFileExists()
+        {
+            if (File.Exists(this._backupPath))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
