@@ -22,6 +22,9 @@ namespace MyDictionary
         private const string DATABASE_NAME = "MyDictionaryDB";
         private const string DATABASE_NAME_MASTER = "master";
 
+        private bool _doesBackupFileExists;
+        private bool _doesDatabaseExists;
+
         private string word;
         private string wordTranslation;
         private bool isWritten;
@@ -36,9 +39,77 @@ namespace MyDictionary
 
         private void MyDictionaryForm_Load(object sender, EventArgs e)
         {
+            CheckIfBackupFileExists();
             CreateConnectionStrings();
+            CheckIfDatabaseExists();
+
+            if (!this._doesDatabaseExists)
+            {
+                RestoreDatabaseFromFile();
+            }
+
             RefreshListBox();
             this.lblIsWritten.BackColor = this.BackColor;
+        }
+
+        private void RestoreDatabaseFromFile()
+        {
+            if (this._doesBackupFileExists)
+            {
+                try
+                {
+                    ServerConnection serverConn = new ServerConnection(this._serverName);
+                    Server server = new Server(serverConn);
+                    Restore restoreDB = new Restore()
+                    {
+                        Action = RestoreActionType.Database,
+                        Database = DATABASE_NAME
+                    };
+                    restoreDB.Devices.AddDevice(this._backupPath, DeviceType.File);
+                    restoreDB.SqlRestore(server);
+                    serverConn.Disconnect();
+                    CheckIfDatabaseExists();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not restore database!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Backup file do not exist!" +
+                                Environment.NewLine +
+                                "The program will close.");
+                this.Close();
+            }
+        }
+
+        private void CheckIfDatabaseExists()
+        {
+            string sqlQuery = $"SELECT db_id('{DATABASE_NAME}')";
+
+            using (SqlConnection sqlConnection = new SqlConnection(this._connectionStringMaster))
+            {
+                using (SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection))
+                {
+                    sqlCommand.CommandType = CommandType.Text;
+
+                    try
+                    {
+                        sqlConnection.Open();
+                        this._doesDatabaseExists = sqlCommand.ExecuteScalar() != DBNull.Value;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Could not check if database exists!!");
+                    }
+                    finally
+                    {
+                        sqlCommand.Dispose();
+                        sqlConnection.Close();
+                    }
+                }
+            }
         }
 
         private void CreateConnectionStrings()
@@ -484,35 +555,40 @@ namespace MyDictionary
 
         private void MyDictionaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
+            if (this._doesDatabaseExists)
             {
-                ServerConnection serverConnection = new ServerConnection(this._serverName);
-                Server server = new Server(serverConnection);
-                Backup backupSourse = new Backup()
+                try
                 {
-                    Action = BackupActionType.Database,
-                    Database = DATABASE_NAME,
-                    Incremental = CheckIfBackupFileExists()
-                };
-                BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
-                backupSourse.Devices.Add(destination);
-                backupSourse.SqlBackup(server);
-                serverConnection.Disconnect();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                    ServerConnection serverConnection = new ServerConnection(this._serverName);
+                    Server server = new Server(serverConnection);
+                    Backup backupSourse = new Backup()
+                    {
+                        Action = BackupActionType.Database,
+                        Database = DATABASE_NAME,
+                        Incremental = this._doesBackupFileExists
+                    };
+                    BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
+                    backupSourse.Devices.Add(destination);
+                    backupSourse.SqlBackup(server);
+                    serverConnection.Disconnect();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
-        private bool CheckIfBackupFileExists()
+        private void CheckIfBackupFileExists()
         {
             if (File.Exists(this._backupPath))
             {
-                return true;
+                this._doesBackupFileExists = true;
             }
-
-            return false;
+            else
+            {
+                this._doesBackupFileExists = false;
+            }
         }
     }
 }
