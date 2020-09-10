@@ -72,7 +72,10 @@ namespace MyDictionary
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Could not restore database!!");
+                    MessageBox.Show("Could not restore database!!" +
+                                Environment.NewLine +
+                                "The program will close.");
+                    this.Close();
                 }
             }
             else
@@ -102,6 +105,7 @@ namespace MyDictionary
                     catch (Exception)
                     {
                         MessageBox.Show("Could not check if database exists!!");
+                        this._doesDatabaseExists = false;
                     }
                     finally
                     {
@@ -130,6 +134,7 @@ namespace MyDictionary
                     MessageBox.Show("Could not find SQL Server!!" +
                                     Environment.NewLine +
                                     "The program will close.");
+                    this._doesDatabaseExists = false;
                     this.Close();
                 }
 
@@ -143,6 +148,8 @@ namespace MyDictionary
                 MessageBox.Show("Could not find SQL Server!!" +
                                     Environment.NewLine +
                                     "The program will close.");
+                this._doesDatabaseExists = false;
+                this.Close();
             }
         }
 
