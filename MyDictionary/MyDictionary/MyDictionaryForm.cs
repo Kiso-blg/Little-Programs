@@ -1,5 +1,6 @@
 ﻿using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
+using Microsoft.SqlServer.Management.Smo.Wmi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace MyDictionary
         private const string DATABASE_NAME_MASTER = "master";
 
         private bool _doesBackupFileExists;
+        private bool _isConnectionSuccessful;
         private bool _doesDatabaseExists;
 
         private string word;
@@ -41,6 +43,7 @@ namespace MyDictionary
         {
             CheckIfBackupFileExists();
             CreateConnectionStrings();
+            TestConnection();
             CheckIfDatabaseExists();
 
             if (!this._doesDatabaseExists)
@@ -50,6 +53,24 @@ namespace MyDictionary
 
             RefreshListBox();
             this.lblIsWritten.BackColor = this.BackColor;
+        }
+
+        private void TestConnection()
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(this._connectionStringMaster))
+            {
+                try
+                {
+                    sqlConnection.Open();
+                    this._isConnectionSuccessful = true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not connect to SQL Server! The program will close!");
+                    this._isConnectionSuccessful = false;
+                    this.Close();
+                }
+            }
         }
 
         private void RestoreDatabaseFromFile()
@@ -118,37 +139,54 @@ namespace MyDictionary
 
         private void CreateConnectionStrings()
         {
+            GetServerName();
+
+            string temporaryString = CONNECTIONSTRING_TEMPLATE;
+
+            if (!string.IsNullOrEmpty(this._serverName))
+            {
+                temporaryString = temporaryString.Replace("<servername>", this._serverName);
+            }
+            else
+            {
+                MessageBox.Show("Could not find SQL Server!!" +
+                                Environment.NewLine +
+                                "The program will close.");
+                this._doesDatabaseExists = false;
+                this.Close();
+            }
+
+            this._connectionString = temporaryString.Replace("<databasename>", DATABASE_NAME);
+            this._connectionStringMaster = temporaryString.Replace("<databasename>", DATABASE_NAME_MASTER);
+        }
+
+        private void GetServerName()
+        {
             try
             {
                 DataTable dataTable = SmoApplication.EnumAvailableSqlServers(true);
                 DataRow dataRow = dataTable.Rows[0];
-                this._serverName = dataRow["Name"].ToString();
-                string temporaryString = CONNECTIONSTRING_TEMPLATE;
+                string serverName = dataRow["Name"].ToString();
 
-                if (!string.IsNullOrEmpty(this._serverName))
+                ManagedComputer mc = new ManagedComputer();
+                mc.ConnectionSettings.ProviderArchitecture = ProviderArchitecture.Use64bit;
+                string serverInstance = mc.ServerInstances[0].Name;
+
+                if (serverName.Contains(serverInstance))
                 {
-                    temporaryString = temporaryString.Replace("<servername>", this._serverName);
+                    this._serverName = serverName;
                 }
                 else
                 {
-                    MessageBox.Show("Could not find SQL Server!!" +
-                                    Environment.NewLine +
-                                    "The program will close.");
-                    this._doesDatabaseExists = false;
-                    this.Close();
+                    this._serverName = serverName + "\\" + serverInstance;
                 }
 
-                this._connectionString = temporaryString.Replace("<databasename>", DATABASE_NAME);
-                this._connectionStringMaster = temporaryString.Replace("<databasename>", DATABASE_NAME_MASTER);
                 dataRow.Delete();
                 dataTable.Dispose();
             }
             catch (Exception)
             {
-                MessageBox.Show("Could not find SQL Server!!" +
-                                    Environment.NewLine +
-                                    "The program will close.");
-                this._doesDatabaseExists = false;
+                MessageBox.Show("Could not retrieve Serve Name. The Program will Close!!");
                 this.Close();
             }
         }
@@ -562,22 +600,50 @@ namespace MyDictionary
 
         private void MyDictionaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this._doesDatabaseExists)
+            if (this._doesDatabaseExists && this._isConnectionSuccessful)
             {
+                //try
+                //{
+                //    ServerConnection serverConnection = new ServerConnection(this._serverName);
+                //    Server server = new Server(serverConnection);
+                //    
+                //    Backup backupSource = new Backup()
+                //    {
+                //        Action = BackupActionType.Database,
+                //        Database = DATABASE_NAME,
+                //        Incremental = !this._doesBackupFileExists
+                //    };
+                //    BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
+                //    backupSource.Devices.Add(destination);
+
+                //    serverConnection.Connect();
+                //    backupSource.SqlBackup(server);
+                //    serverConnection.Disconnect();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
+
                 try
                 {
-                    ServerConnection serverConnection = new ServerConnection(this._serverName);
-                    Server server = new Server(serverConnection);
-                    Backup backupSourse = new Backup()
+                    ServerConnection sqlServerConnection = new ServerConnection(this._serverName);
+                    Server sqlServer = new Server(sqlServerConnection);
+                    Backup backupSource = new Backup()
                     {
                         Action = BackupActionType.Database,
                         Database = DATABASE_NAME,
-                        Incremental = this._doesBackupFileExists
+                        Incremental = this._doesDatabaseExists,
+                        Checksum = true,
+                        //ContinueAfterError = true,
+                        Initialize = true
                     };
                     BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
-                    backupSourse.Devices.Add(destination);
-                    backupSourse.SqlBackup(server);
-                    serverConnection.Disconnect();
+                    backupSource.Devices.Add(destination);
+
+                    sqlServerConnection.Connect();
+                    backupSource.SqlBackup(sqlServer);
+                    sqlServerConnection.Disconnect();
                 }
                 catch (Exception ex)
                 {
