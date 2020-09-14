@@ -77,26 +77,63 @@ namespace MyDictionary
         {
             if (this._doesBackupFileExists)
             {
-                try
+                //ServerConnection serverConn = new ServerConnection(this._serverName);
+                //Server server = new Server(serverConn);
+                //Restore restoreDB = new Restore()
+                //{
+                //    Action = RestoreActionType.Database,
+                //    Database = DATABASE_NAME
+                //};
+                //restoreDB.Devices.AddDevice(this._backupPath, DeviceType.File);                
+
+                //try
+                //{
+                //    serverConn.Connect();
+                //    restoreDB.SqlRestore(server);
+                //    CheckIfDatabaseExists();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show("Could not restore database"
+                //        + Environment.NewLine
+                //        + ex.Message
+                //        + ex.InnerException
+                //        + "The program will close.");
+                //    this.Close();
+                //}
+                //finally
+                //{
+                //    serverConn.Disconnect();
+                //}
+
+                string restoreQuery = $"RESTORE DATABASE [{DATABASE_NAME}] FROM DISK = '{this._backupPath}'";
+
+                using (SqlConnection sqlConnection = new SqlConnection(this._connectionStringMaster))
                 {
-                    ServerConnection serverConn = new ServerConnection(this._serverName);
-                    Server server = new Server(serverConn);
-                    Restore restoreDB = new Restore()
+                    using (SqlCommand sqlCommand = new SqlCommand(restoreQuery, sqlConnection))
                     {
-                        Action = RestoreActionType.Database,
-                        Database = DATABASE_NAME
-                    };
-                    restoreDB.Devices.AddDevice(this._backupPath, DeviceType.File);
-                    restoreDB.SqlRestore(server);
-                    serverConn.Disconnect();
-                    CheckIfDatabaseExists();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Could not restore database!!" +
-                                Environment.NewLine +
-                                "The program will close.");
-                    this.Close();
+                        sqlCommand.CommandType = CommandType.Text;
+
+                        try
+                        {
+                            sqlConnection.Open();
+                            sqlCommand.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Could not restore database"
+                                + Environment.NewLine
+                                + ex.Message
+                                + ex.InnerException
+                                + "The program will close.");
+                            this.Close();
+                        }
+                        finally
+                        {
+                            sqlCommand.Dispose();
+                            sqlConnection.Close();
+                        }
+                    }
                 }
             }
             else
@@ -161,31 +198,16 @@ namespace MyDictionary
         }
 
         private void GetServerName()
-        {
+        {          
             try
             {
-                DataTable dataTable = SmoApplication.EnumAvailableSqlServers(true);
-                DataRow dataRow = dataTable.Rows[0];
-                string serverName = dataRow["Name"].ToString();
-
                 ManagedComputer mc = new ManagedComputer();
                 mc.ConnectionSettings.ProviderArchitecture = ProviderArchitecture.Use64bit;
-                string serverInstance = mc.ServerInstances[0].Name;
-
-                if (serverName.Contains(serverInstance))
-                {
-                    this._serverName = serverName;
-                }
-                else
-                {
-                    this._serverName = serverName + "\\" + serverInstance;
-                }
-
-                dataRow.Delete();
-                dataTable.Dispose();
+                string serverInstance = mc.ServerInstances[0].Name;                
+                this._serverName = mc.Name + "\\" + serverInstance;
             }
             catch (Exception)
-            {
+            {                
                 MessageBox.Show("Could not retrieve Serve Name. The Program will Close!!");
                 this.Close();
             }
@@ -625,29 +647,34 @@ namespace MyDictionary
                 //    MessageBox.Show(ex.Message);
                 //}
 
+                ServerConnection sqlServerConnection = new ServerConnection(this._serverName);
+                Server sqlServer = new Server(sqlServerConnection);
+                Backup backupSource = new Backup()
+                {
+                    Action = BackupActionType.Database,
+                    Database = DATABASE_NAME,
+                    Incremental = this._doesDatabaseExists,
+                    Checksum = true,
+                    //ContinueAfterError = true,
+                    Initialize = true
+                };
+                BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
+                backupSource.Devices.Add(destination);
+
                 try
                 {
-                    ServerConnection sqlServerConnection = new ServerConnection(this._serverName);
-                    Server sqlServer = new Server(sqlServerConnection);
-                    Backup backupSource = new Backup()
-                    {
-                        Action = BackupActionType.Database,
-                        Database = DATABASE_NAME,
-                        Incremental = this._doesDatabaseExists,
-                        Checksum = true,
-                        //ContinueAfterError = true,
-                        Initialize = true
-                    };
-                    BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
-                    backupSource.Devices.Add(destination);
-
                     sqlServerConnection.Connect();
-                    backupSource.SqlBackup(sqlServer);
-                    sqlServerConnection.Disconnect();
+                    backupSource.SqlBackup(sqlServer);                    
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message
+                        + Environment.NewLine
+                        + ex.InnerException);
+                }
+                finally
+                {
+                    sqlServerConnection.Disconnect();
                 }
             }
         }
