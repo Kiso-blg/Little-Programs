@@ -102,7 +102,6 @@ namespace MyDictionary
                         }
                         finally
                         {
-                            sqlCommand.Dispose();
                             sqlConnection.Close();
                         }
                     }
@@ -139,7 +138,6 @@ namespace MyDictionary
                     }
                     finally
                     {
-                        sqlCommand.Dispose();
                         sqlConnection.Close();
                     }
                 }
@@ -147,7 +145,7 @@ namespace MyDictionary
         }
 
         private void CreateConnectionStrings()
-        {           
+        {
             string temporaryString = CONNECTIONSTRING_TEMPLATE;
 
             if (!string.IsNullOrEmpty(this._serverName))
@@ -168,15 +166,15 @@ namespace MyDictionary
         }
 
         private void GetServerName()
-        {          
+        {
             try
             {
                 ManagedComputer mc = new ManagedComputer();
-                mc.ConnectionSettings.ProviderArchitecture = ProviderArchitecture.Use64bit;               
+                mc.ConnectionSettings.ProviderArchitecture = ProviderArchitecture.Use64bit;
                 this._serverName = mc.Name + "\\" + mc.ServerInstances[0].Name;
             }
             catch (Exception)
-            {                
+            {
                 MessageBox.Show("Could not retrieve Serve Name. The Program will Close!!");
                 this.Close();
             }
@@ -209,7 +207,7 @@ namespace MyDictionary
             {
                 this.lblNonWrittenWordsWarnin.Text = string.Empty;
             }
-        }        
+        }
 
         private void RefreshListBox()
         {
@@ -248,7 +246,6 @@ namespace MyDictionary
                     }
                     finally
                     {
-                        sqlDataAdapter.Dispose();
                         connection.Close();
                     }
                 }
@@ -297,7 +294,6 @@ namespace MyDictionary
                         }
                         finally
                         {
-                            sqlCommand.Dispose();
                             connection.Close();
                         }
                     }
@@ -333,7 +329,7 @@ namespace MyDictionary
                                 new ToolTip().Show($"Item {addItemForm.Item} has been added successfuly.",
                                     this.btnAddItem,
                                     this.btnAddItem.Location.X,
-                                    this.btnAddItem.Location.Y,                                    
+                                    this.btnAddItem.Location.Y,
                                     5000);
                             }
                             catch (Exception ex)
@@ -344,7 +340,6 @@ namespace MyDictionary
                             }
                             finally
                             {
-                                sqlCommand.Dispose();
                                 connection.Close();
                             }
                         }
@@ -418,13 +413,12 @@ namespace MyDictionary
                     }
                     finally
                     {
-                        sqlCommand.Dispose();
                         connection.Close();
                     }
                 }
             }
 
-            RefreshIsWrittenLabel(); 
+            RefreshIsWrittenLabel();
         }
 
         private void ListBoxDictionary_MouseClick(object sender, MouseEventArgs e)
@@ -489,7 +483,6 @@ namespace MyDictionary
                     }
                     finally
                     {
-                        sqlComand.Dispose();
                         connection.Close();
                     }
                 }
@@ -538,7 +531,6 @@ namespace MyDictionary
                             }
                             finally
                             {
-                                sqlCommand.Dispose();
                                 connection.Close();
                             }
                         }
@@ -574,7 +566,6 @@ namespace MyDictionary
                     }
                     finally
                     {
-                        sqlCommand.Dispose();
                         connection.Close();
                     }
                 }
@@ -593,6 +584,8 @@ namespace MyDictionary
         {
             if (this._doesDatabaseExists && this._isConnectionSuccessful)
             {
+                File.Delete(this._backupPath);
+
                 string backupQuery = $@"BACKUP DATABASE [{DATABASE_NAME}]
                                         TO DISK = '{this._backupPath}'
                                             WITH FORMAT,
@@ -618,7 +611,6 @@ namespace MyDictionary
                         }
                         finally
                         {
-                            sqlCommand.Dispose();
                             sqlConnection.Close();
                         }
                     }
@@ -636,6 +628,6 @@ namespace MyDictionary
             {
                 this._doesBackupFileExists = false;
             }
-        }
+        }        
     }
 }
