@@ -596,7 +596,7 @@ namespace MyDictionary
                 {
                     using (SqlCommand sqlCommand = new SqlCommand(backupQuery, sqlConnection))
                     {
-                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandType = CommandType.Text;                        
 
                         try
                         {
@@ -610,11 +610,15 @@ namespace MyDictionary
                                             + ex.Message);
                         }
                         finally
-                        {
+                        {                            
                             sqlConnection.Close();
                         }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Could not backup database!!");
             }
         }
 
