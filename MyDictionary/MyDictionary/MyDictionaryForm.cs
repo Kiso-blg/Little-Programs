@@ -1,6 +1,4 @@
-﻿using Microsoft.SqlServer.Management.Common;
-using Microsoft.SqlServer.Management.Smo;
-using Microsoft.SqlServer.Management.Smo.Wmi;
+﻿using Microsoft.SqlServer.Management.Smo.Wmi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +40,7 @@ namespace MyDictionary
         private void MyDictionaryForm_Load(object sender, EventArgs e)
         {
             CheckIfBackupFileExists();
+            GetServerName();
             CreateConnectionStrings();
             TestConnection();
             CheckIfDatabaseExists();
@@ -77,36 +76,9 @@ namespace MyDictionary
         {
             if (this._doesBackupFileExists)
             {
-                //ServerConnection serverConn = new ServerConnection(this._serverName);
-                //Server server = new Server(serverConn);
-                //Restore restoreDB = new Restore()
-                //{
-                //    Action = RestoreActionType.Database,
-                //    Database = DATABASE_NAME
-                //};
-                //restoreDB.Devices.AddDevice(this._backupPath, DeviceType.File);                
-
-                //try
-                //{
-                //    serverConn.Connect();
-                //    restoreDB.SqlRestore(server);
-                //    CheckIfDatabaseExists();
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Could not restore database"
-                //        + Environment.NewLine
-                //        + ex.Message
-                //        + ex.InnerException
-                //        + "The program will close.");
-                //    this.Close();
-                //}
-                //finally
-                //{
-                //    serverConn.Disconnect();
-                //}
-
-                string restoreQuery = $"RESTORE DATABASE [{DATABASE_NAME}] FROM DISK = '{this._backupPath}'";
+                string restoreQuery = $@"RESTORE DATABASE [{DATABASE_NAME}]   
+                                         FROM DISK = '{this._backupPath}'   
+                                            WITH FILE = 1;";
 
                 using (SqlConnection sqlConnection = new SqlConnection(this._connectionStringMaster))
                 {
@@ -175,9 +147,7 @@ namespace MyDictionary
         }
 
         private void CreateConnectionStrings()
-        {
-            GetServerName();
-
+        {           
             string temporaryString = CONNECTIONSTRING_TEMPLATE;
 
             if (!string.IsNullOrEmpty(this._serverName))
@@ -202,9 +172,8 @@ namespace MyDictionary
             try
             {
                 ManagedComputer mc = new ManagedComputer();
-                mc.ConnectionSettings.ProviderArchitecture = ProviderArchitecture.Use64bit;
-                string serverInstance = mc.ServerInstances[0].Name;                
-                this._serverName = mc.Name + "\\" + serverInstance;
+                mc.ConnectionSettings.ProviderArchitecture = ProviderArchitecture.Use64bit;               
+                this._serverName = mc.Name + "\\" + mc.ServerInstances[0].Name;
             }
             catch (Exception)
             {                
@@ -624,57 +593,35 @@ namespace MyDictionary
         {
             if (this._doesDatabaseExists && this._isConnectionSuccessful)
             {
-                //try
-                //{
-                //    ServerConnection serverConnection = new ServerConnection(this._serverName);
-                //    Server server = new Server(serverConnection);
-                //    
-                //    Backup backupSource = new Backup()
-                //    {
-                //        Action = BackupActionType.Database,
-                //        Database = DATABASE_NAME,
-                //        Incremental = !this._doesBackupFileExists
-                //    };
-                //    BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
-                //    backupSource.Devices.Add(destination);
+                string backupQuery = $@"BACKUP DATABASE [{DATABASE_NAME}]
+                                        TO DISK = '{this._backupPath}'
+                                            WITH FORMAT,
+                                                MEDIANAME = 'SQLServerBackups',
+                                                NAME = 'Full Backup of {DATABASE_NAME}';";
 
-                //    serverConnection.Connect();
-                //    backupSource.SqlBackup(server);
-                //    serverConnection.Disconnect();
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
+                using (SqlConnection sqlConnection = new SqlConnection(this._connectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand(backupQuery, sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.Text;
 
-                ServerConnection sqlServerConnection = new ServerConnection(this._serverName);
-                Server sqlServer = new Server(sqlServerConnection);
-                Backup backupSource = new Backup()
-                {
-                    Action = BackupActionType.Database,
-                    Database = DATABASE_NAME,
-                    Incremental = this._doesDatabaseExists,
-                    Checksum = true,
-                    //ContinueAfterError = true,
-                    Initialize = true
-                };
-                BackupDeviceItem destination = new BackupDeviceItem(this._backupPath, DeviceType.File);
-                backupSource.Devices.Add(destination);
-
-                try
-                {
-                    sqlServerConnection.Connect();
-                    backupSource.SqlBackup(sqlServer);                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message
-                        + Environment.NewLine
-                        + ex.InnerException);
-                }
-                finally
-                {
-                    sqlServerConnection.Disconnect();
+                        try
+                        {
+                            sqlConnection.Open();
+                            sqlCommand.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Could not backup database!"
+                                            + Environment.NewLine
+                                            + ex.Message);
+                        }
+                        finally
+                        {
+                            sqlCommand.Dispose();
+                            sqlConnection.Close();
+                        }
+                    }
                 }
             }
         }
