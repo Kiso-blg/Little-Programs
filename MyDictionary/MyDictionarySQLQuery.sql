@@ -6,7 +6,7 @@ GO
 PRINT N'Creating MyDictionaryTable...'
 GO
 CREATE TABLE [MyDictionaryTable] (
-	[Word] NVARCHAR(40) PRIMARY KEY NOT NULL,
+	[Word] NVARCHAR(40) NOT NULL,
 	[WordTranslation] NVARCHAR(MAX) NOT NULL,
 	[IsWritten] BIT NOT NULL DEFAULT(0)
 );
@@ -102,4 +102,12 @@ DELETE FROM [MyDictionaryTable]
 WHERE Word = @Word
 COMMIT TRANSACTION
 END
+GO
+
+--ALTER TABLE [MyDictionaryTable]
+--DROP CONSTRAINT PK__MyDictio__95B50109C48A94D3
+--GO
+
+ALTER TABLE [MyDictionaryTable]
+ADD UNIQUE ([Word])
 GO
