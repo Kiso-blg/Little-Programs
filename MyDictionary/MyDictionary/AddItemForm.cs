@@ -43,7 +43,7 @@ namespace MyDictionary
 
         private bool IsTranslationCorrect()
         {
-            if (this.textBoxAddTranslation.Text != string.Empty)
+            if (this.textBoxAddTranslation.Text != string.Empty && CheckForUnderscores(this.textBoxAddTranslation.Text))
             {
                 try
                 {
@@ -68,7 +68,7 @@ namespace MyDictionary
 
         private bool IsValidItem()
         {
-            if (this.textBoxAddItem.Text != string.Empty)
+            if (this.textBoxAddItem.Text != string.Empty && CheckForUnderscores(this.textBoxAddItem.Text))
             {
                 bool isLatin = CheckIsLatin();
 
@@ -90,9 +90,19 @@ namespace MyDictionary
             }
         }
 
+        private bool CheckForUnderscores(string text)
+        {
+            if (text.Replace("_", string.Empty).Length > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private bool CheckIsLatin()
         {
-            string latinPattern = "[^A-Za-z]";
+            string latinPattern = "[^A-Za-z_]";
             Match match = Regex.Match(this.textBoxAddItem.Text, latinPattern, RegexOptions.Singleline);
 
             if (match.Success)
@@ -109,7 +119,7 @@ namespace MyDictionary
 
         private bool CheckIsCyrillic()
         {
-            string cyrillicPattern = "[^А-Яа-я, ]";
+            string cyrillicPattern = "[^А-Яа-я, _]";
 
             Match match = Regex.Match(this.textBoxAddTranslation.Text, cyrillicPattern, RegexOptions.Singleline);
 

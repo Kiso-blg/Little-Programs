@@ -311,14 +311,17 @@ namespace MyDictionary
 
                 if (addItemForm.CanProceed)
                 {
+                    string item = addItemForm.Item.Replace("_", " ");
+                    string itemTranslation = addItemForm.Translation.Replace("_", " ");
+
                     using (SqlConnection connection = new SqlConnection(this._connectionString))
                     {
                         using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspAddItem", connection))
                         {
                             sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                            sqlCommand.Parameters.AddWithValue("@word", addItemForm.Item);
-                            sqlCommand.Parameters.AddWithValue("@WordTranslation", addItemForm.Translation);
+                            sqlCommand.Parameters.AddWithValue("@word", item);
+                            sqlCommand.Parameters.AddWithValue("@WordTranslation", itemTranslation);
 
                             try
                             {
@@ -504,6 +507,9 @@ namespace MyDictionary
 
                 if (addItemForm.CanProceed)
                 {
+                    addItemForm.Item = addItemForm.Item.Replace("_", " ");
+                    addItemForm.Translation = addItemForm.Translation.Replace("_", " ");
+
                     using (SqlConnection connection = new SqlConnection(this._connectionString))
                     {
                         using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspEditItem", connection))
