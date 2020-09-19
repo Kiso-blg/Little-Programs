@@ -111,3 +111,9 @@ GO
 ALTER TABLE [MyDictionaryTable]
 ADD UNIQUE ([Word])
 GO
+
+ALTER PROCEDURE [MyDictionaryDB].[uspSelectWord]
+AS
+SELECT Word, IsWritten
+FROM [MyDictionaryTable]
+ORDER BY IsWritten DESC
