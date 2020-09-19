@@ -117,3 +117,21 @@ AS
 SELECT Word, IsWritten
 FROM [MyDictionaryTable]
 ORDER BY IsWritten DESC
+
+PRINT N'Creating MyDictionaryDB.uspBackupDatabase...'
+GO
+CREATE PROCEDURE [MyDictionaryDB].[uspBackupDatabase]
+(
+	@DatabaseName VARCHAR(20),
+	@BackupPath VARCHAR(MAX)
+)
+AS
+BEGIN
+DECLARE @FullBackUpName VARCHAR(50) = CONCAT('Full Backup of ', @DatabaseName)
+BACKUP DATABASE @DatabaseName
+TO DISK = @BackupPath
+    WITH FORMAT,
+        MEDIANAME = 'SQLServerBackups',
+        NAME =  @FullBackUpName
+END
+GO

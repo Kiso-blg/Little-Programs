@@ -592,17 +592,23 @@ namespace MyDictionary
             {
                 File.Delete(this._backupPath);
 
-                string backupQuery = $@"BACKUP DATABASE [{DATABASE_NAME}]
-                                        TO DISK = '{this._backupPath}'
-                                            WITH FORMAT,
-                                                MEDIANAME = 'SQLServerBackups',
-                                                NAME = 'Full Backup of {DATABASE_NAME}';";
+                //string backupQuery = $@"BACKUP DATABASE [{DATABASE_NAME}]
+                //                        TO DISK = '{this._backupPath}'
+                //                            WITH FORMAT,
+                //                                MEDIANAME = 'SQLServerBackups',
+                //                                NAME = 'Full Backup of {DATABASE_NAME}';";
 
                 using (SqlConnection sqlConnection = new SqlConnection(this._connectionString))
                 {
-                    using (SqlCommand sqlCommand = new SqlCommand(backupQuery, sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("MyDictionaryDB.uspBackupDatabase", sqlConnection))
                     {
-                        sqlCommand.CommandType = CommandType.Text;                        
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.Add(new SqlParameter("@DatabaseName", SqlDbType.VarChar, 20));
+                        sqlCommand.Parameters["@DatabaseName"].Value = DATABASE_NAME;
+
+                        sqlCommand.Parameters.Add("@BackupPath", SqlDbType.VarChar);
+                        sqlCommand.Parameters["@BackupPath"].Value = this._backupPath;
 
                         try
                         {
