@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\bin\Debug\04-SortThreeNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\bin\Debug\04-SortThreeNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\bin\Debug\04-SortThreeNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\obj\Debug\04-SortThreeNumbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\obj\Debug\04-SortThreeNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\obj\Debug\04-SortThreeNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\04-SortThreeNumbers\obj\Debug\04-SortThreeNumbers.pdb

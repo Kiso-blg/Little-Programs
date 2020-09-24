@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\07-PrintNumbers\bin\Debug\07-PrintNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\07-PrintNumbers\bin\Debug\07-PrintNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\07-PrintNumbers\bin\Debug\07-PrintNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\07-PrintNumbers\obj\Debug\07-PrintNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\07-PrintNumbers\obj\Debug\07-PrintNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\07-PrintNumbers\obj\Debug\07-PrintNumbers.pdb

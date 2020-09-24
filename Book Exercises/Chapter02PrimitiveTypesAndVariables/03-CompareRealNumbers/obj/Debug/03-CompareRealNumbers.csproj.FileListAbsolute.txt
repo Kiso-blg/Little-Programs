@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\bin\Debug\03-CompareRealNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\bin\Debug\03-CompareRealNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\bin\Debug\03-CompareRealNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\obj\Debug\03-CompareRealNumbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\obj\Debug\03-CompareRealNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\obj\Debug\03-CompareRealNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\03-CompareRealNumbers\obj\Debug\03-CompareRealNumbers.pdb

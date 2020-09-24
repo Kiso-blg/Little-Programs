@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\bin\Debug\04-DeckCards.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\bin\Debug\04-DeckCards.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\bin\Debug\04-DeckCards.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\obj\Debug\04-DeckCards.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\obj\Debug\04-DeckCards.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\obj\Debug\04-DeckCards.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\04-DeckCards\obj\Debug\04-DeckCards.pdb

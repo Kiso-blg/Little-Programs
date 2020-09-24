@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\09-EscapingQuotes\bin\Debug\09-EscapingQuotes.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\09-EscapingQuotes\bin\Debug\09-EscapingQuotes.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\09-EscapingQuotes\bin\Debug\09-EscapingQuotes.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\09-EscapingQuotes\obj\Debug\09-EscapingQuotes.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\09-EscapingQuotes\obj\Debug\09-EscapingQuotes.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\09-EscapingQuotes\obj\Debug\09-EscapingQuotes.pdb

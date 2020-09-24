@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\bin\Debug\04-DecimalToHexadecimal.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\bin\Debug\04-DecimalToHexadecimal.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\bin\Debug\04-DecimalToHexadecimal.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\obj\Debug\04-DecimalToHexadecimal.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\obj\Debug\04-DecimalToHexadecimal.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\obj\Debug\04-DecimalToHexadecimal.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\04-DecimalToHexadecimal\obj\Debug\04-DecimalToHexadecimal.pdb

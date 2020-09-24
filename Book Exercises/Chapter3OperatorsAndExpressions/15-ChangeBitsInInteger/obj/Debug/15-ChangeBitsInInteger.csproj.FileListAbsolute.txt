@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\bin\Debug\15-ChangeBitsInInteger.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\bin\Debug\15-ChangeBitsInInteger.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\bin\Debug\15-ChangeBitsInInteger.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\obj\Debug\15-ChangeBitsInInteger.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\obj\Debug\15-ChangeBitsInInteger.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\obj\Debug\15-ChangeBitsInInteger.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\15-ChangeBitsInInteger\obj\Debug\15-ChangeBitsInInteger.pdb

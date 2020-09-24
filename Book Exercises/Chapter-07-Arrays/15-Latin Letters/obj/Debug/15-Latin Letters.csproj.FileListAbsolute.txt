@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\bin\Debug\15-Latin Letters.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\bin\Debug\15-Latin Letters.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\bin\Debug\15-Latin Letters.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\obj\Debug\15-Latin Letters.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\obj\Debug\15-Latin Letters.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\obj\Debug\15-Latin Letters.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\15-Latin Letters\obj\Debug\15-Latin Letters.pdb

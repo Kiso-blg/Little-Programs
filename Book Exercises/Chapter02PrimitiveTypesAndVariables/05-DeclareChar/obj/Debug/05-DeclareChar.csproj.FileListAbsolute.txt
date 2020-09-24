@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\05-DeclareChar\bin\Debug\05-DeclareChar.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\05-DeclareChar\bin\Debug\05-DeclareChar.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\05-DeclareChar\bin\Debug\05-DeclareChar.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\05-DeclareChar\obj\Debug\05-DeclareChar.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\05-DeclareChar\obj\Debug\05-DeclareChar.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\05-DeclareChar\obj\Debug\05-DeclareChar.pdb

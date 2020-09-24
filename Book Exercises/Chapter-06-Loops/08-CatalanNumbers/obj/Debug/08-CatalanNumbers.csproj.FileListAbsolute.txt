@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\obj\Debug\08-CatalanNumbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\obj\Debug\08-CatalanNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\bin\Debug\08-CatalanNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\bin\Debug\08-CatalanNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\bin\Debug\08-CatalanNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\obj\Debug\08-CatalanNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\08-CatalanNumbers\obj\Debug\08-CatalanNumbers.pdb

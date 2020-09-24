@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\03-GetLastDigit\bin\Debug\03-GetLastDigit.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\03-GetLastDigit\bin\Debug\03-GetLastDigit.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\03-GetLastDigit\bin\Debug\03-GetLastDigit.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\03-GetLastDigit\obj\Debug\03-GetLastDigit.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\03-GetLastDigit\obj\Debug\03-GetLastDigit.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\03-GetLastDigit\obj\Debug\03-GetLastDigit.pdb

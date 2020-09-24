@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\12-DifferenceBetweenCSharpAndDotNet\bin\Debug\12-DifferenceBetweenCSharpAndDotNet.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\12-DifferenceBetweenCSharpAndDotNet\bin\Debug\12-DifferenceBetweenCSharpAndDotNet.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\12-DifferenceBetweenCSharpAndDotNet\bin\Debug\12-DifferenceBetweenCSharpAndDotNet.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\12-DifferenceBetweenCSharpAndDotNet\obj\Debug\12-DifferenceBetweenCSharpAndDotNet.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\12-DifferenceBetweenCSharpAndDotNet\obj\Debug\12-DifferenceBetweenCSharpAndDotNet.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\12-DifferenceBetweenCSharpAndDotNet\obj\Debug\12-DifferenceBetweenCSharpAndDotNet.pdb

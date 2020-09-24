@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\12-DecimalToBinary\bin\Debug\12-DecimalToBinary.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\12-DecimalToBinary\bin\Debug\12-DecimalToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\12-DecimalToBinary\bin\Debug\12-DecimalToBinary.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\12-DecimalToBinary\obj\Debug\12-DecimalToBinary.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\12-DecimalToBinary\obj\Debug\12-DecimalToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\12-DecimalToBinary\obj\Debug\12-DecimalToBinary.pdb

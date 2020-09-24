@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\03-SystemConsoleWriteLineClass\bin\Release\03-SystemConsoleWriteLineClass.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\03-SystemConsoleWriteLineClass\bin\Release\03-SystemConsoleWriteLineClass.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\03-SystemConsoleWriteLineClass\bin\Release\03-SystemConsoleWriteLineClass.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\03-SystemConsoleWriteLineClass\obj\Release\03-SystemConsoleWriteLineClass.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\03-SystemConsoleWriteLineClass\obj\Release\03-SystemConsoleWriteLineClass.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\03-SystemConsoleWriteLineClass\obj\Release\03-SystemConsoleWriteLineClass.pdb

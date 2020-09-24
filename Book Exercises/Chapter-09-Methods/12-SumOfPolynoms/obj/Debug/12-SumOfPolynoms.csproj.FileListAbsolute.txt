@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\bin\Debug\12-SumOfPolynoms.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\bin\Debug\12-SumOfPolynoms.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\bin\Debug\12-SumOfPolynoms.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\obj\Debug\12-SumOfPolynoms.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\obj\Debug\12-SumOfPolynoms.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\obj\Debug\12-SumOfPolynoms.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\12-SumOfPolynoms\obj\Debug\12-SumOfPolynoms.pdb

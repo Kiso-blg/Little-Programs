@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\bin\Debug\03-SmallestAndLargestInteger.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\bin\Debug\03-SmallestAndLargestInteger.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\bin\Debug\03-SmallestAndLargestInteger.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\obj\Debug\03-SmallestAndLargestInteger.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\obj\Debug\03-SmallestAndLargestInteger.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\obj\Debug\03-SmallestAndLargestInteger.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\03-SmallestAndLargestInteger\obj\Debug\03-SmallestAndLargestInteger.pdb

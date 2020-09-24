@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\bin\Debug\10-FourDigitNumber.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\bin\Debug\10-FourDigitNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\bin\Debug\10-FourDigitNumber.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\obj\Debug\10-FourDigitNumber.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\obj\Debug\10-FourDigitNumber.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\obj\Debug\10-FourDigitNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\10-FourDigitNumber\obj\Debug\10-FourDigitNumber.pdb

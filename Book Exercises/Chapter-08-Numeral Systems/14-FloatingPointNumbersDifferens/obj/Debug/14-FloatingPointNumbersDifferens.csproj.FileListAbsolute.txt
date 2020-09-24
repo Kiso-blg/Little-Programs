@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\bin\Debug\14-FloatingPointNumbersDifferens.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\bin\Debug\14-FloatingPointNumbersDifferens.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\bin\Debug\14-FloatingPointNumbersDifferens.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\obj\Debug\14-FloatingPointNumbersDifferens.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\obj\Debug\14-FloatingPointNumbersDifferens.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\obj\Debug\14-FloatingPointNumbersDifferens.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\14-FloatingPointNumbersDifferens\obj\Debug\14-FloatingPointNumbersDifferens.pdb

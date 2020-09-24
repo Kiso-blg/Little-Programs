@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\bin\Debug\13-ConvertIntoAnyNumeralSystem.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\bin\Debug\13-ConvertIntoAnyNumeralSystem.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\bin\Debug\13-ConvertIntoAnyNumeralSystem.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\obj\Debug\13-ConvertIntoAnyNumeralSystem.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\obj\Debug\13-ConvertIntoAnyNumeralSystem.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\obj\Debug\13-ConvertIntoAnyNumeralSystem.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\13-ConvertIntoAnyNumeralSystem\obj\Debug\13-ConvertIntoAnyNumeralSystem.pdb

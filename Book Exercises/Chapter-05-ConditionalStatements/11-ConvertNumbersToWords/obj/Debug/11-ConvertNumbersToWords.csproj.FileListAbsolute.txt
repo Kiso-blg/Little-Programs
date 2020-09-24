@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\bin\Debug\11-ConvertNumbersToWords.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\bin\Debug\11-ConvertNumbersToWords.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\bin\Debug\11-ConvertNumbersToWords.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\obj\Debug\11-ConvertNumbersToWords.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\obj\Debug\11-ConvertNumbersToWords.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\obj\Debug\11-ConvertNumbersToWords.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\11-ConvertNumbersToWords\obj\Debug\11-ConvertNumbersToWords.pdb

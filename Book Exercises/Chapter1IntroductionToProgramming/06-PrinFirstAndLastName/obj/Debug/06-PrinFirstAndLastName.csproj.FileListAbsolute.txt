@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\06-PrinFirstAndLastName\bin\Debug\06-PrinFirstAndLastName.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\06-PrinFirstAndLastName\bin\Debug\06-PrinFirstAndLastName.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\06-PrinFirstAndLastName\bin\Debug\06-PrinFirstAndLastName.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\06-PrinFirstAndLastName\obj\Debug\06-PrinFirstAndLastName.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\06-PrinFirstAndLastName\obj\Debug\06-PrinFirstAndLastName.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\06-PrinFirstAndLastName\obj\Debug\06-PrinFirstAndLastName.pdb

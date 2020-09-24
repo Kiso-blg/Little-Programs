@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\bin\Debug\01-NumbersFromOneToN.exe.config
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\bin\Debug\01-NumbersFromOneToN.exe
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\bin\Debug\01-NumbersFromOneToN.pdb
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\obj\Debug\01-NumbersFromOneToN.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\obj\Debug\01-NumbersFromOneToN.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\obj\Debug\01-NumbersFromOneToN.exe
+C:\Users\User\source\repos\Chapter-06-Loops\01-NumbersFromOneToN\obj\Debug\01-NumbersFromOneToN.pdb

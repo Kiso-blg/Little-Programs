@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\bin\Debug\06-FindFirstBiggerElement.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\bin\Debug\06-FindFirstBiggerElement.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\bin\Debug\06-FindFirstBiggerElement.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\obj\Debug\06-FindFirstBiggerElement.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\obj\Debug\06-FindFirstBiggerElement.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\obj\Debug\06-FindFirstBiggerElement.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\06-FindFirstBiggerElement\obj\Debug\06-FindFirstBiggerElement.pdb

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\bin\Debug\08-ConvertHexadecimalToBinary.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\bin\Debug\08-ConvertHexadecimalToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\bin\Debug\08-ConvertHexadecimalToBinary.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\obj\Debug\08-ConvertHexadecimalToBinary.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\obj\Debug\08-ConvertHexadecimalToBinary.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\obj\Debug\08-ConvertHexadecimalToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\08-ConvertHexadecimalToBinary\obj\Debug\08-ConvertHexadecimalToBinary.pdb

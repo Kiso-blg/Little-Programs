@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\bin\Debug\09-InACircleOutOfARectangle.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\bin\Debug\09-InACircleOutOfARectangle.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\bin\Debug\09-InACircleOutOfARectangle.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\obj\Debug\09-InACircleOutOfARectangle.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\obj\Debug\09-InACircleOutOfARectangle.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\obj\Debug\09-InACircleOutOfARectangle.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\09-InACircleOutOfARectangle\obj\Debug\09-InACircleOutOfARectangle.pdb

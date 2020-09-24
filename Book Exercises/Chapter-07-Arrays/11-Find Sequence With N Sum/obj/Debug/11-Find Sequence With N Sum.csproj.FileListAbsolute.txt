@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\bin\Debug\11-Find Sequence With N Sum.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\bin\Debug\11-Find Sequence With N Sum.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\bin\Debug\11-Find Sequence With N Sum.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\obj\Debug\11-Find Sequence With N Sum.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\obj\Debug\11-Find Sequence With N Sum.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\obj\Debug\11-Find Sequence With N Sum.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\11-Find Sequence With N Sum\obj\Debug\11-Find Sequence With N Sum.pdb

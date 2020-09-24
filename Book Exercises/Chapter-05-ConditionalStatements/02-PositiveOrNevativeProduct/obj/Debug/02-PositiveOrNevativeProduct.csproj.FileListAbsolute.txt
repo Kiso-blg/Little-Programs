@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\bin\Debug\02-PositiveOrNevativeProduct.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\bin\Debug\02-PositiveOrNevativeProduct.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\bin\Debug\02-PositiveOrNevativeProduct.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\obj\Debug\02-PositiveOrNevativeProduct.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\obj\Debug\02-PositiveOrNevativeProduct.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\obj\Debug\02-PositiveOrNevativeProduct.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-05-ConditionalStatements\02-PositiveOrNevativeProduct\obj\Debug\02-PositiveOrNevativeProduct.pdb

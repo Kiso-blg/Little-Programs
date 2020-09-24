@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\07-ConvertHexadecimalToDecimal\bin\Debug\07-ConvertHexadecimalToDecimal.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\07-ConvertHexadecimalToDecimal\bin\Debug\07-ConvertHexadecimalToDecimal.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\07-ConvertHexadecimalToDecimal\bin\Debug\07-ConvertHexadecimalToDecimal.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\07-ConvertHexadecimalToDecimal\obj\Debug\07-ConvertHexadecimalToDecimal.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\07-ConvertHexadecimalToDecimal\obj\Debug\07-ConvertHexadecimalToDecimal.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\07-ConvertHexadecimalToDecimal\obj\Debug\07-ConvertHexadecimalToDecimal.pdb

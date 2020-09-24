@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\bin\Debug\06-Factorials.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\bin\Debug\06-Factorials.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\bin\Debug\06-Factorials.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\obj\Debug\06-Factorials.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\obj\Debug\06-Factorials.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\obj\Debug\06-Factorials.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\06-Factorials\obj\Debug\06-Factorials.pdb

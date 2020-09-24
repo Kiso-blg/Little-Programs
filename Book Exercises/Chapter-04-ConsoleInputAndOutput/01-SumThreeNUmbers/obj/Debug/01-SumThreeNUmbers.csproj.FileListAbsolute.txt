@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\bin\Debug\01-SumThreeNUmbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\bin\Debug\01-SumThreeNUmbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\bin\Debug\01-SumThreeNUmbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\obj\Debug\01-SumThreeNUmbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\obj\Debug\01-SumThreeNUmbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\obj\Debug\01-SumThreeNUmbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\01-SumThreeNUmbers\obj\Debug\01-SumThreeNUmbers.pdb

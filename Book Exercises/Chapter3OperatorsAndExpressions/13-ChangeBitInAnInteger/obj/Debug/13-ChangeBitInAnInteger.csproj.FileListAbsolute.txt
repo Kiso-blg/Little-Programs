@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\13-ChangeBitInAnInteger\bin\Debug\13-ChangeBitInAnInteger.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\13-ChangeBitInAnInteger\bin\Debug\13-ChangeBitInAnInteger.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\13-ChangeBitInAnInteger\bin\Debug\13-ChangeBitInAnInteger.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\13-ChangeBitInAnInteger\obj\Debug\13-ChangeBitInAnInteger.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\13-ChangeBitInAnInteger\obj\Debug\13-ChangeBitInAnInteger.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\13-ChangeBitInAnInteger\obj\Debug\13-ChangeBitInAnInteger.pdb

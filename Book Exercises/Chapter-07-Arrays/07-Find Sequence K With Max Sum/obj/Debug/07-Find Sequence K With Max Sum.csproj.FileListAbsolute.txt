@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\07-Find Sequence K With Max Sum\bin\Debug\07-Find Sequence K With Max Sum.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\07-Find Sequence K With Max Sum\bin\Debug\07-Find Sequence K With Max Sum.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\07-Find Sequence K With Max Sum\bin\Debug\07-Find Sequence K With Max Sum.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\07-Find Sequence K With Max Sum\obj\Debug\07-Find Sequence K With Max Sum.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\07-Find Sequence K With Max Sum\obj\Debug\07-Find Sequence K With Max Sum.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\07-Find Sequence K With Max Sum\obj\Debug\07-Find Sequence K With Max Sum.pdb

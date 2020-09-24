@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\bin\Debug\02-PerimeterAndAreaOfACircle.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\bin\Debug\02-PerimeterAndAreaOfACircle.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\bin\Debug\02-PerimeterAndAreaOfACircle.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\obj\Debug\02-PerimeterAndAreaOfACircle.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\obj\Debug\02-PerimeterAndAreaOfACircle.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\obj\Debug\02-PerimeterAndAreaOfACircle.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\02-PerimeterAndAreaOfACircle\obj\Debug\02-PerimeterAndAreaOfACircle.csprojAssemblyReference.cache

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\bin\Debug\04-CountRepeatingNumber.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\bin\Debug\04-CountRepeatingNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\bin\Debug\04-CountRepeatingNumber.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\obj\Debug\04-CountRepeatingNumber.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\obj\Debug\04-CountRepeatingNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\obj\Debug\04-CountRepeatingNumber.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\04-CountRepeatingNumber\obj\Debug\04-CountRepeatingNumber.csprojAssemblyReference.cache

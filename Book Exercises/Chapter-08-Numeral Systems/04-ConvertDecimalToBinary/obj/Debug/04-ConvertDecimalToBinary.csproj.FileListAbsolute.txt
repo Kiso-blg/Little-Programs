@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\bin\Debug\04-ConvertDecimalToBinary.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\bin\Debug\04-ConvertDecimalToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\bin\Debug\04-ConvertDecimalToBinary.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\obj\Debug\04-ConvertDecimalToBinary.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\obj\Debug\04-ConvertDecimalToBinary.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\obj\Debug\04-ConvertDecimalToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\04-ConvertDecimalToBinary\obj\Debug\04-ConvertDecimalToBinary.pdb

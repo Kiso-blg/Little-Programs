@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\16-ShuffleNumbers\bin\Debug\16-ShuffleNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\16-ShuffleNumbers\bin\Debug\16-ShuffleNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\16-ShuffleNumbers\bin\Debug\16-ShuffleNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\16-ShuffleNumbers\obj\Debug\16-ShuffleNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\16-ShuffleNumbers\obj\Debug\16-ShuffleNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\16-ShuffleNumbers\obj\Debug\16-ShuffleNumbers.pdb

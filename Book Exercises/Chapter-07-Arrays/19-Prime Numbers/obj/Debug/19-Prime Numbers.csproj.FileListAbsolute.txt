@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\bin\Debug\19-Prime Numbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\bin\Debug\19-Prime Numbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\bin\Debug\19-Prime Numbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\obj\Debug\19-Prime Numbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\obj\Debug\19-Prime Numbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\obj\Debug\19-Prime Numbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\19-Prime Numbers\obj\Debug\19-Prime Numbers.pdb

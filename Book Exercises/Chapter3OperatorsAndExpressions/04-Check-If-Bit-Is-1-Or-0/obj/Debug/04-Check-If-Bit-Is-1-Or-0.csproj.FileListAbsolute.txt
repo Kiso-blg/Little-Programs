@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\04-Check-If-Bit-Is-1-Or-0\bin\Debug\04-Check-If-Bit-Is-1-Or-0.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\04-Check-If-Bit-Is-1-Or-0\bin\Debug\04-Check-If-Bit-Is-1-Or-0.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\04-Check-If-Bit-Is-1-Or-0\bin\Debug\04-Check-If-Bit-Is-1-Or-0.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\04-Check-If-Bit-Is-1-Or-0\obj\Debug\04-Check-If-Bit-Is-1-Or-0.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\04-Check-If-Bit-Is-1-Or-0\obj\Debug\04-Check-If-Bit-Is-1-Or-0.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\04-Check-If-Bit-Is-1-Or-0\obj\Debug\04-Check-If-Bit-Is-1-Or-0.pdb

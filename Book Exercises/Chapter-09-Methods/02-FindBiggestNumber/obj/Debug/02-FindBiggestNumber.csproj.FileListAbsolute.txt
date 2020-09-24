@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\bin\Debug\02-FindBiggestNumber.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\bin\Debug\02-FindBiggestNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\bin\Debug\02-FindBiggestNumber.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\obj\Debug\02-FindBiggestNumber.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\obj\Debug\02-FindBiggestNumber.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\obj\Debug\02-FindBiggestNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-09-Methods\02-FindBiggestNumber\obj\Debug\02-FindBiggestNumber.pdb

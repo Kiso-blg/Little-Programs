@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\15-ConvertFloatToBinary\bin\Debug\15-ConvertFloatToBinary.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\15-ConvertFloatToBinary\bin\Debug\15-ConvertFloatToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\15-ConvertFloatToBinary\bin\Debug\15-ConvertFloatToBinary.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\15-ConvertFloatToBinary\obj\Debug\15-ConvertFloatToBinary.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\15-ConvertFloatToBinary\obj\Debug\15-ConvertFloatToBinary.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-08-Numeral Systems\15-ConvertFloatToBinary\obj\Debug\15-ConvertFloatToBinary.pdb

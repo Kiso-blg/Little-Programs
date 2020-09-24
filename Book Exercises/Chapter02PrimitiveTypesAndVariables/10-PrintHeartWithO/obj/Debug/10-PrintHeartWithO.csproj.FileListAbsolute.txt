@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\bin\Debug\10-PrintHeartWithO.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\bin\Debug\10-PrintHeartWithO.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\bin\Debug\10-PrintHeartWithO.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\obj\Debug\10-PrintHeartWithO.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\obj\Debug\10-PrintHeartWithO.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\obj\Debug\10-PrintHeartWithO.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter02PrimitiveTypesAndVariables\10-PrintHeartWithO\obj\Debug\10-PrintHeartWithO.csprojAssemblyReference.cache

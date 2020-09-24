@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\bin\Debug\01-OddOrEvenNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\bin\Debug\01-OddOrEvenNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\bin\Debug\01-OddOrEvenNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\obj\Debug\01-OddOrEvenNumbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\obj\Debug\01-OddOrEvenNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\obj\Debug\01-OddOrEvenNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\01-OddOrEvenNumbers\obj\Debug\01-OddOrEvenNumbers.pdb

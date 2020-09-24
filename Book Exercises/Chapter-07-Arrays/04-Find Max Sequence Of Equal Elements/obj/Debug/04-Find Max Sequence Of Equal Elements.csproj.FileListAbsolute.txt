@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\bin\Debug\04-Find Max Sequence Of Equal Elements.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\bin\Debug\04-Find Max Sequence Of Equal Elements.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\bin\Debug\04-Find Max Sequence Of Equal Elements.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\obj\Debug\04-Find Max Sequence Of Equal Elements.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\obj\Debug\04-Find Max Sequence Of Equal Elements.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\obj\Debug\04-Find Max Sequence Of Equal Elements.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\04-Find Max Sequence Of Equal Elements\obj\Debug\04-Find Max Sequence Of Equal Elements.pdb

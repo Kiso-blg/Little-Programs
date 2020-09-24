@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\05-ModifySampleProgram\bin\Debug\05-ModifySampleProgram.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\05-ModifySampleProgram\bin\Debug\05-ModifySampleProgram.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\05-ModifySampleProgram\bin\Debug\05-ModifySampleProgram.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\05-ModifySampleProgram\obj\Debug\05-ModifySampleProgram.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\05-ModifySampleProgram\obj\Debug\05-ModifySampleProgram.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\05-ModifySampleProgram\obj\Debug\05-ModifySampleProgram.pdb

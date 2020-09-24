@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\02-Compare Two Arrays\bin\Debug\02-Compare Two Arrays.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\02-Compare Two Arrays\bin\Debug\02-Compare Two Arrays.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\02-Compare Two Arrays\bin\Debug\02-Compare Two Arrays.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\02-Compare Two Arrays\obj\Debug\02-Compare Two Arrays.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\02-Compare Two Arrays\obj\Debug\02-Compare Two Arrays.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\02-Compare Two Arrays\obj\Debug\02-Compare Two Arrays.pdb

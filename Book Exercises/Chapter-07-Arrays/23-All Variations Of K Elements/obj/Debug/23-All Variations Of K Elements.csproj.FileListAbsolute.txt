@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\bin\Debug\23-All Variations Of K Elements.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\bin\Debug\23-All Variations Of K Elements.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\bin\Debug\23-All Variations Of K Elements.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\obj\Debug\23-All Variations Of K Elements.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\obj\Debug\23-All Variations Of K Elements.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\obj\Debug\23-All Variations Of K Elements.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\23-All Variations Of K Elements\obj\Debug\23-All Variations Of K Elements.pdb

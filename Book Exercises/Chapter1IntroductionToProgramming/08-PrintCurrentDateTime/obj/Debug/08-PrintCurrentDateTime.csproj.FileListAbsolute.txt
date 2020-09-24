@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\bin\Debug\08-PrintCurrentDateTime.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\bin\Debug\08-PrintCurrentDateTime.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\bin\Debug\08-PrintCurrentDateTime.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\obj\Debug\08-PrintCurrentDateTime.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\obj\Debug\08-PrintCurrentDateTime.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\obj\Debug\08-PrintCurrentDateTime.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\08-PrintCurrentDateTime\obj\Debug\08-PrintCurrentDateTime.pdb

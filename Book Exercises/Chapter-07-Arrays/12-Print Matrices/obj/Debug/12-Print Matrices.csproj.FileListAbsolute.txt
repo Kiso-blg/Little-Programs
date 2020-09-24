@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\bin\Debug\12-Print Matrices.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\bin\Debug\12-Print Matrices.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\bin\Debug\12-Print Matrices.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\obj\Debug\12-Print Matrices.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\obj\Debug\12-Print Matrices.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\obj\Debug\12-Print Matrices.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-07-Arrays\12-Print Matrices\obj\Debug\12-Print Matrices.pdb

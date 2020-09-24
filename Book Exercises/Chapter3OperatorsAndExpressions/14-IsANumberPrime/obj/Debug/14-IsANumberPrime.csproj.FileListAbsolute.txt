@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\14-IsANumberPrime\bin\Debug\14-IsANumberPrime.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\14-IsANumberPrime\bin\Debug\14-IsANumberPrime.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\14-IsANumberPrime\bin\Debug\14-IsANumberPrime.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\14-IsANumberPrime\obj\Debug\14-IsANumberPrime.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\14-IsANumberPrime\obj\Debug\14-IsANumberPrime.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter3OperatorsAndExpressions\14-IsANumberPrime\obj\Debug\14-IsANumberPrime.pdb

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\bin\Debug\03-CompanyData.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\bin\Debug\03-CompanyData.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\bin\Debug\03-CompanyData.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\obj\Debug\03-CompanyData.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\obj\Debug\03-CompanyData.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\obj\Debug\03-CompanyData.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-04-ConsoleInputAndOutput\03-CompanyData\obj\Debug\03-CompanyData.pdb

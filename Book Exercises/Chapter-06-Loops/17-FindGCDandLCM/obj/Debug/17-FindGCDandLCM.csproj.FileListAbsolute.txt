@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\bin\Debug\17-FindGCDandLCM.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\bin\Debug\17-FindGCDandLCM.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\bin\Debug\17-FindGCDandLCM.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\obj\Debug\17-FindGCDandLCM.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\obj\Debug\17-FindGCDandLCM.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\obj\Debug\17-FindGCDandLCM.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter-06-Loops\17-FindGCDandLCM\obj\Debug\17-FindGCDandLCM.pdb

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\bin\Debug\13-MostPopularProgrammingLanguages.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\bin\Debug\13-MostPopularProgrammingLanguages.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\bin\Debug\13-MostPopularProgrammingLanguages.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\obj\Debug\13-MostPopularProgrammingLanguages.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\obj\Debug\13-MostPopularProgrammingLanguages.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\obj\Debug\13-MostPopularProgrammingLanguages.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\Book Exercises\Chapter1IntroductionToProgramming\13-MostPopularProgrammingLanguages\obj\Debug\13-MostPopularProgrammingLanguages.pdb
