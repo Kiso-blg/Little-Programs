@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\bin\Debug\11-RandomShuffle.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\bin\Debug\11-RandomShuffle.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\bin\Debug\11-RandomShuffle.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\bin\Debug\11-RandomShuffle.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\bin\Debug\11-RandomShuffle.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\bin\Debug\11-RandomShuffle.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\11-RandomShuffle\obj\Debug\11-RandomShuffle.pdb

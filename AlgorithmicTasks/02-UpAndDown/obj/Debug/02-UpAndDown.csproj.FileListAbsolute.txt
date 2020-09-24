@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\bin\Debug\02-UpAndDown.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\bin\Debug\02-UpAndDown.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\bin\Debug\02-UpAndDown.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\bin\Debug\02-UpAndDown.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\bin\Debug\02-UpAndDown.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\bin\Debug\02-UpAndDown.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\02-UpAndDown\obj\Debug\02-UpAndDown.pdb

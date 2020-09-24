@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\bin\Debug\17-FindingMedianOfSequence.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\bin\Debug\17-FindingMedianOfSequence.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\bin\Debug\17-FindingMedianOfSequence.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\bin\Debug\17-FindingMedianOfSequence.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\bin\Debug\17-FindingMedianOfSequence.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\bin\Debug\17-FindingMedianOfSequence.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\17-FindingMedianOfSequence\obj\Debug\17-FindingMedianOfSequence.pdb

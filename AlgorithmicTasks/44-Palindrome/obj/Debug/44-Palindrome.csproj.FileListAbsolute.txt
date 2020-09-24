@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\bin\Debug\44-Palindrome.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\bin\Debug\44-Palindrome.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\bin\Debug\44-Palindrome.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\obj\Debug\44-Palindrome.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\obj\Debug\44-Palindrome.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\obj\Debug\44-Palindrome.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\44-Palindrome\obj\Debug\44-Palindrome.pdb

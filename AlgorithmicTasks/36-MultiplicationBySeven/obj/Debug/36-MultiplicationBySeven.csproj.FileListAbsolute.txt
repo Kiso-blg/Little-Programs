@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\bin\Debug\36-MultiplicationBySeven.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\bin\Debug\36-MultiplicationBySeven.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\bin\Debug\36-MultiplicationBySeven.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\obj\Debug\36-MultiplicationBySeven.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\obj\Debug\36-MultiplicationBySeven.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\obj\Debug\36-MultiplicationBySeven.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\36-MultiplicationBySeven\obj\Debug\36-MultiplicationBySeven.pdb

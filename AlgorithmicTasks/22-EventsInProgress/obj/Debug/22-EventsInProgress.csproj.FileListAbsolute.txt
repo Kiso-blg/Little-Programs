@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\bin\Debug\22-EventsInProgress.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\bin\Debug\22-EventsInProgress.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\bin\Debug\22-EventsInProgress.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\obj\Debug\22-EventsInProgress.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\obj\Debug\22-EventsInProgress.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\obj\Debug\22-EventsInProgress.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\22-EventsInProgress\obj\Debug\22-EventsInProgress.pdb

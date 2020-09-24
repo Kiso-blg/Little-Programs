@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\47-DigitalRoot\bin\Debug\47-DigitalRoot.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\47-DigitalRoot\bin\Debug\47-DigitalRoot.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\47-DigitalRoot\bin\Debug\47-DigitalRoot.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\47-DigitalRoot\obj\Debug\47-DigitalRoot.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\47-DigitalRoot\obj\Debug\47-DigitalRoot.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\47-DigitalRoot\obj\Debug\47-DigitalRoot.pdb

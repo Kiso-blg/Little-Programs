@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\bin\Debug\37-SwapNumbers.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\bin\Debug\37-SwapNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\bin\Debug\37-SwapNumbers.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\obj\Debug\37-SwapNumbers.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\obj\Debug\37-SwapNumbers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\obj\Debug\37-SwapNumbers.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\37-SwapNumbers\obj\Debug\37-SwapNumbers.pdb

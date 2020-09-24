@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\bin\Debug\41-DepthOfTree.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\bin\Debug\41-DepthOfTree.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\bin\Debug\41-DepthOfTree.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\obj\Debug\41-DepthOfTree.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\obj\Debug\41-DepthOfTree.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\obj\Debug\41-DepthOfTree.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\41-DepthOfTree\obj\Debug\41-DepthOfTree.pdb

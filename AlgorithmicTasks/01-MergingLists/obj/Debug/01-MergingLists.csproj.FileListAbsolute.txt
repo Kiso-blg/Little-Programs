@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\bin\Debug\01-MergingLists.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\bin\Debug\01-MergingLists.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\bin\Debug\01-MergingLists.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\obj\Debug\01-MergingLists.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\obj\Debug\01-MergingLists.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\obj\Debug\01-MergingLists.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\01-MergingLists\obj\Debug\01-MergingLists.pdb

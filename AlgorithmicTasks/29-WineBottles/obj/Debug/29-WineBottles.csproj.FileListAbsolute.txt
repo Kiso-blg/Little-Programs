@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\bin\Debug\29-WineBottles.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\bin\Debug\29-WineBottles.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\bin\Debug\29-WineBottles.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\obj\Debug\29-WineBottles.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\obj\Debug\29-WineBottles.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\obj\Debug\29-WineBottles.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\29-WineBottles\obj\Debug\29-WineBottles.pdb

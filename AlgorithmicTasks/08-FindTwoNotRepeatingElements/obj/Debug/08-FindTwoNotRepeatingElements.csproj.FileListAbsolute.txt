@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\bin\Debug\08-FindTwoNotRepeatingElements.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\bin\Debug\08-FindTwoNotRepeatingElements.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\bin\Debug\08-FindTwoNotRepeatingElements.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\obj\Debug\08-FindTwoNotRepeatingElements.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\bin\Debug\08-FindTwoNotRepeatingElements.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\bin\Debug\08-FindTwoNotRepeatingElements.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\08-FindTwoNotRepeatingElements\bin\Debug\08-FindTwoNotRepeatingElements.pdb

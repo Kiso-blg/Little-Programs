@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\24-TextAndStrings\bin\Debug\24-TextAndStrings.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\24-TextAndStrings\bin\Debug\24-TextAndStrings.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\24-TextAndStrings\bin\Debug\24-TextAndStrings.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\24-TextAndStrings\obj\Debug\24-TextAndStrings.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\24-TextAndStrings\obj\Debug\24-TextAndStrings.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\24-TextAndStrings\obj\Debug\24-TextAndStrings.pdb

@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\bin\Debug\30-JumpingPawns.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\bin\Debug\30-JumpingPawns.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\bin\Debug\30-JumpingPawns.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\obj\Debug\30-JumpingPawns.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\obj\Debug\30-JumpingPawns.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\obj\Debug\30-JumpingPawns.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\30-JumpingPawns\obj\Debug\30-JumpingPawns.pdb

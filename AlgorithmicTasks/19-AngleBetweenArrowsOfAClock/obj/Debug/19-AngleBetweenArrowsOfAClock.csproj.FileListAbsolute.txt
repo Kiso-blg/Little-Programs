@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\bin\Debug\19-AngleBetweenArrowsOfAClock.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\bin\Debug\19-AngleBetweenArrowsOfAClock.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\bin\Debug\19-AngleBetweenArrowsOfAClock.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\bin\Debug\19-AngleBetweenArrowsOfAClock.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\bin\Debug\19-AngleBetweenArrowsOfAClock.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\bin\Debug\19-AngleBetweenArrowsOfAClock.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\19-AngleBetweenArrowsOfAClock\obj\Debug\19-AngleBetweenArrowsOfAClock.pdb

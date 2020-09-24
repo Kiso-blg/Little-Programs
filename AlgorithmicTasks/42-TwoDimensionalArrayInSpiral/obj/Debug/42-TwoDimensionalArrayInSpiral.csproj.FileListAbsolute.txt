@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\bin\Debug\42-TwoDimensionalArrayInSpiral.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\bin\Debug\42-TwoDimensionalArrayInSpiral.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\bin\Debug\42-TwoDimensionalArrayInSpiral.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\obj\Debug\42-TwoDimensionalArrayInSpiral.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\obj\Debug\42-TwoDimensionalArrayInSpiral.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\obj\Debug\42-TwoDimensionalArrayInSpiral.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\42-TwoDimensionalArrayInSpiral\obj\Debug\42-TwoDimensionalArrayInSpiral.pdb

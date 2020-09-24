@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\bin\Debug\15-RemoveRepeatingObjects.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\bin\Debug\15-RemoveRepeatingObjects.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\bin\Debug\15-RemoveRepeatingObjects.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\bin\Debug\15-RemoveRepeatingObjects.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\bin\Debug\15-RemoveRepeatingObjects.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\bin\Debug\15-RemoveRepeatingObjects.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\15-RemoveRepeatingObjects\obj\Debug\15-RemoveRepeatingObjects.pdb

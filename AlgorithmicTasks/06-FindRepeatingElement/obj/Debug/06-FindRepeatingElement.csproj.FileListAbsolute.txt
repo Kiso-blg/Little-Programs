@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\bin\Debug\06-FindRepeatingElement.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\bin\Debug\06-FindRepeatingElement.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\bin\Debug\06-FindRepeatingElement.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\bin\Debug\06-FindRepeatingElement.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\bin\Debug\06-FindRepeatingElement.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\bin\Debug\06-FindRepeatingElement.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\06-FindRepeatingElement\obj\Debug\06-FindRepeatingElement.pdb

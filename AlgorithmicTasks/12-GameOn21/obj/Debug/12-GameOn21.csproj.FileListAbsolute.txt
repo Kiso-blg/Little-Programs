@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\bin\Debug\12-GameOn21.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\bin\Debug\12-GameOn21.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\bin\Debug\12-GameOn21.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\bin\Debug\12-GameOn21.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\bin\Debug\12-GameOn21.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\bin\Debug\12-GameOn21.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\12-GameOn21\obj\Debug\12-GameOn21.pdb

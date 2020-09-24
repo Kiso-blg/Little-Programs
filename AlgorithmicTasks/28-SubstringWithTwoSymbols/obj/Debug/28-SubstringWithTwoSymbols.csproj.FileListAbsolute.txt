@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\bin\Debug\28-SubstringWithTwoSymbols.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\bin\Debug\28-SubstringWithTwoSymbols.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\bin\Debug\28-SubstringWithTwoSymbols.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\obj\Debug\28-SubstringWithTwoSymbols.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\obj\Debug\28-SubstringWithTwoSymbols.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\obj\Debug\28-SubstringWithTwoSymbols.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\28-SubstringWithTwoSymbols\obj\Debug\28-SubstringWithTwoSymbols.csprojAssemblyReference.cache

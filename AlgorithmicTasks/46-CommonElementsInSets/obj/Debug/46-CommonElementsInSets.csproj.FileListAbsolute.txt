@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\bin\Debug\46-CommonElementsInSets.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\bin\Debug\46-CommonElementsInSets.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\bin\Debug\46-CommonElementsInSets.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\obj\Debug\46-CommonElementsInSets.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\obj\Debug\46-CommonElementsInSets.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\obj\Debug\46-CommonElementsInSets.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\46-CommonElementsInSets\obj\Debug\46-CommonElementsInSets.pdb

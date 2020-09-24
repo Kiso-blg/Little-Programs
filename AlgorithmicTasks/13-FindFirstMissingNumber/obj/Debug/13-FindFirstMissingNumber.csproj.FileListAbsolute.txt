@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\bin\Debug\13-FindFirstMissingNumber.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\bin\Debug\13-FindFirstMissingNumber.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\bin\Debug\13-FindFirstMissingNumber.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\bin\Debug\13-FindFirstMissingNumber.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\bin\Debug\13-FindFirstMissingNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\bin\Debug\13-FindFirstMissingNumber.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\13-FindFirstMissingNumber\obj\Debug\13-FindFirstMissingNumber.pdb

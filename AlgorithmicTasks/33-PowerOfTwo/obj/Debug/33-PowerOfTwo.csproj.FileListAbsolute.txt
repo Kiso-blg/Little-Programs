@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\bin\Debug\33-PowerOfTwo.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\bin\Debug\33-PowerOfTwo.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\bin\Debug\33-PowerOfTwo.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\obj\Debug\33-PowerOfTwo.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\obj\Debug\33-PowerOfTwo.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\obj\Debug\33-PowerOfTwo.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\33-PowerOfTwo\obj\Debug\33-PowerOfTwo.pdb

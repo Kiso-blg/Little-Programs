@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\49-RockPaperScissorsLizardSpok\bin\Debug\49-RockPaperScissorsLizardSpok.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\49-RockPaperScissorsLizardSpok\bin\Debug\49-RockPaperScissorsLizardSpok.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\49-RockPaperScissorsLizardSpok\bin\Debug\49-RockPaperScissorsLizardSpok.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\49-RockPaperScissorsLizardSpok\obj\Debug\49-RockPaperScissorsLizardSpok.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\49-RockPaperScissorsLizardSpok\obj\Debug\49-RockPaperScissorsLizardSpok.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\49-RockPaperScissorsLizardSpok\obj\Debug\49-RockPaperScissorsLizardSpok.pdb

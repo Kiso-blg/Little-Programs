@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\bin\Debug\34-LowestBit.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\bin\Debug\34-LowestBit.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\bin\Debug\34-LowestBit.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\obj\Debug\34-LowestBit.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\obj\Debug\34-LowestBit.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\obj\Debug\34-LowestBit.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\34-LowestBit\obj\Debug\34-LowestBit.pdb

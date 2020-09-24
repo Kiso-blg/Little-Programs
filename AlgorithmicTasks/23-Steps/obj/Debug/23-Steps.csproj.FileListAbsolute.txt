@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\bin\Debug\23-Steps.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\bin\Debug\23-Steps.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\bin\Debug\23-Steps.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\obj\Debug\23-Steps.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\obj\Debug\23-Steps.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\obj\Debug\23-Steps.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\23-Steps\obj\Debug\23-Steps.pdb

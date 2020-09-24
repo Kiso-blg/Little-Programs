@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\bin\Debug\43-FastPowering.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\bin\Debug\43-FastPowering.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\bin\Debug\43-FastPowering.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\obj\Debug\43-FastPowering.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\obj\Debug\43-FastPowering.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\obj\Debug\43-FastPowering.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\43-FastPowering\obj\Debug\43-FastPowering.pdb

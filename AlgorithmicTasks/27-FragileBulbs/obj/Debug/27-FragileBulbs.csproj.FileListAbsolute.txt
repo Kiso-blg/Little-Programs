@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\27-FragileBulbs\bin\Debug\27-FragileBulbs.exe.config
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\27-FragileBulbs\bin\Debug\27-FragileBulbs.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\27-FragileBulbs\bin\Debug\27-FragileBulbs.pdb
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\27-FragileBulbs\obj\Debug\27-FragileBulbs.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\27-FragileBulbs\obj\Debug\27-FragileBulbs.exe
+C:\Users\User\Documents\Visual Studio 2019\Projects\AlgorithmicTasks\27-FragileBulbs\obj\Debug\27-FragileBulbs.pdb
