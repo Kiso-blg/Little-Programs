@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\bin\Release\LiberayManagementSystem.exe.config
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\bin\Release\LiberayManagementSystem.exe
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\bin\Release\LiberayManagementSystem.pdb
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.csprojAssemblyReference.cache
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.Dashboard.resources
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.Form_Login.resources
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.Properties.Resources.resources
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.csproj.GenerateResource.cache
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.exe
+C:\Users\User\source\repos\LiberayManagementSystem\LiberayManagementSystem\obj\Release\LiberayManagementSystem.pdb
