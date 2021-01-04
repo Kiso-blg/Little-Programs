@@ -103,7 +103,7 @@ namespace LibraryManagementSystem
             this.labelEnrollmentNo.Location = new System.Drawing.Point(20, 530);
             this.labelEnrollmentNo.Name = "labelEnrollmentNo";
             this.labelEnrollmentNo.Size = new System.Drawing.Size(161, 18);
-            this.labelEnrollmentNo.TabIndex = 4;
+            this.labelEnrollmentNo.TabIndex = 0;
             this.labelEnrollmentNo.Text = "Enter Enrollment No";
             // 
             // dataGridView_ReturnedBooks
@@ -114,7 +114,7 @@ namespace LibraryManagementSystem
             this.dataGridView_ReturnedBooks.Location = new System.Drawing.Point(20, 300);
             this.dataGridView_ReturnedBooks.Name = "dataGridView_ReturnedBooks";
             this.dataGridView_ReturnedBooks.Size = new System.Drawing.Size(990, 210);
-            this.dataGridView_ReturnedBooks.TabIndex = 3;
+            this.dataGridView_ReturnedBooks.TabIndex = 0;
             // 
             // labelReturnedBooks
             // 
@@ -124,7 +124,7 @@ namespace LibraryManagementSystem
             this.labelReturnedBooks.Location = new System.Drawing.Point(436, 270);
             this.labelReturnedBooks.Name = "labelReturnedBooks";
             this.labelReturnedBooks.Size = new System.Drawing.Size(159, 24);
-            this.labelReturnedBooks.TabIndex = 2;
+            this.labelReturnedBooks.TabIndex = 0;
             this.labelReturnedBooks.Text = "Returned Books";
             // 
             // dataGridView_NotReturnedBooks
@@ -135,7 +135,7 @@ namespace LibraryManagementSystem
             this.dataGridView_NotReturnedBooks.Location = new System.Drawing.Point(20, 45);
             this.dataGridView_NotReturnedBooks.Name = "dataGridView_NotReturnedBooks";
             this.dataGridView_NotReturnedBooks.Size = new System.Drawing.Size(990, 210);
-            this.dataGridView_NotReturnedBooks.TabIndex = 1;
+            this.dataGridView_NotReturnedBooks.TabIndex = 0;
             // 
             // labelIssuedBooks
             // 
