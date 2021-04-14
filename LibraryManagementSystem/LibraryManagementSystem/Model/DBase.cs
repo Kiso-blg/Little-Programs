@@ -5,8 +5,7 @@ namespace LibraryManagementSystem
 {
     class DBase
     {
-        public SqlConnection GetConnection { get; } = new SqlConnection(
-            "Data Source=KISO-DESKTOP\\SQLEXPRESS;Initial Catalog=Library_Management_System_DB;Integrated Security=True");
+        public SqlConnection GetConnection { get; } = new SqlConnection(Globals.ConnectionString);
 
         // Open the Connection
         public void OpenConnection()

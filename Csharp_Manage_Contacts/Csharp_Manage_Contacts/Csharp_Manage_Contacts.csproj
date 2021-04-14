@@ -166,7 +166,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnString.cs" />
+    <Compile Include="Model\ConnString.cs" />
     <Compile Include="View\Add_Contact_Form.cs">
       <SubType>Form</SubType>
     </Compile>

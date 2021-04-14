@@ -195,9 +195,9 @@ namespace LibraryManagementSystem
             if (issueBook.ReturnBook(this.bookId, this.studentNumber, returnDate, out string errorMessage))
             {
                 MessageBox.Show(errorMessage,
-                       "Return Book",
-                       MessageBoxButtons.OK,
-                       MessageBoxIcon.Information);
+                    "Return Book",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                 PopulateDataGridView();
                 Button_Cancel_Click(this, null);
             }
