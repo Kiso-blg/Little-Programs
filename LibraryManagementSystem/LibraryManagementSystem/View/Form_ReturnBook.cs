@@ -23,6 +23,7 @@ namespace LibraryManagementSystem
         }
 
         static readonly IssueBook issueBook = new IssueBook();
+        private int IRBookId;
         private int bookId;
         private string studentNumber;
 
@@ -45,12 +46,19 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("No table found!"
+                if (errorMessage != string.Empty)
+                {
+                    MessageBox.Show("No table found!"
                     + Environment.NewLine
                     + errorMessage,
                     "Load Students and Books",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+                }
+                else
+                {
+                    this.dataGridView_AllBooks.DataSource = null;
+                }                
             }
         }
 
@@ -152,6 +160,7 @@ namespace LibraryManagementSystem
             {
                 if (e.RowIndex > -1)
                 {
+                    this.IRBookId = int.Parse(this.dataGridView_AllBooks.Rows[e.RowIndex].Cells["Issue Id"].Value.ToString());
                     this.bookId = int.Parse(this.dataGridView_AllBooks.Rows[e.RowIndex].Cells["Book Id"].Value.ToString());
                     this.studentNumber = this.dataGridView_AllBooks.Rows[e.RowIndex].Cells["Student Number"].Value.ToString();
                     string bookName = this.dataGridView_AllBooks.Rows[e.RowIndex].Cells["Book Name"].Value.ToString();
@@ -192,7 +201,7 @@ namespace LibraryManagementSystem
         {
             DateTime returnDate = this.dateTimePicker_BookReturnDate.Value.Date;
 
-            if (issueBook.ReturnBook(this.bookId, this.studentNumber, returnDate, out string errorMessage))
+            if (issueBook.ReturnBook(this.IRBookId, this.bookId, this.studentNumber, returnDate, out string errorMessage))
             {
                 MessageBox.Show(errorMessage,
                     "Return Book",

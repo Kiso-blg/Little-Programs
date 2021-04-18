@@ -624,7 +624,8 @@ CREATE PROCEDURE [SelectStudentAndNotReturnedBooks]
 )
 AS
 BEGIN
-SELECT BT.BookId AS [Book Id],
+SELECT IRBT.IRBookId AS [Issue Id],
+	   BT.BookId AS [Book Id],
 	   BT.BookName AS [Book Name],
 	   ST.StudentName AS [Student Name],
 	   ST.StudentNumber AS [Student Number],
@@ -667,6 +668,7 @@ GO
 
 CREATE PROCEDURE [ReturnBook]
 (
+	@IRBookId INT,
 	@BookId INT,
 	@StudentNumber VARCHAR(250),
 	@ReturnBookDate DATE,
@@ -677,7 +679,8 @@ BEGIN
 BEGIN TRANSACTION
 UPDATE [IssueReturnBook_Table]
 SET BookReturnDate = @ReturnBookDate
-WHERE BookId = @BookId 
+WHERE IRBookId = @IRBookId
+	AND BookId = @BookId 
 	AND StudentNumber = @StudentNumber 
 	AND  AdministrationId = @AdministrationId
 

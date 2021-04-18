@@ -294,12 +294,13 @@ namespace LibraryManagementSystem
         }                
 
         // Function return Book.
-        internal bool ReturnBook(int bookId, string studentNumber, DateTime returnDate, out string errorMessage)
+        internal bool ReturnBook(int IRBookId, int bookId, string studentNumber, DateTime returnDate, out string errorMessage)
         {
             using (SqlCommand command = new SqlCommand("ReturnBook", db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
+                command.Parameters.Add(new SqlParameter("@IRBookId", SqlDbType.Int)).Value = IRBookId;
                 command.Parameters.Add(new SqlParameter("@BookId", SqlDbType.Int)).Value = bookId;
                 command.Parameters.Add(new SqlParameter("@StudentNumber", SqlDbType.VarChar, 250)).Value = studentNumber;
                 command.Parameters.Add(new SqlParameter("@ReturnBookDate", SqlDbType.Date)).Value = returnDate;
