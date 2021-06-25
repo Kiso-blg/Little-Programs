@@ -1,32 +1,78 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_UpdateSemesters.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Data;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_UpdateSemesters class.
+    /// Contains methods for Form_UpdateSemesters class.
+    /// </summary>
     public partial class Form_UpdateSemesters : Form
     {
-        public Form_UpdateSemesters()
-        {
-            InitializeComponent();
-        }
-
+        /// <summary>
+        /// Contains an instance of Admissions class.
+        /// </summary>
         private readonly Admissions admission = new Admissions();
+
+        /// <summary>
+        /// Checks if combo box isComboBoxCoursesFilled is filled with data.
+        /// Returns True if the combo box is filled and False if it is empty.
+        /// </summary>
         private bool isComboBoxCoursesFilled = false;
+
+        /// <summary>
+        /// Checks if combo box isComboBoxDatesFilled is filled with data.
+        /// Returns True if the combo box is filled and False if it is empty.
+        /// </summary>
         private bool isComboBoxDatesFilled = false;
+
+        /// <summary>
+        /// Checks if combo box isComboBoxSemestersFilled is filled with data.
+        /// Returns True if the combo box is filled and False if it is empty.
+        /// </summary>
         private bool isComboBoxSemestersFilled = false;
 
-        public int CourseId { get; private set; }
-        public int StartYear { get; private set; }
-        public int SemesterId { get; private set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_UpdateSemesters" /> class.
+        /// </summary>
+        public Form_UpdateSemesters()
+        {
+            this.InitializeComponent();
+        }
 
-        // Form Load
+        /// <summary>
+        /// Gets or sets Course Id.
+        /// </summary>
+        public int CourseId { get; set; }
+
+        /// <summary>
+        /// Gets or sets Enlist date.
+        /// </summary>
+        public int StartYear { get; set; }
+
+        /// <summary>
+        /// Gets or sets Semester Id.
+        /// </summary>
+        public int SemesterId { get; set; }
+
+        /// <summary>
+        /// Load Form_UpdateSemesters_Load.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
         private void Form_UpdateSemesters_Load(object sender, EventArgs e)
         {
-            GetCoursesInComboBox();
-        }        
+            this.GetCoursesInComboBox();
+        }
 
-        // Fill ComboBox Courses
+        /// <summary>
+        /// Fills ComboBox Courses.
+        /// </summary>
         private void GetCoursesInComboBox()
         {
             Course course = new Course();
@@ -34,23 +80,25 @@
 
             if (coursesTable.Rows.Count > 0)
             {
-                this.comboBox_Courses.DisplayMember = "CourseName";
-                this.comboBox_Courses.ValueMember = "CourseId";
+                this.comboBoxCourses.DisplayMember = "CourseName";
+                this.comboBoxCourses.ValueMember = "CourseId";
                 this.isComboBoxCoursesFilled = true;
-                this.comboBox_Courses.DataSource = coursesTable;                
+                this.comboBoxCourses.DataSource = coursesTable;                
             }
             else
             {
                 if (errorMsg != string.Empty)
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                         "Fill ComboBox Courses",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("No Courses Found!",
+                    MessageBox.Show(
+                        "No Courses Found!",
                         "Fill ComboBox Courses",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -60,133 +108,162 @@
             }
         }
 
-        // Reload the dates in ComboBox Dates on Courses Selected Index Change
-        private void ComboBox_Courses_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Reload the dates in ComboBox Dates on Courses Selected Index Change.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ComboBoxCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetDatesInComboBox();
-            ClearStudentData();
+            this.GetDatesInComboBox();
+            this.ClearStudentData();
         }
 
-        // Fill ComboBox Dates
+        /// <summary>
+        /// Fills ComboBox Dates.
+        /// </summary>
         private void GetDatesInComboBox()
         {
             if (this.isComboBoxCoursesFilled)
             {
-                int coursesId = int.Parse(this.comboBox_Courses.SelectedValue.ToString());
+                int coursesId = int.Parse(this.comboBoxCourses.SelectedValue.ToString());
                 DataTable yearsTable = admission.GetDates(coursesId, out string errorMsg);
 
                 if (yearsTable.Rows.Count > 0)
                 {
-                    this.comboBox_Dates.DisplayMember = "Year";
+                    this.comboBoxDates.DisplayMember = "Year";
                     this.isComboBoxDatesFilled = true;
-                    this.comboBox_Dates.DataSource = yearsTable;
+                    this.comboBoxDates.DataSource = yearsTable;
                 }
                 else
                 {
                     if (errorMsg != string.Empty)
                     {
-                        MessageBox.Show(errorMsg,
+                        MessageBox.Show(
+                            errorMsg,
                             "Fill ComboBox Courses",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
                     }
 
-                    ClearComboBoxDates();
+                    this.ClearComboBoxDates();
                 }
             }
             else
             {
-                ClearComboBoxDates();
+                this.ClearComboBoxDates();
             }
         }
 
-        // Clear ComboBox Dates
+        /// <summary>
+        /// Clears ComboBox Dates.
+        /// </summary>
         private void ClearComboBoxDates()
         {
             this.isComboBoxDatesFilled = false;
-            this.comboBox_Dates.DataSource = null;
-            this.comboBox_Dates.Text = string.Empty;
+            this.comboBoxDates.DataSource = null;
+            this.comboBoxDates.Text = string.Empty;
         }
 
-        // Reload the semesters in ComboBox Semesters on Dates Select Index Change
-        private void ComboBox_Dates_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Reload the semesters in ComboBox Semesters on Dates Select Index Change.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ComboBoxDates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetSemestersInComboBox();
-            ClearStudentData();
+            this.GetSemestersInComboBox();
+            this.ClearStudentData();
         }
 
-        // Fill ComboBox Semesters
+        /// <summary>
+        /// Fill ComboBox Semesters.
+        /// </summary>
         private void GetSemestersInComboBox()
         {
             if (this.isComboBoxDatesFilled)
             {
-                int coursesId = int.Parse(this.comboBox_Courses.SelectedValue.ToString());
-                int year = int.Parse(this.comboBox_Dates.Text);
+                int coursesId = int.Parse(this.comboBoxCourses.SelectedValue.ToString());
+                int year = int.Parse(this.comboBoxDates.Text);
                 DataTable semestersTable = admission.GetSemesters(coursesId, year, out string errorMsg);
 
                 if (semestersTable.Rows.Count > 0)
                 {
-                    this.comboBox_Semesters.DisplayMember = "SemesterName";
-                    this.comboBox_Semesters.ValueMember = "SemesterId";
+                    this.comboBoxSemesters.DisplayMember = "SemesterName";
+                    this.comboBoxSemesters.ValueMember = "SemesterId";
                     this.isComboBoxSemestersFilled = true;
-                    this.comboBox_Semesters.DataSource = semestersTable;
+                    this.comboBoxSemesters.DataSource = semestersTable;
                 }
                 else
                 {
                     if (errorMsg != string.Empty)
                     {
-                        MessageBox.Show(errorMsg,
+                        MessageBox.Show(
+                            errorMsg,
                             "Fill ComboBox Semesters",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
                     }
 
-                    ClearComboBoxSemesters();
+                    this.ClearComboBoxSemesters();
                 }
             }
             else
             {
-                ClearComboBoxSemesters();
+                this.ClearComboBoxSemesters();
             }
         }
 
-        // Clear ComboBox Semesters
+        /// <summary>
+        /// Clear ComboBox Semesters.
+        /// </summary>
         private void ClearComboBoxSemesters()
         {
             this.isComboBoxSemestersFilled = false;
-            this.comboBox_Semesters.DataSource = null;
-            this.comboBox_Semesters.Text = string.Empty;            
+            this.comboBoxSemesters.DataSource = null;
+            this.comboBoxSemesters.Text = string.Empty;            
         }
 
-        // Clear the selected sudent data on ComboBox Semesters Selected Index Change event
-        private void ComboBox_Semesters_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Clears the selected student data on ComboBox Semesters Selected Index Change event.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ComboBoxSemesters_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClearStudentData();
+            this.ClearStudentData();
         }
 
-        // Update Semester
-        private void Button_UpdateSemester_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Updates Semester.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ButtonUpdateSemester_Click(object sender, EventArgs e)
         {
-            if (this.label_StudentId.Text != string.Empty)
+            if (this.labelStudentId.Text != string.Empty)
             {
-                if (MessageBox.Show("Are you sure? The current student semester will be updated",
+                if (MessageBox.Show(
+                    "Are you sure? The current student semester will be updated",
                     "Update Semester",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    int studentId = int.Parse(this.label_StudentId.Text);
+                    int studentId = int.Parse(this.labelStudentId.Text);
 
                     if (admission.UpdateSemesters(studentId, out string errorMsg))
                     {
-                        MessageBox.Show(errorMsg,
+                        MessageBox.Show(
+                            errorMsg,
                             "Update Semester",
                             MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);                        
-                        GetDatesInComboBox();
+                            MessageBoxIcon.Information);
+                        this.GetDatesInComboBox();
                     }
                     else
                     {
-                        MessageBox.Show(errorMsg,
+                        MessageBox.Show(
+                            errorMsg,
                             "Update Semester",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
@@ -195,18 +272,22 @@
             }
         }
 
-        // Select students with current course, inlist date and semester who had paid their fees.
-        private void Button_SelectStudent_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Select students with current course, enlist date and semester who had paid their fees.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ButtonSelectStudent_Click(object sender, EventArgs e)
         {
             if (isComboBoxSemestersFilled)
             {
-                int courseId = int.Parse(this.comboBox_Courses.SelectedValue.ToString());
-                int year = int.Parse(this.comboBox_Dates.Text);
-                int semesterId = int.Parse(this.comboBox_Semesters.SelectedValue.ToString());
+                int courseId = int.Parse(this.comboBoxCourses.SelectedValue.ToString());
+                int year = int.Parse(this.comboBoxDates.Text);
+                int semesterId = int.Parse(this.comboBoxSemesters.SelectedValue.ToString());
 
-                SetCourseId(courseId);
-                SetStartYear(year);
-                SetSemesterId(semesterId);
+                this.SetCourseId(courseId);
+                this.SetStartYear(year);
+                this.SetSemesterId(semesterId);
 
                 string studentId = string.Empty;
                 string studentName = string.Empty;
@@ -216,42 +297,53 @@
                 {
                     selectStudent.ShowDialog();
 
-                    if (selectStudent.dataGridView_SelectStudents.Rows.Count > 0)
+                    if (selectStudent.SelectedIndex > 0)
                     {
-                        studentId = selectStudent.dataGridView_SelectStudents.CurrentRow.Cells["AdmissionId"].Value.ToString();
-                        studentName = selectStudent.dataGridView_SelectStudents.CurrentRow.Cells["Name"].Value.ToString();
-                        studentSurname = selectStudent.dataGridView_SelectStudents.CurrentRow.Cells["Surname"].Value.ToString();
+                        studentId = selectStudent.DataGridViewSelectStudents.CurrentRow.Cells["AdmissionId"].Value.ToString();
+                        studentName = selectStudent.DataGridViewSelectStudents.CurrentRow.Cells["Name"].Value.ToString();
+                        studentSurname = selectStudent.DataGridViewSelectStudents.CurrentRow.Cells["Surname"].Value.ToString();
                     }                    
                 }
 
-                this.label_StudentId.Text = studentId;
-                this.label_StudentName.Text = studentName + " " + studentSurname;
+                this.labelStudentId.Text = studentId;
+                this.labelStudentName.Text = studentName + " " + studentSurname;
             }            
         }
 
-        // Set Course Id 
+        /// <summary>
+        /// Sets Course Id.
+        /// </summary>
+        /// <param name="courseId">Contains the course id.</param>
         private void SetCourseId(int courseId)
         {
             this.CourseId = courseId;
         }
 
-        // Set Start Date
+        /// <summary>
+        /// Sets Start Date.
+        /// </summary>
+        /// <param name="year">Contains the year of the enlist date.</param>
         private void SetStartYear(int year)
         {
             this.StartYear = year;
         }
 
-        // Set Semester Id
+        /// <summary>
+        /// Sets Semester Id.
+        /// </summary>
+        /// <param name="semesterId">Contains the semester id.</param>
         private void SetSemesterId(int semesterId)
         {
             this.SemesterId = semesterId;
         }
 
-        // Clear the selected student data.
+        /// <summary>
+        /// Clear the selected student data.
+        /// </summary>
         private void ClearStudentData()
         {
-            this.label_StudentId.Text = string.Empty;
-            this.label_StudentName.Text = string.Empty;
+            this.labelStudentId.Text = string.Empty;
+            this.labelStudentName.Text = string.Empty;
         }        
     }
 }

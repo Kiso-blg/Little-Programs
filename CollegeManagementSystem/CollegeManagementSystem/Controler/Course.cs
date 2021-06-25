@@ -1,17 +1,36 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Course.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Data;
     using System.Data.SqlClient;
 
-    class Course
+    /// <summary>
+    /// The main Course class.
+    /// Perform all functions for courses.
+    /// </summary>
+    internal class Course
     {
+        /// <summary>
+        /// Contains SQL Connection.
+        /// </summary>
         private readonly CollegeDB db = new CollegeDB();
 
-        // Insert new course.
+        /// <summary>
+        /// Insert new course.
+        /// </summary>
+        /// <returns>
+        /// Return True if the adding new course is successful.
+        /// </returns>
+        /// <param name="courseName">String containing course name.</param>
+        /// <param name="courseFee">Decimal containing the fee amount.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool AddNewCourse(string courseName, decimal courseFee, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("InsertNewCourse", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("InsertNewCourse", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -21,7 +40,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -39,15 +58,26 @@
                     errorMsg = ex.Message;
                     return false;
                 }
+                finally
+                {
+                    this.db.CloseConnection();
+                }
             }
-        }        
+        }
 
-        // Get the data for the current course by CourseId.
+        /// <summary>
+        /// Get the data for the current course by CourseId.
+        /// </summary>
+        /// <returns>
+        /// Return table with the information for the selected course.
+        /// </returns>
+        /// <param name="courseId">Integer containing course Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetCourseData(int courseId, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("GetCourseData", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("GetCourseData", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -58,7 +88,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -69,7 +99,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -77,10 +107,19 @@
             return table;
         }
 
-        // Update course data by CourseId.
+        /// <summary>
+        /// Update course data by CourseId.
+        /// </summary>
+        /// <returns>
+        /// Return table with the information for the selected course.
+        /// </returns>
+        /// <param name="courseId">Integer containing course Id.</param>
+        /// <param name="courseName">String containing course name.</param>
+        /// <param name="fee">Decimal containing the fee amount.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool UpdateCourse(int courseId, string courseName, decimal fee, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("UpdateCourseData", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("UpdateCourseData", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -91,7 +130,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -111,15 +150,22 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }
 
-        // Delete ourse by CourseId.
+        /// <summary>
+        /// Delete course by CourseId.
+        /// </summary>
+        /// <returns>
+        /// Return True if the process is successful.
+        /// </returns>
+        /// <param name="courseId">Integer containing course Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool DeleteCourse(int courseId, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("DeleteCourseById", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("DeleteCourseById", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -128,7 +174,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -148,17 +194,23 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }
 
-        // Select all courses.
+        /// <summary>
+        /// Select all courses.
+        /// </summary>
+        /// <returns>
+        /// Return table with all courses.
+        /// </returns>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetAllCourses(out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectAllCourses", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectAllCourses", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -168,7 +220,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -179,7 +231,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }

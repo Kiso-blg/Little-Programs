@@ -1,8 +1,125 @@
-﻿
+﻿// <copyright file="Form_AddTeacher.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_AddTeacher
+    /// <summary>
+    /// The partial Form_AddTeacher class.
+    /// Contains all controllers for Form_AddTeacher class.
+    /// </summary>
+    public partial class Form_AddTeacher
     {
+        /// <summary>
+        /// Panel panelBody.
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// PictureBox pictureBoxInfo.
+        /// </summary>
+        private System.Windows.Forms.PictureBox pictureBoxInfo;
+
+        /// <summary>
+        /// Label labelName.
+        /// </summary>
+        private System.Windows.Forms.Label labelName;
+
+        /// <summary>
+        /// Label labelInformation.
+        /// </summary>
+        private System.Windows.Forms.Label labelInformation;
+
+        /// <summary>
+        /// RichTextBox richTextBoxAddress.
+        /// </summary>
+        private System.Windows.Forms.RichTextBox richTextBoxAddress;
+
+        /// <summary>
+        /// ComboBox comboBoxCourse.
+        /// </summary>
+        private System.Windows.Forms.ComboBox comboBoxCourse;
+
+        /// <summary>
+        /// TextBox textBoxEmail.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxEmail;
+
+        /// <summary>
+        /// TextBox textBoxMobileNo.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxMobileNo;
+
+        /// <summary>
+        /// DateTimePicker dateTimePickerDateOfBirth.
+        /// </summary>
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
+
+        /// <summary>
+        /// RadioButton radioButtonFemale.
+        /// </summary>
+        private System.Windows.Forms.RadioButton radioButtonFemale;
+
+        /// <summary>
+        /// RadioButton radioButtonMale.
+        /// </summary>
+        private System.Windows.Forms.RadioButton radioButtonMale;
+
+        /// <summary>
+        /// TextBox textBoxSurname.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxSurname;
+
+        /// <summary>
+        /// TextBox textBoxName.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxName;
+
+        /// <summary>
+        /// Label labelDateOfBirth.
+        /// </summary>
+        private System.Windows.Forms.Label labelDateOfBirth;
+
+        /// <summary>
+        /// Label labelAddress.
+        /// </summary>
+        private System.Windows.Forms.Label labelAddress;
+
+        /// <summary>
+        /// Label labelCourse.
+        /// </summary>
+        private System.Windows.Forms.Label labelCourse;
+
+        /// <summary>
+        /// Label labelEmail.
+        /// </summary>
+        private System.Windows.Forms.Label labelEmail;
+
+        /// <summary>
+        /// Label labelMobileNo.
+        /// </summary>
+        private System.Windows.Forms.Label labelMobileNo;
+
+        /// <summary>
+        /// Label labelGender.
+        /// </summary>
+        private System.Windows.Forms.Label labelGender;
+
+        /// <summary>
+        /// Label labelSurname.
+        /// </summary>
+        private System.Windows.Forms.Label labelSurname;
+
+        /// <summary>
+        /// Button buttonSubmit.
+        /// </summary>
+        private System.Windows.Forms.Button buttonSubmit;
+
+        /// <summary>
+        /// Button buttonResetData.
+        /// </summary>
+        private System.Windows.Forms.Button buttonResetData;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +131,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,17 +148,17 @@ namespace CollegeManagementSystem
         private void InitializeComponent()
         {
             this.panelBody = new System.Windows.Forms.Panel();
-            this.button_ResetData = new System.Windows.Forms.Button();
-            this.button_Submit = new System.Windows.Forms.Button();
-            this.richTextBox_Address = new System.Windows.Forms.RichTextBox();
-            this.comboBox_Course = new System.Windows.Forms.ComboBox();
-            this.textBox_Email = new System.Windows.Forms.TextBox();
-            this.textBox_MobileNo = new System.Windows.Forms.TextBox();
-            this.dateTimePicker_DateOfBirth = new System.Windows.Forms.DateTimePicker();
-            this.radioButton_Female = new System.Windows.Forms.RadioButton();
-            this.radioButton_Male = new System.Windows.Forms.RadioButton();
-            this.textBox_Surname = new System.Windows.Forms.TextBox();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.buttonResetData = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.richTextBoxAddress = new System.Windows.Forms.RichTextBox();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxMobileNo = new System.Windows.Forms.TextBox();
+            this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelDateOfBirth = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelCourse = new System.Windows.Forms.Label();
@@ -58,17 +176,17 @@ namespace CollegeManagementSystem
             // panelBody
             // 
             this.panelBody.BackColor = System.Drawing.Color.White;
-            this.panelBody.Controls.Add(this.button_ResetData);
-            this.panelBody.Controls.Add(this.button_Submit);
-            this.panelBody.Controls.Add(this.richTextBox_Address);
-            this.panelBody.Controls.Add(this.comboBox_Course);
-            this.panelBody.Controls.Add(this.textBox_Email);
-            this.panelBody.Controls.Add(this.textBox_MobileNo);
-            this.panelBody.Controls.Add(this.dateTimePicker_DateOfBirth);
-            this.panelBody.Controls.Add(this.radioButton_Female);
-            this.panelBody.Controls.Add(this.radioButton_Male);
-            this.panelBody.Controls.Add(this.textBox_Surname);
-            this.panelBody.Controls.Add(this.textBox_Name);
+            this.panelBody.Controls.Add(this.buttonResetData);
+            this.panelBody.Controls.Add(this.buttonSubmit);
+            this.panelBody.Controls.Add(this.richTextBoxAddress);
+            this.panelBody.Controls.Add(this.comboBoxCourse);
+            this.panelBody.Controls.Add(this.textBoxEmail);
+            this.panelBody.Controls.Add(this.textBoxMobileNo);
+            this.panelBody.Controls.Add(this.dateTimePickerDateOfBirth);
+            this.panelBody.Controls.Add(this.radioButtonFemale);
+            this.panelBody.Controls.Add(this.radioButtonMale);
+            this.panelBody.Controls.Add(this.textBoxSurname);
+            this.panelBody.Controls.Add(this.textBoxName);
             this.panelBody.Controls.Add(this.labelDateOfBirth);
             this.panelBody.Controls.Add(this.labelAddress);
             this.panelBody.Controls.Add(this.labelCourse);
@@ -85,110 +203,110 @@ namespace CollegeManagementSystem
             this.panelBody.Size = new System.Drawing.Size(800, 440);
             this.panelBody.TabIndex = 0;
             // 
-            // button_ResetData
+            // buttonResetData
             // 
-            this.button_ResetData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_ResetData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_ResetData.Location = new System.Drawing.Point(420, 375);
-            this.button_ResetData.Name = "button_ResetData";
-            this.button_ResetData.Size = new System.Drawing.Size(90, 25);
-            this.button_ResetData.TabIndex = 11;
-            this.button_ResetData.Text = "Reset";
-            this.button_ResetData.UseVisualStyleBackColor = true;
-            this.button_ResetData.Click += new System.EventHandler(this.Button_ResetData_Click);
+            this.buttonResetData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonResetData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonResetData.Location = new System.Drawing.Point(420, 375);
+            this.buttonResetData.Name = "buttonResetData";
+            this.buttonResetData.Size = new System.Drawing.Size(90, 25);
+            this.buttonResetData.TabIndex = 11;
+            this.buttonResetData.Text = "Reset";
+            this.buttonResetData.UseVisualStyleBackColor = true;
+            this.buttonResetData.Click += new System.EventHandler(this.ButtonResetData_Click);
             // 
-            // button_Submit
+            // buttonSubmit
             // 
-            this.button_Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_Submit.Location = new System.Drawing.Point(270, 375);
-            this.button_Submit.Name = "button_Submit";
-            this.button_Submit.Size = new System.Drawing.Size(90, 25);
-            this.button_Submit.TabIndex = 10;
-            this.button_Submit.Text = "Submit";
-            this.button_Submit.UseVisualStyleBackColor = true;
-            this.button_Submit.Click += new System.EventHandler(this.Button_Submit_Click);
+            this.buttonSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSubmit.Location = new System.Drawing.Point(270, 375);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(90, 25);
+            this.buttonSubmit.TabIndex = 10;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.ButtonSubmit_Click);
             // 
-            // richTextBox_Address
+            // richTextBoxAddress
             // 
-            this.richTextBox_Address.Location = new System.Drawing.Point(561, 225);
-            this.richTextBox_Address.Name = "richTextBox_Address";
-            this.richTextBox_Address.Size = new System.Drawing.Size(148, 61);
-            this.richTextBox_Address.TabIndex = 9;
-            this.richTextBox_Address.Text = "";
+            this.richTextBoxAddress.Location = new System.Drawing.Point(561, 225);
+            this.richTextBoxAddress.Name = "richTextBoxAddress";
+            this.richTextBoxAddress.Size = new System.Drawing.Size(148, 61);
+            this.richTextBoxAddress.TabIndex = 9;
+            this.richTextBoxAddress.Text = string.Empty;
             // 
-            // comboBox_Course
+            // comboBoxCourse
             // 
-            this.comboBox_Course.FormattingEnabled = true;
-            this.comboBox_Course.Location = new System.Drawing.Point(561, 175);
-            this.comboBox_Course.Name = "comboBox_Course";
-            this.comboBox_Course.Size = new System.Drawing.Size(149, 21);
-            this.comboBox_Course.TabIndex = 8;
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(561, 175);
+            this.comboBoxCourse.Name = "comboBoxCourse";
+            this.comboBoxCourse.Size = new System.Drawing.Size(149, 21);
+            this.comboBoxCourse.TabIndex = 8;
             // 
-            // textBox_Email
+            // textBoxEmail
             // 
-            this.textBox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Email.Location = new System.Drawing.Point(560, 129);
-            this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(150, 22);
-            this.textBox_Email.TabIndex = 7;
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEmail.Location = new System.Drawing.Point(560, 129);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(150, 22);
+            this.textBoxEmail.TabIndex = 7;
             // 
-            // textBox_MobileNo
+            // textBoxMobileNo
             // 
-            this.textBox_MobileNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_MobileNo.Location = new System.Drawing.Point(220, 309);
-            this.textBox_MobileNo.Name = "textBox_MobileNo";
-            this.textBox_MobileNo.Size = new System.Drawing.Size(150, 22);
-            this.textBox_MobileNo.TabIndex = 6;
+            this.textBoxMobileNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMobileNo.Location = new System.Drawing.Point(220, 309);
+            this.textBoxMobileNo.Name = "textBoxMobileNo";
+            this.textBoxMobileNo.Size = new System.Drawing.Size(150, 22);
+            this.textBoxMobileNo.TabIndex = 6;
             // 
-            // dateTimePicker_DateOfBirth
+            // dateTimePickerDateOfBirth
             // 
-            this.dateTimePicker_DateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_DateOfBirth.Location = new System.Drawing.Point(220, 266);
-            this.dateTimePicker_DateOfBirth.Name = "dateTimePicker_DateOfBirth";
-            this.dateTimePicker_DateOfBirth.Size = new System.Drawing.Size(150, 20);
-            this.dateTimePicker_DateOfBirth.TabIndex = 5;
-            this.dateTimePicker_DateOfBirth.Value = new System.DateTime(2021, 4, 5, 0, 0, 0, 0);
+            this.dateTimePickerDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(220, 266);
+            this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
+            this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(150, 20);
+            this.dateTimePickerDateOfBirth.TabIndex = 5;
+            this.dateTimePickerDateOfBirth.Value = new System.DateTime(2021, 4, 5, 0, 0, 0, 0);
             // 
             // radioButton_Female
             // 
-            this.radioButton_Female.AutoSize = true;
-            this.radioButton_Female.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton_Female.Location = new System.Drawing.Point(292, 221);
-            this.radioButton_Female.Name = "radioButton_Female";
-            this.radioButton_Female.Size = new System.Drawing.Size(78, 20);
-            this.radioButton_Female.TabIndex = 4;
-            this.radioButton_Female.TabStop = true;
-            this.radioButton_Female.Text = "Female";
-            this.radioButton_Female.UseVisualStyleBackColor = true;
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonFemale.Location = new System.Drawing.Point(292, 221);
+            this.radioButtonFemale.Name = "radioButton_Female";
+            this.radioButtonFemale.Size = new System.Drawing.Size(78, 20);
+            this.radioButtonFemale.TabIndex = 4;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "Female";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
             // 
             // radioButton_Male
             // 
-            this.radioButton_Male.AutoSize = true;
-            this.radioButton_Male.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton_Male.Location = new System.Drawing.Point(220, 221);
-            this.radioButton_Male.Name = "radioButton_Male";
-            this.radioButton_Male.Size = new System.Drawing.Size(60, 20);
-            this.radioButton_Male.TabIndex = 3;
-            this.radioButton_Male.TabStop = true;
-            this.radioButton_Male.Text = "Male";
-            this.radioButton_Male.UseVisualStyleBackColor = true;
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonMale.Location = new System.Drawing.Point(220, 221);
+            this.radioButtonMale.Name = "radioButton_Male";
+            this.radioButtonMale.Size = new System.Drawing.Size(60, 20);
+            this.radioButtonMale.TabIndex = 3;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Male";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
             // 
             // textBox_Surname
             // 
-            this.textBox_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Surname.Location = new System.Drawing.Point(220, 174);
-            this.textBox_Surname.Name = "textBox_Surname";
-            this.textBox_Surname.Size = new System.Drawing.Size(150, 22);
-            this.textBox_Surname.TabIndex = 2;
+            this.textBoxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSurname.Location = new System.Drawing.Point(220, 174);
+            this.textBoxSurname.Name = "textBox_Surname";
+            this.textBoxSurname.Size = new System.Drawing.Size(150, 22);
+            this.textBoxSurname.TabIndex = 2;
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Name.Location = new System.Drawing.Point(220, 129);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(150, 22);
-            this.textBox_Name.TabIndex = 1;
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxName.Location = new System.Drawing.Point(220, 129);
+            this.textBoxName.Name = "textBox_Name";
+            this.textBoxName.Size = new System.Drawing.Size(150, 22);
+            this.textBoxName.TabIndex = 1;
             // 
             // labelDateOfBirth
             // 
@@ -308,29 +426,6 @@ namespace CollegeManagementSystem
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panelBody;
-        private System.Windows.Forms.PictureBox pictureBoxInfo;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelInformation;
-        private System.Windows.Forms.RichTextBox richTextBox_Address;
-        private System.Windows.Forms.ComboBox comboBox_Course;
-        private System.Windows.Forms.TextBox textBox_Email;
-        private System.Windows.Forms.TextBox textBox_MobileNo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_DateOfBirth;
-        private System.Windows.Forms.RadioButton radioButton_Female;
-        private System.Windows.Forms.RadioButton radioButton_Male;
-        private System.Windows.Forms.TextBox textBox_Surname;
-        private System.Windows.Forms.TextBox textBox_Name;
-        private System.Windows.Forms.Label labelDateOfBirth;
-        private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.Label labelCourse;
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Label labelMobileNo;
-        private System.Windows.Forms.Label labelGender;
-        private System.Windows.Forms.Label labelSurname;
-        private System.Windows.Forms.Button button_Submit;
-        private System.Windows.Forms.Button button_ResetData;
+        #endregion        
     }
 }

@@ -1,8 +1,95 @@
-﻿
+﻿// <copyright file="Form_Courses.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_Courses
+    /// <summary>
+    /// The partial Form_Courses class.
+    /// Contains all controllers for Form_AddTeacher class.
+    /// </summary>
+    public partial class Form_Courses
     {
+        /// <summary>
+        /// Panel panelBody.
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// PictureBox pictureBoxCourses.
+        /// </summary>
+        private System.Windows.Forms.PictureBox pictureBoxCourses;
+
+        /// <summary>
+        /// Label labelCourseName.
+        /// </summary>
+        private System.Windows.Forms.Label labelCourseName;
+
+        /// <summary>
+        /// SplitContainer splitContainer.
+        /// </summary>
+        private System.Windows.Forms.SplitContainer splitContainer;
+
+        /// <summary>
+        /// Button buttonAddCourse.
+        /// </summary>
+        private System.Windows.Forms.Button buttonAddCourse;
+
+        /// <summary>
+        /// Label labelCourseFee.
+        /// </summary>
+        private System.Windows.Forms.Label labelCourseFee;
+
+        /// <summary>
+        /// TextBox textBoxFee.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxFee;
+
+        /// <summary>
+        /// TextBox textBoxCourseName.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxCourseName;
+
+        /// <summary>
+        /// Label labelName.
+        /// </summary>
+        private System.Windows.Forms.Label labelName;
+
+        /// <summary>
+        /// TextBox textBoxCourseId.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxCourseId;
+
+        /// <summary>
+        /// Button buttonEditCourse.
+        /// </summary>
+        private System.Windows.Forms.Button buttonEditCourse;
+
+        /// <summary>
+        /// Button buttonDeleteCourse.
+        /// </summary>
+        private System.Windows.Forms.Button buttonDeleteCourse;
+
+        /// <summary>
+        /// TextBox textBoxEditFee.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxEditFee;
+
+        /// <summary>
+        /// Label labelEditCourseFee.
+        /// </summary>
+        private System.Windows.Forms.Label labelEditCourseFee;
+
+        /// <summary>
+        /// TextBox textBoxEditCourseName.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxEditCourseName;
+
+        /// <summary>
+        /// Button buttonSelectCourse.
+        /// </summary>
+        private System.Windows.Forms.Button buttonSelectCourse;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +101,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -32,18 +120,18 @@ namespace CollegeManagementSystem
             this.panelBody = new System.Windows.Forms.Panel();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.labelCourseName = new System.Windows.Forms.Label();
-            this.button_AddCourse = new System.Windows.Forms.Button();
+            this.buttonAddCourse = new System.Windows.Forms.Button();
             this.labelCourseFee = new System.Windows.Forms.Label();
-            this.textBox_Fee = new System.Windows.Forms.TextBox();
-            this.textBox_CourseName = new System.Windows.Forms.TextBox();
-            this.button_SelectCours = new System.Windows.Forms.Button();
-            this.textBox_EditCourseName = new System.Windows.Forms.TextBox();
-            this.button_EditCourse = new System.Windows.Forms.Button();
-            this.button_DeleteCourse = new System.Windows.Forms.Button();
-            this.textBox_EditFee = new System.Windows.Forms.TextBox();
+            this.textBoxFee = new System.Windows.Forms.TextBox();
+            this.textBoxCourseName = new System.Windows.Forms.TextBox();
+            this.buttonSelectCourse = new System.Windows.Forms.Button();
+            this.textBoxEditCourseName = new System.Windows.Forms.TextBox();
+            this.buttonEditCourse = new System.Windows.Forms.Button();
+            this.buttonDeleteCourse = new System.Windows.Forms.Button();
+            this.textBoxEditFee = new System.Windows.Forms.TextBox();
             this.labelEditCourseFee = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.textBox_CourseId = new System.Windows.Forms.TextBox();
+            this.textBoxCourseId = new System.Windows.Forms.TextBox();
             this.pictureBoxCourses = new System.Windows.Forms.PictureBox();
             this.panelBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -75,21 +163,21 @@ namespace CollegeManagementSystem
             // splitContainer.Panel1
             // 
             this.splitContainer.Panel1.Controls.Add(this.labelCourseName);
-            this.splitContainer.Panel1.Controls.Add(this.button_AddCourse);
+            this.splitContainer.Panel1.Controls.Add(this.buttonAddCourse);
             this.splitContainer.Panel1.Controls.Add(this.labelCourseFee);
-            this.splitContainer.Panel1.Controls.Add(this.textBox_Fee);
-            this.splitContainer.Panel1.Controls.Add(this.textBox_CourseName);
+            this.splitContainer.Panel1.Controls.Add(this.textBoxFee);
+            this.splitContainer.Panel1.Controls.Add(this.textBoxCourseName);
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.button_SelectCours);
-            this.splitContainer.Panel2.Controls.Add(this.textBox_EditCourseName);
-            this.splitContainer.Panel2.Controls.Add(this.button_EditCourse);
-            this.splitContainer.Panel2.Controls.Add(this.button_DeleteCourse);
-            this.splitContainer.Panel2.Controls.Add(this.textBox_EditFee);
+            this.splitContainer.Panel2.Controls.Add(this.buttonSelectCourse);
+            this.splitContainer.Panel2.Controls.Add(this.textBoxEditCourseName);
+            this.splitContainer.Panel2.Controls.Add(this.buttonEditCourse);
+            this.splitContainer.Panel2.Controls.Add(this.buttonDeleteCourse);
+            this.splitContainer.Panel2.Controls.Add(this.textBoxEditFee);
             this.splitContainer.Panel2.Controls.Add(this.labelEditCourseFee);
             this.splitContainer.Panel2.Controls.Add(this.labelName);
-            this.splitContainer.Panel2.Controls.Add(this.textBox_CourseId);
+            this.splitContainer.Panel2.Controls.Add(this.textBoxCourseId);
             this.splitContainer.Size = new System.Drawing.Size(500, 285);
             this.splitContainer.SplitterDistance = 125;
             this.splitContainer.SplitterWidth = 5;
@@ -107,15 +195,15 @@ namespace CollegeManagementSystem
             // 
             // button_AddCourse
             // 
-            this.button_AddCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_AddCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_AddCourse.Location = new System.Drawing.Point(310, 65);
-            this.button_AddCourse.Name = "button_AddCourse";
-            this.button_AddCourse.Size = new System.Drawing.Size(145, 30);
-            this.button_AddCourse.TabIndex = 3;
-            this.button_AddCourse.Text = "Add New Course";
-            this.button_AddCourse.UseVisualStyleBackColor = true;
-            this.button_AddCourse.Click += new System.EventHandler(this.Button_AddCourse_Click);
+            this.buttonAddCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddCourse.Location = new System.Drawing.Point(310, 65);
+            this.buttonAddCourse.Name = "button_AddCourse";
+            this.buttonAddCourse.Size = new System.Drawing.Size(145, 30);
+            this.buttonAddCourse.TabIndex = 3;
+            this.buttonAddCourse.Text = "Add New Course";
+            this.buttonAddCourse.UseVisualStyleBackColor = true;
+            this.buttonAddCourse.Click += new System.EventHandler(this.ButtonAddCourse_Click);
             // 
             // labelCourseFee
             // 
@@ -129,71 +217,71 @@ namespace CollegeManagementSystem
             // 
             // textBox_Fee
             // 
-            this.textBox_Fee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Fee.Location = new System.Drawing.Point(170, 73);
-            this.textBox_Fee.Name = "textBox_Fee";
-            this.textBox_Fee.Size = new System.Drawing.Size(100, 22);
-            this.textBox_Fee.TabIndex = 2;
+            this.textBoxFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFee.Location = new System.Drawing.Point(170, 73);
+            this.textBoxFee.Name = "textBox_Fee";
+            this.textBoxFee.Size = new System.Drawing.Size(100, 22);
+            this.textBoxFee.TabIndex = 2;
             // 
             // textBox_CourseName
             // 
-            this.textBox_CourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_CourseName.Location = new System.Drawing.Point(170, 28);
-            this.textBox_CourseName.Name = "textBox_CourseName";
-            this.textBox_CourseName.Size = new System.Drawing.Size(285, 22);
-            this.textBox_CourseName.TabIndex = 1;
+            this.textBoxCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCourseName.Location = new System.Drawing.Point(170, 28);
+            this.textBoxCourseName.Name = "textBox_CourseName";
+            this.textBoxCourseName.Size = new System.Drawing.Size(285, 22);
+            this.textBoxCourseName.TabIndex = 1;
             // 
             // button_SelectCours
             // 
-            this.button_SelectCours.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_SelectCours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_SelectCours.Location = new System.Drawing.Point(34, 23);
-            this.button_SelectCours.Name = "button_SelectCours";
-            this.button_SelectCours.Size = new System.Drawing.Size(120, 25);
-            this.button_SelectCours.TabIndex = 9;
-            this.button_SelectCours.Text = "Select Course";
-            this.button_SelectCours.UseVisualStyleBackColor = true;
-            this.button_SelectCours.Click += new System.EventHandler(this.Button_SelectCours_Click);
+            this.buttonSelectCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSelectCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSelectCourse.Location = new System.Drawing.Point(34, 23);
+            this.buttonSelectCourse.Name = "button_SelectCours";
+            this.buttonSelectCourse.Size = new System.Drawing.Size(120, 25);
+            this.buttonSelectCourse.TabIndex = 9;
+            this.buttonSelectCourse.Text = "Select Course";
+            this.buttonSelectCourse.UseVisualStyleBackColor = true;
+            this.buttonSelectCourse.Click += new System.EventHandler(this.ButtonSelectCours_Click);
             // 
             // textBox_EditCourseName
             // 
-            this.textBox_EditCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_EditCourseName.Location = new System.Drawing.Point(190, 63);
-            this.textBox_EditCourseName.Name = "textBox_EditCourseName";
-            this.textBox_EditCourseName.Size = new System.Drawing.Size(265, 22);
-            this.textBox_EditCourseName.TabIndex = 6;
+            this.textBoxEditCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEditCourseName.Location = new System.Drawing.Point(190, 63);
+            this.textBoxEditCourseName.Name = "textBox_EditCourseName";
+            this.textBoxEditCourseName.Size = new System.Drawing.Size(265, 22);
+            this.textBoxEditCourseName.TabIndex = 6;
             // 
             // button_EditCourse
             // 
-            this.button_EditCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_EditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_EditCourse.Location = new System.Drawing.Point(335, 100);
-            this.button_EditCourse.Name = "button_EditCourse";
-            this.button_EditCourse.Size = new System.Drawing.Size(120, 25);
-            this.button_EditCourse.TabIndex = 8;
-            this.button_EditCourse.Text = "Edit Course";
-            this.button_EditCourse.UseVisualStyleBackColor = true;
-            this.button_EditCourse.Click += new System.EventHandler(this.Button_EditCourse_Click);
+            this.buttonEditCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditCourse.Location = new System.Drawing.Point(335, 100);
+            this.buttonEditCourse.Name = "button_EditCourse";
+            this.buttonEditCourse.Size = new System.Drawing.Size(120, 25);
+            this.buttonEditCourse.TabIndex = 8;
+            this.buttonEditCourse.Text = "Edit Course";
+            this.buttonEditCourse.UseVisualStyleBackColor = true;
+            this.buttonEditCourse.Click += new System.EventHandler(this.ButtonEditCourse_Click);
             // 
             // button_DeleteCourse
             // 
-            this.button_DeleteCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_DeleteCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_DeleteCourse.Location = new System.Drawing.Point(325, 20);
-            this.button_DeleteCourse.Name = "button_DeleteCourse";
-            this.button_DeleteCourse.Size = new System.Drawing.Size(130, 25);
-            this.button_DeleteCourse.TabIndex = 5;
-            this.button_DeleteCourse.Text = "Delete Course";
-            this.button_DeleteCourse.UseVisualStyleBackColor = true;
-            this.button_DeleteCourse.Click += new System.EventHandler(this.Button_DeleteCourse_Click);
+            this.buttonDeleteCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDeleteCourse.Location = new System.Drawing.Point(325, 20);
+            this.buttonDeleteCourse.Name = "button_DeleteCourse";
+            this.buttonDeleteCourse.Size = new System.Drawing.Size(130, 25);
+            this.buttonDeleteCourse.TabIndex = 5;
+            this.buttonDeleteCourse.Text = "Delete Course";
+            this.buttonDeleteCourse.UseVisualStyleBackColor = true;
+            this.buttonDeleteCourse.Click += new System.EventHandler(this.ButtonDeleteCourse_Click);
             // 
             // textBox_EditFee
             // 
-            this.textBox_EditFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_EditFee.Location = new System.Drawing.Point(190, 103);
-            this.textBox_EditFee.Name = "textBox_EditFee";
-            this.textBox_EditFee.Size = new System.Drawing.Size(100, 22);
-            this.textBox_EditFee.TabIndex = 7;
+            this.textBoxEditFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEditFee.Location = new System.Drawing.Point(190, 103);
+            this.textBoxEditFee.Name = "textBox_EditFee";
+            this.textBoxEditFee.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEditFee.TabIndex = 7;
             // 
             // labelEditCourseFee
             // 
@@ -217,12 +305,12 @@ namespace CollegeManagementSystem
             // 
             // textBox_CourseId
             // 
-            this.textBox_CourseId.Enabled = false;
-            this.textBox_CourseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_CourseId.Location = new System.Drawing.Point(190, 23);
-            this.textBox_CourseId.Name = "textBox_CourseId";
-            this.textBox_CourseId.Size = new System.Drawing.Size(80, 22);
-            this.textBox_CourseId.TabIndex = 4;
+            this.textBoxCourseId.Enabled = false;
+            this.textBoxCourseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCourseId.Location = new System.Drawing.Point(190, 23);
+            this.textBoxCourseId.Name = "textBox_CourseId";
+            this.textBoxCourseId.Size = new System.Drawing.Size(80, 22);
+            this.textBoxCourseId.TabIndex = 4;
             // 
             // pictureBoxCourses
             // 
@@ -256,22 +344,5 @@ namespace CollegeManagementSystem
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelBody;
-        private System.Windows.Forms.PictureBox pictureBoxCourses;
-        private System.Windows.Forms.Label labelCourseName;
-        private System.Windows.Forms.SplitContainer splitContainer;
-        private System.Windows.Forms.Button button_AddCourse;
-        private System.Windows.Forms.Label labelCourseFee;
-        private System.Windows.Forms.TextBox textBox_Fee;
-        private System.Windows.Forms.TextBox textBox_CourseName;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.TextBox textBox_CourseId;
-        private System.Windows.Forms.Button button_EditCourse;
-        private System.Windows.Forms.Button button_DeleteCourse;
-        private System.Windows.Forms.TextBox textBox_EditFee;
-        private System.Windows.Forms.Label labelEditCourseFee;
-        private System.Windows.Forms.TextBox textBox_EditCourseName;
-        private System.Windows.Forms.Button button_SelectCours;
     }
 }

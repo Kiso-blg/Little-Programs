@@ -1,21 +1,50 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_SelectStudent.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.ComponentModel;
     using System.Data;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_SelectStudent class.
+    /// Contains methods for Form_SelectStudent class.
+    /// </summary>
     public partial class Form_SelectStudent : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_SelectStudent" /> class.
+        /// </summary>
+        /// <param name="updateSemesters">Contains form type Form_UpdateSemesters</param>
         public Form_SelectStudent(Form_UpdateSemesters updateSemesters)
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.UpdateSemesters = updateSemesters;
         }
 
+        /// <summary>
+        /// Gets or sets the selected index.
+        /// </summary>
+        public int SelectedIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets form type Form_UpdateSemesters.
+        /// </summary>
         public Form_UpdateSemesters UpdateSemesters { get; set; }
 
-        // Load Form SelectStudent
+        /// <summary>
+        /// Gets or sets the DataGridViewSelectStudents data.
+        /// </summary>
+        public DataGridView DataGridViewSelectStudents { get; set; }
+
+        /// <summary>
+        /// Load Form_SelectStudent.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
         private void Form_SelectStudent_Load(object sender, EventArgs e)
         {
             int courseId = this.UpdateSemesters.CourseId;
@@ -29,20 +58,22 @@
             {
                 if (errorMsg != string.Empty)
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                         "Select Students",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
                 else
                 {
-                    this.dataGridView_SelectStudents.DataSource = studentsTable;
-                    this.dataGridView_SelectStudents.ClearSelection();
+                    this.dataGridViewSelectStudents.DataSource = studentsTable;
+                    this.dataGridViewSelectStudents.ClearSelection();
                 }
             }
             else
             {
-                MessageBox.Show("No Students Found",
+                MessageBox.Show(
+                    "No Students Found",
                     "Select Student",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -50,22 +81,32 @@
             }            
         }
 
-        // Select student data and close the form.
-        private void DataGridView_SelectStudents_DoubleClick(object sender, EventArgs e)
+        /// <summary>
+        /// Select student data and close the form.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void DataGridViewSelectStudents_DoubleClick(object sender, EventArgs e)
         {
+            this.SelectedIndex = int.Parse(this.dataGridViewSelectStudents.CurrentRow.Cells["AdmissionId"].Value.ToString());
+            this.DataGridViewSelectStudents = this.dataGridViewSelectStudents;
             this.Close();
-        }        
+        }
 
-        // Sort the DataGridView by current column in ascending or descending order.
+        /// <summary>
+        /// Sorts the DataGridView by current column in ascending or descending order.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains DataGridViewCellMouseEventArgs event argument.</param>
         private void DataGridView_SelectStudents_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             // Source: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview.sortedcolumn?view=net-5.0
-            DataGridViewColumn newColumn = this.dataGridView_SelectStudents
+            DataGridViewColumn newColumn = this.dataGridViewSelectStudents
                 .Columns
                 .GetColumnCount(DataGridViewElementStates.Selected) == 1 ?
-                this.dataGridView_SelectStudents.SelectedColumns[0] : null;
+                this.dataGridViewSelectStudents.SelectedColumns[0] : null;
 
-            DataGridViewColumn oldColumn = this.dataGridView_SelectStudents.SortedColumn;
+            DataGridViewColumn oldColumn = this.dataGridViewSelectStudents.SortedColumn;
             ListSortDirection direction;
 
             // If oldColumn is null, then the DataGridView is not currently sorted.
@@ -73,7 +114,7 @@
             {
                 // Sorf the same column again, reversing the SortOrder.
                 if (oldColumn == newColumn &&
-                    this.dataGridView_SelectStudents.SortOrder == SortOrder.Ascending)
+                    this.dataGridViewSelectStudents.SortOrder == SortOrder.Ascending)
                 {
                     direction = ListSortDirection.Descending;
                 }
@@ -91,13 +132,13 @@
             // If new column is selected, sort by new column.
             if (newColumn != null)
             {
-                this.dataGridView_SelectStudents.Sort(newColumn, direction);
+                this.dataGridViewSelectStudents.Sort(newColumn, direction);
                 newColumn.HeaderCell.SortGlyphDirection =
                     direction == ListSortDirection.Ascending ?
                     SortOrder.Ascending : SortOrder.Descending;
             }
 
-            this.dataGridView_SelectStudents.ClearSelection();
+            this.dataGridViewSelectStudents.ClearSelection();
         }
     }
 }

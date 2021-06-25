@@ -1,15 +1,22 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Program.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Windows.Forms;
 
-    static class Program
+    /// <summary>
+    /// The Program class.
+    /// </summary>
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        internal static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -1,8 +1,25 @@
-﻿
+﻿// <copyright file="Form_SelectCourse.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_SelectCourse
+    /// <summary>
+    /// The partial Form_SelectCourse class.
+    /// Contains all controllers for Form_SelectCourse class.
+    /// </summary>
+    public partial class Form_SelectCourse
     {
+        /// <summary>
+        /// Panel panelBody
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// DataGridView dataGridViewCourses
+        /// </summary>
+        private System.Windows.Forms.DataGridView dataGridViewCourses;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +31,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,14 +48,14 @@ namespace CollegeManagementSystem
         private void InitializeComponent()
         {
             this.panelBody = new System.Windows.Forms.Panel();
-            this.dataGridView_Courses = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCourses = new System.Windows.Forms.DataGridView();
             this.panelBody.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Courses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBody
             // 
-            this.panelBody.Controls.Add(this.dataGridView_Courses);
+            this.panelBody.Controls.Add(this.dataGridViewCourses);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(0, 0);
             this.panelBody.Name = "panelBody";
@@ -46,15 +64,15 @@ namespace CollegeManagementSystem
             // 
             // dataGridView_Courses
             // 
-            this.dataGridView_Courses.AllowUserToAddRows = false;
-            this.dataGridView_Courses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Courses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Courses.Location = new System.Drawing.Point(10, 10);
-            this.dataGridView_Courses.Name = "dataGridView_Courses";
-            this.dataGridView_Courses.Size = new System.Drawing.Size(370, 300);
-            this.dataGridView_Courses.TabIndex = 0;
-            this.dataGridView_Courses.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_Courses_ColumnHeaderMouseClick);
-            this.dataGridView_Courses.DoubleClick += new System.EventHandler(this.DataGridView_Courses_DoubleClick);
+            this.dataGridViewCourses.AllowUserToAddRows = false;
+            this.dataGridViewCourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCourses.Location = new System.Drawing.Point(10, 10);
+            this.dataGridViewCourses.Name = "dataGridView_Courses";
+            this.dataGridViewCourses.Size = new System.Drawing.Size(370, 300);
+            this.dataGridViewCourses.TabIndex = 0;
+            this.dataGridViewCourses.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewCourses_ColumnHeaderMouseClick);
+            this.dataGridViewCourses.DoubleClick += new System.EventHandler(this.DataGridViewCourses_DoubleClick);
             // 
             // Form_SelectCourse
             // 
@@ -67,14 +85,11 @@ namespace CollegeManagementSystem
             this.Text = "Select Course";
             this.Load += new System.EventHandler(this.Form_SelectCourse_Load);
             this.panelBody.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Courses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panelBody;
-        internal System.Windows.Forms.DataGridView dataGridView_Courses;
+        #endregion        
     }
 }

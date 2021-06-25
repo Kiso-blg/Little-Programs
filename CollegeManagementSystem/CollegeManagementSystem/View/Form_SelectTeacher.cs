@@ -1,21 +1,39 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_SelectTeacher.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.ComponentModel;
     using System.Data;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_SelectTeacher class.
+    /// Contains methods for Form_SelectTeacher class.
+    /// </summary>
     public partial class Form_SelectTeacher : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_SelectTeacher" /> class.
+        /// </summary>
         public Form_SelectTeacher()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Gets or sets the selected index.
+        /// </summary>
         public int SelectedIndex { get; set; }
 
-        // Form Load
+        /// <summary>
+        /// Load Form_SelectTeacher.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
         private void Form_SelectTeacher_Load(object sender, EventArgs e)
         {
             Teachers teachers = new Teachers();
@@ -23,35 +41,44 @@
 
             if (errorMsg != string.Empty)
             {
-                MessageBox.Show(errorMsg,
+                MessageBox.Show(
+                    errorMsg,
                    "Select All Teachers",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Error);
             }
             else
             {
-                this.dataGridView_Teachers.DataSource = teachersTable;
-                this.dataGridView_Teachers.ClearSelection();
+                this.dataGridViewTeachers.DataSource = teachersTable;
+                this.dataGridViewTeachers.ClearSelection();
             }
         }
 
-        // Select teacher id and close the form.
-        private void DataGridView_Teachers_DoubleClick(object sender, EventArgs e)
+        /// <summary>
+        /// Select teacher id and close the form.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void DataGridViewTeachers_DoubleClick(object sender, EventArgs e)
         {
-            this.SelectedIndex = int.Parse(this.dataGridView_Teachers.CurrentRow.Cells["TeacherId"].Value.ToString());
+            this.SelectedIndex = int.Parse(this.dataGridViewTeachers.CurrentRow.Cells["TeacherId"].Value.ToString());
             this.Close();
         }
 
-        // Sort the DataGridView by current column in ascending or descending order.
-        private void DataGridView_Teachers_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        /// <summary>
+        /// Sorts the DataGridView by current column in ascending or descending order.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains DataGridViewCellMouseEventArgs event argument.</param>
+        private void DataGridViewTeachers_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             // Source: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview.sortedcolumn?view=net-5.0
-            DataGridViewColumn newColumn = this.dataGridView_Teachers
+            DataGridViewColumn newColumn = this.dataGridViewTeachers
                 .Columns
                 .GetColumnCount(DataGridViewElementStates.Selected) == 1 ?
-                this.dataGridView_Teachers.SelectedColumns[0] : null;
+                this.dataGridViewTeachers.SelectedColumns[0] : null;
 
-            DataGridViewColumn oldColumn = this.dataGridView_Teachers.SortedColumn;
+            DataGridViewColumn oldColumn = this.dataGridViewTeachers.SortedColumn;
             ListSortDirection direction;
 
             // If oldColumn is null, then the DataGridView is not currently sorted.
@@ -59,7 +86,7 @@
             {
                 // Sorf the same column again, reversing the SortOrder.
                 if (oldColumn == newColumn &&
-                    this.dataGridView_Teachers.SortOrder == SortOrder.Ascending)
+                    this.dataGridViewTeachers.SortOrder == SortOrder.Ascending)
                 {
                     direction = ListSortDirection.Descending;
                 }
@@ -77,15 +104,15 @@
             // If new column is selected, sort by new column.
             if (newColumn != null)
             {
-                this.dataGridView_Teachers.Sort(newColumn, direction);
+                this.dataGridViewTeachers.Sort(newColumn, direction);
                 newColumn.HeaderCell.SortGlyphDirection =
                     direction == ListSortDirection.Ascending ?
                     SortOrder.Ascending : SortOrder.Descending;
             }
 
-            this.dataGridView_Teachers.ClearSelection();
-            this.dataGridView_Teachers.Rows[0].Selected = false;
-            this.dataGridView_Teachers.Columns[0].Selected = false;
+            this.dataGridViewTeachers.ClearSelection();
+            this.dataGridViewTeachers.Rows[0].Selected = false;
+            this.dataGridViewTeachers.Columns[0].Selected = false;
         }        
     }
 }

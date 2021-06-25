@@ -1,34 +1,55 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_NewAdmission.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Linq;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_NewAdmission class.
+    /// Perform adding new admission.
+    /// </summary>
     public partial class Form_NewAdmission : Form
     {
+        /// <summary>
+        /// Contains an instance of Admissions class.
+        /// </summary>
+        private readonly Admissions admissions = new Admissions();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_NewAdmission" /> class.
+        /// </summary>
         public Form_NewAdmission()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        readonly Admissions admissions = new Admissions();
-
-        // Form Load
+        /// <summary>
+        /// Load form Form_NewAdmission.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
         private void Form_NewAdmission_Load(object sender, EventArgs e)
         {
-            GetRegistrationNumber();
-            GetCoursesInComboBox();
-            this.comboBox_Date.DataSource = Enumerable.Range(DateTime.Now.Year, 10).ToList();
+            this.GetRegistrationNumber();
+            this.GetCoursesInComboBox();
+            this.comboBoxDate.DataSource = Enumerable.Range(DateTime.Now.Year, 10).ToList();
         }
 
-        // Get the next registration number.
+        /// <summary>
+        /// Get the next registration number.
+        /// </summary>
         private void GetRegistrationNumber()
         {
-            int id = admissions.GetLastRecordId(Globals.GlobalCollegeId, out string errorMsg);
+            int id = this.admissions.GetLastRecordId(Globals.GlobalCollegeId, out string errorMsg);
 
             if (errorMsg != string.Empty)
             {
-                MessageBox.Show(errorMsg,
+                MessageBox.Show(
+                    errorMsg,
                     "Registration Id",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -40,69 +61,79 @@
             }
         }
 
-        // Fill the courses in the combobox.
+        /// <summary>
+        /// Fill the courses in the comboBox.
+        /// </summary>
         private void GetCoursesInComboBox()
         {
             Course course = new Course();
-            this.comboBox_Course.DataSource = course.GetAllCourses(out string errorMsg);
+            this.comboBoxCourse.DataSource = course.GetAllCourses(out string errorMsg);
 
-            if (this.comboBox_Course.Items.Count > 0)
+            if (this.comboBoxCourse.Items.Count > 0)
             {               
-                this.comboBox_Course.DisplayMember = "CourseName";
-                this.comboBox_Course.ValueMember = "CourseId";                
+                this.comboBoxCourse.DisplayMember = "CourseName";
+                this.comboBoxCourse.ValueMember = "CourseId";                
             }
             else 
             {
                 if (errorMsg != string.Empty)
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                        "Fill ComboBox Courses",
                        MessageBoxButtons.OK,
                        MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("No Courses Found!",
+                    MessageBox.Show(
+                        "No Courses Found!",
                         "Fill ComboBox Courses",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);                    
                 }
 
-                this.Button_Submit.Enabled = false;
+                this.buttonSubmit.Enabled = false;
             }            
         }
 
-        // Submit new admission.
-        private void Button_Submit_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Submit new admission.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            string name = this.textBox_Name.Text.Trim();
-            string surname = this.textBox_Surname.Text.Trim();
+            string name = this.textBoxName.Text.Trim();
+            string surname = this.textBoxSurname.Text.Trim();
             char gender = GetGender();
             DateTime birthDate = this.dateTimePickerBirthDate.Value.Date;
-            string mobilePhone = this.textBox_MobilePhone.Text.Trim();
-            string email = this.textBox_Email.Text.Trim();
+            string mobilePhone = this.textBoxMobilePhone.Text.Trim();
+            string email = this.textBoxEmail.Text.Trim();
             int semesterId = 1;
-            int courseId = int.Parse(this.comboBox_Course.SelectedValue.ToString());
-            string schoolName = this.textBox_SchoolName.Text.Trim();
-            DateTime inlistDate = new DateTime(int.Parse(this.comboBox_Date.SelectedItem.ToString()), DateTime.Now.Month, DateTime.Now.Day);
-            string address = this.richTextBox_Address.Text.Trim();
+            int courseId = int.Parse(this.comboBoxCourse.SelectedValue.ToString());
+            string schoolName = this.textBoxSchoolName.Text.Trim();
+            DateTime inlistDate = new DateTime(int.Parse(this.comboBoxDate.SelectedItem.ToString()), DateTime.Now.Month, DateTime.Now.Day);
+            string address = this.richTextBoxAddress.Text.Trim();
 
-            if (admissions.IsDataValid(name, surname, gender, mobilePhone, email, schoolName, address, out string errorMsg))
+            if (this.admissions.IsDataValid(name, surname, gender, mobilePhone, email, schoolName, address, out string errorMsg))
             {
                 if (semesterId > 0 && courseId > 0)
                 {
-                    if (admissions.AddNewAdmission(name, surname, gender, birthDate, mobilePhone, email, semesterId, courseId, schoolName, inlistDate, address, out errorMsg))
+                    if (this.admissions.AddNewAdmission(name, surname, gender, birthDate, mobilePhone, email, semesterId, courseId, schoolName, inlistDate, address, out errorMsg))
                     {
-                        MessageBox.Show(errorMsg,
+                        MessageBox.Show(
+                            errorMsg,
                             "New Admission",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        ClearTheEnteredData();
-                        GetRegistrationNumber();
+                        this.ClearTheEnteredData();
+                        this.GetRegistrationNumber();
                     }
                     else
                     {
-                        MessageBox.Show(errorMsg,
+                        MessageBox.Show(
+                            errorMsg,
                             "New Admission",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
@@ -110,15 +141,17 @@
                 }
                 else
                 {
-                    MessageBox.Show("Please fill the Comboboxes!",
-                            "New Admission",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
+                    MessageBox.Show(
+                        "Please fill the Comboboxes!",
+                        "New Admission",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Invalid input! The next Fields are Incorrect:"
+                MessageBox.Show(
+                    "Invalid input! The next Fields are Incorrect:"
                     + Environment.NewLine
                     + errorMsg,
                     "New Admission",
@@ -127,7 +160,12 @@
             }
         }
 
-        // Return Gender type.
+        /// <summary>
+        /// Return Gender type.
+        /// </summary>
+        /// <returns>
+        /// Returns M for male, F for female and O if something went wrong.
+        /// </returns>
         private char GetGender()
         {
             if (this.radioButtonMale.Checked == true)
@@ -144,25 +182,31 @@
             }
         }
 
-        // Button Reset
-        private void Button_Reset_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Reset the controllers data.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonReset_Click(object sender, EventArgs e)
         {
-            ClearTheEnteredData();
+            this.ClearTheEnteredData();
         }
 
-        // Clear the entered data.
+        /// <summary>
+        /// Clear the entered data.
+        /// </summary>
         private void ClearTheEnteredData()
         {
-            this.textBox_Name.Clear();
-            this.textBox_Surname.Clear();
+            this.textBoxName.Clear();
+            this.textBoxSurname.Clear();
             this.radioButtonFemale.Checked = false;
             this.radioButtonMale.Checked = false;
             this.dateTimePickerBirthDate.Value = DateTime.Now.Date;
-            this.textBox_MobilePhone.Clear();
-            this.textBox_Email.Clear();
-            GetCoursesInComboBox();
-            this.textBox_SchoolName.Clear();
-            this.richTextBox_Address.Clear();
+            this.textBoxMobilePhone.Clear();
+            this.textBoxEmail.Clear();
+            this.GetCoursesInComboBox();
+            this.textBoxSchoolName.Clear();
+            this.richTextBoxAddress.Clear();
         }
     }
 }

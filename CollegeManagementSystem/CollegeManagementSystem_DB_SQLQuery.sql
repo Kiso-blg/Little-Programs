@@ -102,7 +102,7 @@ FROM Semesters AS SE
 INNER JOIN AdmissionsTable AS AT
 ON SE.SemesterId = AT.SemesterId
 WHERE AT.CourseId = @CourseId
-AND YEAR(AT.InlistDate) = @Year
+AND YEAR(AT.EnlistDate) = @Year
 AND AT.CollegeId = @CollegeId
 GROUP BY SE.SemesterId, SE.SemesterName
 END
@@ -155,7 +155,7 @@ CREATE TABLE [AdmissionsTable]
 	SemesterId INT NOT NULL,
 	CourseId INT NOT NULL,
 	SchoolName VARCHAR(250) NOT NULL,
-	InlistDate DATE NOT NULL,
+	EnlistDate DATE NOT NULL,
 	CollegeId INT NOT NULL,
 	Address VARCHAR(300) NOT NULL,
 	CONSTRAINT CH_Gender
@@ -191,7 +191,7 @@ CREATE PROCEDURE [AddNewAdmission]
 	@SemesterId INT,
 	@CourseId INT,
 	@SchoolName VARCHAR(250),
-	@InlistDate DATE,	
+	@EnlistDate DATE,	
 	@Address VARCHAR(300),
 	@CollegeId INT
 )
@@ -199,9 +199,9 @@ AS
 BEGIN
 BEGIN TRANSACTION
 INSERT INTO [AdmissionsTable] (Name, Surname, Gender, BirthDate, MobilePhone, Email,
-								SemesterId, CourseId, SchoolName, InlistDate, Address, CollegeId)
+								SemesterId, CourseId, SchoolName, EnlistDate, Address, CollegeId)
 VALUES (@Name, @Surname, @Gender, @BirthDate, @MobilePhone, @Email, @SemesterId,
-		@CourseId, @SchoolName, @InlistDate, @Address, @CollegeId)
+		@CourseId, @SchoolName, @EnlistDate, @Address, @CollegeId)
 
 IF (@@ROWCOUNT <> 1)
 	BEGIN
@@ -229,7 +229,7 @@ RETURN @Id
 END
 GO
 
-CREATE PROCEDURE [GetInlistDates]
+CREATE PROCEDURE [GetEnlistDates]
 (
 	@CourseId INT,
 	@CollegeId INT,
@@ -237,12 +237,12 @@ CREATE PROCEDURE [GetInlistDates]
 )
 AS
 BEGIN
-SELECT YEAR([InlistDate]) AS [Year]
+SELECT YEAR([EnlistDate]) AS [Year]
 FROM [AdmissionsTable]
 WHERE CourseId = @CourseId
 AND CollegeId = @CollegeId
 AND SemesterId < @SemesterId
-GROUP BY YEAR([InlistDate])
+GROUP BY YEAR([EnlistDate])
 END
 GO
 
@@ -279,7 +279,7 @@ CREATE PROCEDURE [GetAdmissionData]
 )
 AS
 BEGIN
-SELECT AT.AdmissionId, AT.Name, AT.Surname, YEAR(AT.InlistDate) AS [Year], SE.SemesterName, SE.SemesterId, CT.CourseName, CT.CourseFee
+SELECT AT.AdmissionId, AT.Name, AT.Surname, YEAR(AT.EnlistDate) AS [Year], SE.SemesterName, SE.SemesterId, CT.CourseName, CT.CourseFee
 FROM [AdmissionsTable] AS AT
 INNER JOIN [Semesters] AS SE
 ON AT.SemesterId = SE.SemesterId
@@ -461,7 +461,7 @@ CREATE PROCEDURE [SelectStudents]
 )
 AS
 BEGIN
-SELECT AT.AdmissionId, AT.Name, AT.Surname, AT.Gender, AT.Email, AT.InlistDate, CT.CourseName, SE.SemesterName, FT.FeeAmount
+SELECT AT.AdmissionId, AT.Name, AT.Surname, AT.Gender, AT.Email, AT.EnlistDate, CT.CourseName, SE.SemesterName, FT.FeeAmount
 FROM [AdmissionsTable] AS AT
 INNER JOIN [Semesters] AS SE
 ON AT.SemesterId = SE.SemesterId
@@ -470,7 +470,7 @@ ON AT.CourseId = CT.CourseId
 INNER JOIN [FeesTable] AS FT
 ON AT.AdmissionId = FT.AdmissionId
 WHERE AT.CourseId = @CourseId
-AND YEAR(AT.InlistDate) = @Year
+AND YEAR(AT.EnlistDate) = @Year
 AND AT.SemesterId = @SemesterId
 AND FT.SemesterId = @SemesterId
 END
@@ -488,7 +488,7 @@ SELECT AT.AdmissionId AS [Student Id],
 	   AT.Gender,
 	   AT.MobilePhone AS [Mobile Phone],
 	   AT.Email,
-	   AT.InlistDate AS [Start year],
+	   AT.EnlistDate AS [Start year],
 	   CT.CourseName AS [Course Name],
 	   SE.SemesterName AS [Semester]
 FROM [AdmissionsTable] AS AT
@@ -513,7 +513,7 @@ SELECT AT.AdmissionId AS [Student Id],
 	   AT.Gender,
 	   AT.MobilePhone AS [Mobile Phone],
 	   AT.Email,
-	   AT.InlistDate AS [Start year],
+	   AT.EnlistDate AS [Start year],
 	   CT.CourseName AS [Course Name],
 	   SE.SemesterName AS [Semester]
 FROM [AdmissionsTable] AS AT

@@ -1,8 +1,25 @@
-﻿
+﻿// <copyright file="Form_SelectAdmission.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_SelectAdmission
-    {
+    /// <summary>
+    /// The partial Form_SelectAdmission class.
+    /// Contains all controllers for Form_SelectAdmission class.
+    /// </summary>
+    public partial class Form_SelectAdmission
+    {        
+        /// <summary>
+        /// DataGridView DataGridViewAdmissions
+        /// </summary>
+        private System.Windows.Forms.DataGridView dataGridViewAdmissions;
+
+        /// <summary>
+        /// Panel panelBody
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +31,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -29,52 +47,49 @@ namespace CollegeManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_Body = new System.Windows.Forms.Panel();
-            this.dataGridView_Admissions = new System.Windows.Forms.DataGridView();
-            this.panel_Body.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Admissions)).BeginInit();
+            this.panelBody = new System.Windows.Forms.Panel();
+            this.dataGridViewAdmissions = new System.Windows.Forms.DataGridView();
+            this.panelBody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmissions)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Body
             // 
-            this.panel_Body.BackColor = System.Drawing.Color.White;
-            this.panel_Body.Controls.Add(this.dataGridView_Admissions);
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(0, 0);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(900, 420);
-            this.panel_Body.TabIndex = 0;
+            this.panelBody.BackColor = System.Drawing.Color.White;
+            this.panelBody.Controls.Add(this.dataGridViewAdmissions);
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Location = new System.Drawing.Point(0, 0);
+            this.panelBody.Name = "panel_Body";
+            this.panelBody.Size = new System.Drawing.Size(900, 420);
+            this.panelBody.TabIndex = 0;
             // 
             // dataGridView_Admissions
             // 
-            this.dataGridView_Admissions.AllowUserToAddRows = false;
-            this.dataGridView_Admissions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Admissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Admissions.Location = new System.Drawing.Point(10, 10);
-            this.dataGridView_Admissions.Name = "dataGridView_Admissions";
-            this.dataGridView_Admissions.Size = new System.Drawing.Size(880, 400);
-            this.dataGridView_Admissions.TabIndex = 0;
-            this.dataGridView_Admissions.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_Admissions_ColumnHeaderMouseClick);
-            this.dataGridView_Admissions.DoubleClick += new System.EventHandler(this.DataGridView_Admissions_DoubleClick);
+            this.dataGridViewAdmissions.AllowUserToAddRows = false;
+            this.dataGridViewAdmissions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAdmissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdmissions.Location = new System.Drawing.Point(10, 10);
+            this.dataGridViewAdmissions.Name = "dataGridView_Admissions";
+            this.dataGridViewAdmissions.Size = new System.Drawing.Size(880, 400);
+            this.dataGridViewAdmissions.TabIndex = 0;
+            this.dataGridViewAdmissions.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewAdmissions_ColumnHeaderMouseClick);
+            this.dataGridViewAdmissions.DoubleClick += new System.EventHandler(this.DataGridViewAdmissions_DoubleClick);
             // 
             // Form_SelectAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 420);
-            this.Controls.Add(this.panel_Body);
+            this.Controls.Add(this.panelBody);
             this.Name = "Form_SelectAdmission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Admission";
-            this.Load += new System.EventHandler(this.Form_SelectAdmission_Load);
-            this.panel_Body.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Admissions)).EndInit();
+            this.Load += new System.EventHandler(this.FormSelectAdmission_Load);
+            this.panelBody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmissions)).EndInit();
             this.ResumeLayout(false);
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panel_Body;
-        internal System.Windows.Forms.DataGridView dataGridView_Admissions;
+        #endregion       
     }
 }

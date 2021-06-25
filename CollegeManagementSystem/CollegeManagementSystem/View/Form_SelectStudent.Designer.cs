@@ -1,8 +1,25 @@
-﻿
+﻿// <copyright file="Form_SelectStudent.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_SelectStudent
+    /// <summary>
+    /// The partial Form_SelectStudent class.
+    /// Contains all controllers for Form_SelectStudent class.
+    /// </summary>
+    public partial class Form_SelectStudent
     {
+        /// <summary>
+        /// Panel panelBody.
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// DataGridView dataGridViewSelectStudents.
+        /// </summary>
+        private System.Windows.Forms.DataGridView dataGridViewSelectStudents;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +31,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -29,54 +47,51 @@ namespace CollegeManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView_SelectStudents = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SelectStudents)).BeginInit();
+            this.panelBody = new System.Windows.Forms.Panel();
+            this.dataGridViewSelectStudents = new System.Windows.Forms.DataGridView();
+            this.panelBody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelectStudents)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelBody
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView_SelectStudents);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 430);
-            this.panel1.TabIndex = 0;
+            this.panelBody.BackColor = System.Drawing.Color.White;
+            this.panelBody.Controls.Add(this.dataGridViewSelectStudents);
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Location = new System.Drawing.Point(0, 0);
+            this.panelBody.Name = "panelBody";
+            this.panelBody.Size = new System.Drawing.Size(970, 430);
+            this.panelBody.TabIndex = 0;
             // 
-            // dataGridView_SelectStudents
+            // dataGridViewSelectStudents
             // 
-            this.dataGridView_SelectStudents.AllowUserToAddRows = false;
-            this.dataGridView_SelectStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_SelectStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_SelectStudents.Location = new System.Drawing.Point(10, 10);
-            this.dataGridView_SelectStudents.Name = "dataGridView_SelectStudents";
-            this.dataGridView_SelectStudents.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView_SelectStudents.Size = new System.Drawing.Size(950, 410);
-            this.dataGridView_SelectStudents.TabIndex = 0;
-            this.dataGridView_SelectStudents.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_SelectStudents_ColumnHeaderMouseClick);
-            this.dataGridView_SelectStudents.DoubleClick += new System.EventHandler(this.DataGridView_SelectStudents_DoubleClick);
+            this.dataGridViewSelectStudents.AllowUserToAddRows = false;
+            this.dataGridViewSelectStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSelectStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSelectStudents.Location = new System.Drawing.Point(10, 10);
+            this.dataGridViewSelectStudents.Name = "dataGridViewSelectStudents";
+            this.dataGridViewSelectStudents.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewSelectStudents.Size = new System.Drawing.Size(950, 410);
+            this.dataGridViewSelectStudents.TabIndex = 0;
+            this.dataGridViewSelectStudents.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_SelectStudents_ColumnHeaderMouseClick);
+            this.dataGridViewSelectStudents.DoubleClick += new System.EventHandler(this.DataGridViewSelectStudents_DoubleClick);
             // 
             // Form_SelectStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 430);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelBody);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_SelectStudent";
             this.Text = "Select Student";
             this.Load += new System.EventHandler(this.Form_SelectStudent_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SelectStudents)).EndInit();
+            this.panelBody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelectStudents)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        internal System.Windows.Forms.DataGridView dataGridView_SelectStudents;
+        #endregion        
     }
 }

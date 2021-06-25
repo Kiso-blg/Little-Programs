@@ -1,14 +1,27 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="CollegeDB.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System.Data;
     using System.Data.SqlClient;
 
-    class CollegeDB
+    /// <summary>
+    /// The main CollegeDB class.
+    /// Perform all processes with the SQL connection.
+    /// </summary>
+    internal class CollegeDB
     {
-        // Return the Connection
+        /// <summary>
+        /// Gets SQL connection.
+        /// </summary>
+        /// <value>SQL connection.</value>
         public SqlConnection GetConnection { get; } = new SqlConnection(Globals.ConnectionString);
 
-        // Open the Connection
+        /// <summary>
+        /// Open the Connection
+        /// </summary>
         public void OpenConnection()
         {
             if (this.GetConnection.State == ConnectionState.Closed)
@@ -17,7 +30,9 @@
             }
         }
 
-        // Close the Connection
+        /// <summary>
+        /// Close the Connection
+        /// </summary>
         public void CloseConnection()
         {
             if (this.GetConnection.State == ConnectionState.Open)

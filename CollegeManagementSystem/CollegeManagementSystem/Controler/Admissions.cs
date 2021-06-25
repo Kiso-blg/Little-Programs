@@ -1,24 +1,62 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Admissions.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Data;
     using System.Data.SqlClient;
     using System.Text.RegularExpressions;
 
+    /// <summary>
+    /// The main Admissions class.
+    /// Perform all functions for admissions and students.
+    /// </summary>
     internal class Admissions
     {
+        /// <summary>
+        /// Contains Regex Pattern for Name.
+        /// </summary>
         private const string NamePattern = "^[a-zA-Z]{2,100}$";
+
+        /// <summary>
+        /// Contains Regex Pattern for Phone Number.
+        /// </summary>
         private const string PhonePattern = @"^08([7-9]{1}[2-9]{1}[0-9]{6})$";
+
+        /// <summary>
+        /// Contains Regex Pattern for E-mail Address.
+        /// </summary>
         private const string EmailPattern = @"^[a-zA-Z0-9]{1}[a-zA-Z0-9\._-]{1,}\@[a-zA-Z\-]{2,}(\.[a-z]{2,})$";
-        private const string SchoolPattern = "^[a-zA-Z0-9.'\", ]{5,250}$";        
 
-        private const string AddressPattern = "^[a-zA-Z0-9.'\", ]{5,300}$";        
+        /// <summary>
+        /// Contains Regex Pattern for School Name.
+        /// </summary>
+        private const string SchoolPattern = "^[a-zA-Z0-9.'\", ]{5,250}$";
 
+        /// <summary>
+        /// Contains Regex Pattern for Address.
+        /// </summary>
+        private const string AddressPattern = "^[a-zA-Z0-9.'\", ]{5,300}$";
+
+        /// <summary>
+        /// Contains Regex Pattern for ID.
+        /// </summary>
         private const string IdPatterm = "^[0-9]{1,20}$";
 
-        private readonly CollegeDB db = new CollegeDB();        
+        /// <summary>
+        /// Contains SQL Connection.
+        /// </summary>
+        private readonly CollegeDB db = new CollegeDB();
 
-        // Check if the entered registration number is valid.
+        /// <summary>
+        /// Check if the entered registration number is valid.
+        /// </summary>
+        /// <returns>
+        /// Return True if the registration number is valid
+        /// </returns>
+        /// <param name="admissionNumber">String containing admission number.</param>
         internal bool IsDataValid(string admissionNumber)
         {
             bool result = true;
@@ -30,8 +68,21 @@
 
             return result;
         }
-        
-        // Check if the entered data is valid.
+
+        /// <summary>
+        /// Check if the entered data is valid.
+        /// </summary>
+        /// <returns>
+        /// Return True if the entered data is valid.
+        /// </returns>
+        /// <param name="name">String containing Name.</param>
+        /// <param name="surname">String containing surname.</param>
+        /// <param name="gender">Char containing gender info.</param>
+        /// <param name="mobilePhone">String containing phone number.</param>
+        /// <param name="email">String containing email address.</param>
+        /// <param name="schoolName">String containing school name.</param>
+        /// <param name="address">String containing address.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool IsDataValid(string name, string surname, char gender, string mobilePhone, string email, string schoolName, string address, out string errorMsg)
         {
             bool result = true;
@@ -85,14 +136,21 @@
             }
 
             return result;
-        }        
+        }
 
-        // Return the Id of the last record.
+        /// <summary>
+        /// Takes the college id and returns the Id of the last record.
+        /// </summary>
+        /// <returns>
+        /// Returns the Id of the last record.
+        /// </returns>
+        /// <param name="collegeId">Integer containing the college Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal int GetLastRecordId(int collegeId, out string errorMsg)
         {
             int id = 0;
 
-            using (SqlCommand command = new SqlCommand("GetLastId", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("GetLastId", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -105,7 +163,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     command.ExecuteNonQuery();
                     id = int.Parse(command.Parameters["@Id"].Value.ToString());
@@ -117,19 +175,26 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
 
                 return id;
             }
-        }        
+        }
 
-        // Return table with AdmissionId and InlistDate.
+        /// <summary>
+        /// Takes the integer coursesId and returns table with AdmissionId and EnlistDate.
+        /// </summary>
+        /// <returns>
+        /// Return table with AdmissionId and EnlistDate.
+        /// </returns>
+        /// <param name="coursesId">Integer containing the course Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetDates(int coursesId, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("GetInlistDates", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("GetEnlistDates", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -141,7 +206,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -152,7 +217,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -160,12 +225,20 @@
             return table;
         }
 
-        // Return table with list of the semesters.
+        /// <summary>
+        /// Takes the integers coursesId and year, and returns table with list of the semesters.
+        /// </summary>
+        /// <returns>
+        /// Return table with list of the semesters.
+        /// </returns>
+        /// <param name="coursesId">Integer containing the course Id.</param>
+        /// <param name="year">Integer containing year.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetSemesters(int coursesId, int year, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectSemesters", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectSemesters", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -177,7 +250,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -188,7 +261,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -196,10 +269,27 @@
             return table;
         }
 
-        // Add new admission.
-        internal bool AddNewAdmission(string name, string surname, char gender, DateTime birthDate, string mobilePhone, string email, int semesterId, int courseId, string schoolName, DateTime inlistDate, string address, out string errorMsg)
+        /// <summary>
+        /// Add new admission.
+        /// </summary>
+        /// <returns>
+        /// Return True if the adding new admission is successful.
+        /// </returns>
+        /// <param name="name">String Name.</param>
+        /// <param name="surname">String Surname.</param>
+        /// <param name="gender">Char Gender.</param>
+        /// <param name="birthDate">DateTime BirthDate.</param>
+        /// <param name="mobilePhone">String mobilePhone.</param>
+        /// <param name="email">String email.</param>
+        /// <param name="semesterId">Integer containing the semester Id.</param>
+        /// <param name="courseId">Integer containing the course Id.</param>
+        /// <param name="schoolName">String schoolName.</param>
+        /// <param name="enlistDate">DateTime enlistDate.</param>
+        /// <param name="address">String address.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
+        internal bool AddNewAdmission(string name, string surname, char gender, DateTime birthDate, string mobilePhone, string email, int semesterId, int courseId, string schoolName, DateTime enlistDate, string address, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("AddNewAdmission", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("AddNewAdmission", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -212,13 +302,13 @@
                 command.Parameters.Add(new SqlParameter("@SemesterId", SqlDbType.Int)).Value = semesterId;
                 command.Parameters.Add(new SqlParameter("@CourseId", SqlDbType.Int)).Value = courseId;
                 command.Parameters.Add(new SqlParameter("@SchoolName", SqlDbType.VarChar, 250)).Value = schoolName;
-                command.Parameters.Add(new SqlParameter("@InlistDate", SqlDbType.Date)).Value = inlistDate;
+                command.Parameters.Add(new SqlParameter("@EnlistDate", SqlDbType.Date)).Value = enlistDate;
                 command.Parameters.Add(new SqlParameter("@Address", SqlDbType.VarChar, 300)).Value = address;
                 command.Parameters.Add(new SqlParameter("@CollegeId", SqlDbType.Int)).Value = Globals.GlobalCollegeId;
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -238,15 +328,22 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }
 
-        // Update the semesters for the selected year.
+        /// <summary>
+        /// Update the semesters for the selected year.
+        /// </summary>
+        /// <returns>
+        /// Return True if the semester was updated successfully.
+        /// </returns>
+        /// <param name="studentId">Integer containing the student Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool UpdateSemesters(int studentId, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("UpdateSemester", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("UpdateSemester", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -256,7 +353,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     command.ExecuteNonQuery();
                     errorMsg = "The semesters were updated successfully";
@@ -269,17 +366,23 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }
 
-        // Select Name, Start Date, Semester and Fee for all admissions.
+        /// <summary>
+        /// Select Name, Start Date, Semester and Fee for all admissions.
+        /// </summary>
+        /// <returns>
+        /// Return Table with the selected data.
+        /// </returns>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetAdmissionsData(out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("GetAdmissionData", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("GetAdmissionData", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -289,7 +392,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -300,7 +403,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -308,10 +411,18 @@
             return table;
         }
 
-        // Check if the tax for the semester for the current student is already paid.
+        /// <summary>
+        /// Check if the tax for the semester for the current student is already paid.
+        /// </summary>
+        /// <returns>
+        /// Return True if the tax is is already paid.
+        /// </returns>
+        /// <param name="admissionNumber">Integer containing the admission Number.</param>
+        /// <param name="semesterId">Integer containing the semester Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool IsTheTaxAlreadyPaid(int admissionNumber, int semesterId, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("IsTheSemesterPaid", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("IsTheSemesterPaid", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -322,7 +433,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         DataTable table = new DataTable();
                         adapter.Fill(table);
@@ -345,16 +456,25 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
         }
 
-        // Mark Fee as Paid.
+        /// <summary>
+        /// Mark Fee as Paid.
+        /// </summary>
+        /// <returns>
+        /// Return True if the process was successful.
+        /// </returns>
+        /// <param name="admissionNumber">Integer containing the admission Number.</param>
+        /// <param name="semesterId">Integer containing the semester Id.</param>
+        /// <param name="fee">Decimal containing the fee amount.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool InsertFeeTax(int admissionNumber, int semesterId, decimal fee, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("InsertFeeData", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("InsertFeeData", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -365,7 +485,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -385,17 +505,26 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }
 
-        // Return table with students with paid fees by course, inlist date and semester.
+        /// <summary>
+        /// Select students which fees are already paid.
+        /// </summary>
+        /// <returns>
+        /// Return table with students with paid fees by course, enlist date and semester.
+        /// </returns>
+        /// <param name="courseId">Integer containing the course Id.</param>
+        /// <param name="year">Integer containing year.</param>
+        /// <param name="semesterId">Integer containing semester Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetStudentsWithFees(int courseId, int year, int semesterId, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectStudents", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectStudents", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -408,7 +537,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -419,7 +548,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -427,12 +556,18 @@
             return table;
         }
 
-        // Select all students.
+        /// <summary>
+        /// Select all students.
+        /// </summary>
+        /// <returns>
+        /// Return Table with all students.
+        /// </returns>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetStudentsData(out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectStudentData", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectStudentData", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -442,7 +577,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -453,7 +588,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -461,12 +596,19 @@
             return table;
         }
 
-        // Select current student by student id.
+        /// <summary>
+        /// Select student by Id.
+        /// </summary>
+        /// <returns>
+        /// Return Table with the selected student.
+        /// </returns>
+        /// <param name="id">Integer containing the admission id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetStudentById(int id, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectStudentById", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectStudentById", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -477,7 +619,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -488,7 +630,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -496,12 +638,19 @@
             return table;
         }
 
-        // Return detailed student data by id.
+        /// <summary>
+        /// Select detailed student by Id.
+        /// </summary>
+        /// <returns>
+        /// Return Table with the selected student.
+        /// </returns>
+        /// <param name="admissionId">Integer containing the admission id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetStudentDetails(int admissionId, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectStudentDataById", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectStudentDataById", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -512,7 +661,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -523,7 +672,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -531,10 +680,17 @@
             return table;
         }
 
-        // Delete student by student id.
+        /// <summary>
+        /// Delete student by student id.
+        /// </summary>
+        /// <returns>
+        /// Return True the process was successful.
+        /// </returns>
+        /// <param name="admissionId">Integer containing the admission id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool DeleteStudent(int admissionId, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("DeleteStudentById", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("DeleteStudentById", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -543,7 +699,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -563,7 +719,7 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }

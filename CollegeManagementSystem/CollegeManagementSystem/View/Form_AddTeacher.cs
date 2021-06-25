@@ -1,24 +1,41 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_AddTeacher.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Data;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_AddTeacher class.
+    /// Contains methods for Form_AddTeacher class.
+    /// </summary>
     public partial class Form_AddTeacher : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_AddTeacher" /> class.
+        /// </summary>
         public Form_AddTeacher()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        // Form Load
+        /// <summary>
+        /// Form Load.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
         private void Form_AddTeacher_Load(object sender, EventArgs e)
         {
-            GetCoursesInComboBox();
-            this.dateTimePicker_DateOfBirth.Value = DateTime.Now.Date;
+            this.GetCoursesInComboBox();
+            this.dateTimePickerDateOfBirth.Value = DateTime.Now.Date;
         }
 
-        // Fill the courses in the combobox.
+        /// <summary>
+        /// Fill the courses in the comboBox.
+        /// </summary>
         private void GetCoursesInComboBox()
         {
             Course course = new Course();
@@ -26,22 +43,24 @@
 
             if (coursesTable.Rows.Count > 0)
             {
-                this.comboBox_Course.DisplayMember = "CourseName";
-                this.comboBox_Course.ValueMember = "CourseId";
-                this.comboBox_Course.DataSource = coursesTable;
+                this.comboBoxCourse.DisplayMember = "CourseName";
+                this.comboBoxCourse.ValueMember = "CourseId";
+                this.comboBoxCourse.DataSource = coursesTable;
             }
             else
             {
                 if (errorMsg != string.Empty)
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                         "Fill ComboBox Courses",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("No Courses Found!",
+                    MessageBox.Show(
+                        "No Courses Found!",
                         "Fill ComboBox Courses",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -49,18 +68,22 @@
             }
         }
 
-        // Add new teacher.
-        private void Button_Submit_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Add new teacher.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonSubmit_Click(object sender, EventArgs e)
         {
             Teachers teachers = new Teachers();
-            string name = this.textBox_Name.Text.Trim();
-            string surname = this.textBox_Surname.Text.Trim();
-            char gender = GetGender();
-            DateTime dateOfBirth = this.dateTimePicker_DateOfBirth.Value.Date;
-            string mobilePhone = this.textBox_MobileNo.Text.Trim();
-            string email = this.textBox_Email.Text.Trim();
-            int courseId = int.Parse(this.comboBox_Course.SelectedValue.ToString());
-            string address = this.richTextBox_Address.Text.Trim();
+            string name = this.textBoxName.Text.Trim();
+            string surname = this.textBoxSurname.Text.Trim();
+            char gender = this.GetGender();
+            DateTime dateOfBirth = this.dateTimePickerDateOfBirth.Value.Date;
+            string mobilePhone = this.textBoxMobileNo.Text.Trim();
+            string email = this.textBoxEmail.Text.Trim();
+            int courseId = int.Parse(this.comboBoxCourse.SelectedValue.ToString());
+            string address = this.richTextBoxAddress.Text.Trim();
 
             if (teachers.IsDataValid(name, surname, gender, mobilePhone, email, address, out string errorMsg))
             {
@@ -68,23 +91,27 @@
                 {
                     if (teachers.AddNewTeacher(name, surname, gender, dateOfBirth, mobilePhone, email, courseId, address, out errorMsg))
                     {
-                        MessageBox.Show(errorMsg,
-                        "Add New Teacher",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                        ClearTheEnteredData();
+                        MessageBox.Show(
+                            errorMsg,
+                            "Add New Teacher",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                            this.ClearTheEnteredData();
                     }
                     else
                     {
-                        MessageBox.Show(errorMsg,
-                        "Add New Teacher",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                        MessageBox.Show(
+                            errorMsg,
+                            "Add New Teacher",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No Courses Found!",
+                    MessageBox.Show(
+                        "No Courses Found!",
                         "Add New Teacher",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -92,7 +119,8 @@
             }
             else
             {
-                MessageBox.Show("Invalid input! The next Fields are Incorrect:"
+                MessageBox.Show(
+                    "Invalid input! The next Fields are Incorrect:"
                     + Environment.NewLine
                     + errorMsg,
                     "Add New Teacher",
@@ -101,28 +129,35 @@
             }
         }
 
-        // Clear the entered data.
+        /// <summary>
+        /// Clear the entered data.
+        /// </summary>
         private void ClearTheEnteredData()
         {
-            this.textBox_Name.Clear();
-            this.textBox_Surname.Clear();
-            this.radioButton_Male.Checked = false;
-            this.radioButton_Female.Checked = false;
-            this.dateTimePicker_DateOfBirth.Value = DateTime.Now.Date;
-            this.textBox_MobileNo.Clear();
-            this.textBox_Email.Clear();
-            GetCoursesInComboBox();
-            this.richTextBox_Address.Clear();
+            this.textBoxName.Clear();
+            this.textBoxSurname.Clear();
+            this.radioButtonMale.Checked = false;
+            this.radioButtonFemale.Checked = false;
+            this.dateTimePickerDateOfBirth.Value = DateTime.Now.Date;
+            this.textBoxMobileNo.Clear();
+            this.textBoxEmail.Clear();
+            this.GetCoursesInComboBox();
+            this.richTextBoxAddress.Clear();
         }
 
-        // Return Gender type.
+        /// <summary>
+        /// Return Gender type.
+        /// </summary>
+        /// <returns>
+        /// Returns M for male, F for female and O if something went wrong.
+        /// </returns>
         private char GetGender()
         {
-            if (this.radioButton_Male.Checked)
+            if (this.radioButtonMale.Checked)
             {
                 return 'M';
             }
-            else if (this.radioButton_Female.Checked)
+            else if (this.radioButtonFemale.Checked)
             {
                 return 'F';
             }
@@ -132,10 +167,14 @@
             }
         }
 
-        // Button Reset click event. Clear the entered data.
-        private void Button_ResetData_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Button Reset click event. Clear the entered data.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonResetData_Click(object sender, EventArgs e)
         {
-            ClearTheEnteredData();
+            this.ClearTheEnteredData();
         }
     }
 }

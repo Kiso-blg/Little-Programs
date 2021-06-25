@@ -1,22 +1,43 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_RemoveTeacher.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Data;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_RemoveTeacher class.
+    /// Contains methods for Form_RemoveTeacher class.
+    /// </summary>
     public partial class Form_RemoveTeacher : Form
     {
+        /// <summary>
+        /// Contains pattern for the empty labels.
+        /// </summary>
         private const string EmptyLabelText = "________";
 
-        public Form_RemoveTeacher()
-        {
-            InitializeComponent();
-        }
-
+        /// <summary>
+        /// Contains an instance of Teachers class.
+        /// </summary>
         private readonly Teachers teachers = new Teachers();
 
-        // Load Form SelectTeachers
-        private void Button_SelectRegistrationId_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_RemoveTeacher" /> class.
+        /// </summary>
+        public Form_RemoveTeacher()
+        {
+            this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Load Form_SelectTeachers.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonSelectRegistrationId_Click(object sender, EventArgs e)
         {
             int teacherId;
 
@@ -28,18 +49,22 @@
 
             if (teacherId > 0)
             {
-                PopulateTeacherData(teacherId);
+                this.PopulateTeacherData(teacherId);
             }
         }
 
-        // Populate the teacher data in the labels.
+        /// <summary>
+        /// Populates the teacher data in the labels.
+        /// </summary>
+        /// <param name="teacherId">Contains teacher id.</param>
         private void PopulateTeacherData(int teacherId)
         {
             DataTable teacherData = teachers.GetTeacherById(teacherId, out string errorMsg);
 
             if (errorMsg != string.Empty)
             {
-                MessageBox.Show(errorMsg,
+                MessageBox.Show(
+                    errorMsg,
                     "Populate Teacher Details",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -50,35 +75,41 @@
                 {
                     DataRow teacherDataRow = teacherData.Rows[0];
 
-                    this.label_RegistrationId.Text = teacherDataRow.ItemArray[0].ToString();
-                    this.label_Name.Text = teacherDataRow.ItemArray[1].ToString();
-                    this.label_Surname.Text = teacherDataRow.ItemArray[2].ToString();
-                    this.label_BirthDate.Text = DateTime.Parse(teacherDataRow.ItemArray[4].ToString()).Date.ToString("dd.MM.yyyy");
-                    this.label_MobilePhone.Text = teacherDataRow.ItemArray[5].ToString();
-                    this.label_Email.Text = teacherDataRow.ItemArray[6].ToString();
-                    this.label_Course.Text = teacherDataRow.ItemArray[8].ToString();
+                    this.labelRegistrationId.Text = teacherDataRow.ItemArray[0].ToString();
+                    this.labelName.Text = teacherDataRow.ItemArray[1].ToString();
+                    this.labelSurname.Text = teacherDataRow.ItemArray[2].ToString();
+                    this.labelBirthDate.Text = DateTime.Parse(teacherDataRow.ItemArray[4].ToString()).Date.ToString("dd.MM.yyyy");
+                    this.labelMobilePhone.Text = teacherDataRow.ItemArray[5].ToString();
+                    this.labelEmail.Text = teacherDataRow.ItemArray[6].ToString();
+                    this.labelCourse.Text = teacherDataRow.ItemArray[8].ToString();
                 }
             }
         }
 
-        // Button Remove Teacher
-        private void Button_Remove_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Remove teacher.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonRemove_Click(object sender, EventArgs e)
         {
-            if (this.label_RegistrationId.Text != EmptyLabelText)
+            if (this.labelRegistrationId.Text != EmptyLabelText)
             {
-                int teacherId = int.Parse(this.label_RegistrationId.Text);
+                int teacherId = int.Parse(this.labelRegistrationId.Text);
 
                 if (teachers.DeleteTeacher(teacherId, out string errorMsg))
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                         "Delete Teacher",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-                    ClearTheTeacherData();
+                    this.ClearTheTeacherData();
                 }
                 else
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                         "Delete Teacher",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -86,22 +117,28 @@
             }
         }
 
-        // Button Clear Click Event
-        private void Button_Clear_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Invokes method ClearTheTeacherData.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonClear_Click(object sender, EventArgs e)
         {
-            ClearTheTeacherData();
+            this.ClearTheTeacherData();
         }
 
-        // Reset the lables and clear the teacher data.
+        /// <summary>
+        /// Reset the labels and clear the teacher data.
+        /// </summary>
         private void ClearTheTeacherData()
         {
-            this.label_RegistrationId.Text = EmptyLabelText;
-            this.label_Name.Text = EmptyLabelText;
-            this.label_Surname.Text = EmptyLabelText;
-            this.label_BirthDate.Text = EmptyLabelText;
-            this.label_MobilePhone.Text = EmptyLabelText;
-            this.label_Email.Text = EmptyLabelText;
-            this.label_Course.Text = EmptyLabelText;
+            this.labelRegistrationId.Text = EmptyLabelText;
+            this.labelName.Text = EmptyLabelText;
+            this.labelSurname.Text = EmptyLabelText;
+            this.labelBirthDate.Text = EmptyLabelText;
+            this.labelMobilePhone.Text = EmptyLabelText;
+            this.labelEmail.Text = EmptyLabelText;
+            this.labelCourse.Text = EmptyLabelText;
         }
     }
 }

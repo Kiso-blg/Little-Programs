@@ -1,58 +1,84 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_SearchTeacher.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.ComponentModel;
     using System.Data;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_SearchTeacher class.
+    /// Contains methods for Form_SearchTeacher class.
+    /// </summary>
     public partial class Form_SearchTeacher : Form
     {
-        public Form_SearchTeacher()
-        {
-            InitializeComponent();
-        }
-
+        /// <summary>
+        /// Contains an instance of Teachers class.
+        /// </summary>
         private readonly Teachers teachers = new Teachers();
 
-        // Form Load
-        private void Form_SearchTeacher_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_SearchTeacher" /> class.
+        /// </summary>
+        public Form_SearchTeacher()
         {
-            PopulateTheDataGridView();
+            this.InitializeComponent();
         }
 
-        // Populate the DataGreidView.
+        /// <summary>
+        /// Load Form_SearchTeacher.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void Form_SearchTeacher_Load(object sender, EventArgs e)
+        {
+            this.PopulateTheDataGridView();
+        }
+
+        /// <summary>
+        /// Populates the DataGridView.
+        /// </summary>
         private void PopulateTheDataGridView()
         {
-            DataTable teachersTable = teachers.GetTeachersData(out string errorMsg);
+            DataTable teachersTable = this.teachers.GetTeachersData(out string errorMsg);
 
             if (errorMsg != string.Empty)
             {
-                MessageBox.Show(errorMsg,
+                MessageBox.Show(
+                    errorMsg,
                     "Search Teachers",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
             else
             {
-                this.dataGridView_Teachers.DataSource = teachersTable;
-                this.dataGridView_Teachers.ClearSelection();
+                this.dataGridViewTeachers.DataSource = teachersTable;
+                this.dataGridViewTeachers.ClearSelection();
             }
         }
 
-        // Button Search Teacher by Id.
-        private void Button_Search_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Searches teacher by id.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            string strRegistrationId = this.textBox_RegistrationId.Text.Trim();
+            string strRegistrationId = this.textBoxRegistrationId.Text.Trim();
 
             if (strRegistrationId != string.Empty)
             {
                 if (int.TryParse(strRegistrationId, out int teacherId))
                 {
-                    DataTable table = teachers.GetTeacherById(teacherId, out string errorMsg);
+                    DataTable table = this.teachers.GetTeacherById(teacherId, out string errorMsg);
 
                     if (errorMsg != string.Empty)
                     {
-                        MessageBox.Show("Invalid Input!",
+                        MessageBox.Show(
+                            "Invalid Input!",
                             "Search Teacher",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
@@ -60,13 +86,14 @@
 
                     if (table.Rows.Count == 1)
                     {
-                        this.dataGridView_Teachers.DataSource = table;
-                        this.dataGridView_Teachers.ClearSelection();
+                        this.dataGridViewTeachers.DataSource = table;
+                        this.dataGridViewTeachers.ClearSelection();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Input!",
+                    MessageBox.Show(
+                        "Invalid Input!",
                         "Search Teacher",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -74,27 +101,35 @@
             }
             else
             {
-                PopulateTheDataGridView();
+                this.PopulateTheDataGridView();
             }
         }
 
-        // Clear the TextBox RegistrationId and reload the DataGridView.
-        private void Button_Refresh_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Clears the TextBox RegistrationId and reload the DataGridView.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event argument.</param>
+        private void ButtonRefresh_Click(object sender, EventArgs e)
         {
-            this.textBox_RegistrationId.Clear();
-            PopulateTheDataGridView();
+            this.textBoxRegistrationId.Clear();
+            this.PopulateTheDataGridView();
         }
 
-        // Sort the DataGridView by current column in ascending or descending order.
-        private void DataGridView_Teachers_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        /// <summary>
+        /// Sorts the DataGridView by current column in ascending or descending order.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains DataGridViewCellMouseEventArgs event argument.</param>
+        private void DataGridViewTeachers_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             // Source: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview.sortedcolumn?view=net-5.0
-            DataGridViewColumn newColumn = this.dataGridView_Teachers
+            DataGridViewColumn newColumn = this.dataGridViewTeachers
                 .Columns
                 .GetColumnCount(DataGridViewElementStates.Selected) == 1 ?
-                this.dataGridView_Teachers.SelectedColumns[0] : null;
+                this.dataGridViewTeachers.SelectedColumns[0] : null;
 
-            DataGridViewColumn oldColumn = this.dataGridView_Teachers.SortedColumn;
+            DataGridViewColumn oldColumn = this.dataGridViewTeachers.SortedColumn;
             ListSortDirection direction;
 
             // If oldColumn is null, then the DataGridView is not currently sorted.
@@ -102,7 +137,7 @@
             {
                 // Sorf the same column again, reversing the SortOrder.
                 if (oldColumn == newColumn &&
-                    this.dataGridView_Teachers.SortOrder == SortOrder.Ascending)
+                    this.dataGridViewTeachers.SortOrder == SortOrder.Ascending)
                 {
                     direction = ListSortDirection.Descending;
                 }
@@ -120,13 +155,13 @@
             // If new column is selected, sort by new column.
             if (newColumn != null)
             {
-                this.dataGridView_Teachers.Sort(newColumn, direction);
+                this.dataGridViewTeachers.Sort(newColumn, direction);
                 newColumn.HeaderCell.SortGlyphDirection =
                     direction == ListSortDirection.Ascending ?
                     SortOrder.Ascending : SortOrder.Descending;
             }
 
-            this.dataGridView_Teachers.ClearSelection();
+            this.dataGridViewTeachers.ClearSelection();
         }
     }
 }

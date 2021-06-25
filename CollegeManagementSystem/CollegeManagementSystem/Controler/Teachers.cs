@@ -1,20 +1,58 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Teachers.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Data;
     using System.Data.SqlClient;
     using System.Text.RegularExpressions;
 
+    /// <summary>
+    /// The main Teachers class.
+    /// Perform all functions for teachers.
+    /// </summary>
     internal class Teachers
     {
+        /// <summary>
+        /// Contains Regex Pattern for Name.
+        /// </summary>
         private const string NamePattern = "^[a-zA-Z]{2,100}$";
+
+        /// <summary>
+        /// Contains Regex Pattern for Phone Number.
+        /// </summary>
         private const string PhonePattern = @"^08([7-9]{1}[2-9]{1}[0-9]{6})$";
+
+        /// <summary>
+        /// Contains Regex Pattern for E-mail Address.
+        /// </summary>
         private const string EmailPattern = @"^[a-zA-Z0-9]{1}[a-zA-Z0-9\._-]{1,}\@[a-zA-Z\-]{2,}(\.[a-z]{2,})$";
+
+        /// <summary>
+        /// Contains Regex Pattern for Address.
+        /// </summary>
         private const string AddressPattern = "^[a-zA-Z0-9.'\", ]{5,300}$";
 
+        /// <summary>
+        /// Contains SQL Connection.
+        /// </summary>
         private readonly CollegeDB db = new CollegeDB();
 
-        // Check if the entered data is valid.
+        /// <summary>
+        /// Check if the entered data is valid.
+        /// </summary>
+        /// <returns>
+        /// Return True if the entered data is valid.
+        /// </returns>
+        /// <param name="name">String containing Name.</param>
+        /// <param name="surname">String containing surname.</param>
+        /// <param name="gender">Char containing gender info.</param>
+        /// <param name="mobilePhone">String containing phone number.</param>
+        /// <param name="email">String containing email address.</param>
+        /// <param name="address">String containing address.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool IsDataValid(string name, string surname, char gender, string mobilePhone, string email, string address, out string errorMsg)
         {
             bool result = true;
@@ -53,7 +91,7 @@
             if (Regex.Match(address, AddressPattern).Success == false)
             {
                 result = false;
-                errorMsg += "Address";
+                errorMsg += "Address, ";
             }
 
             if (!result)
@@ -62,12 +100,26 @@
             }
 
             return result;
-        }        
+        }
 
-        // Add new teacher.
+        /// <summary>
+        /// Add new teacher.
+        /// </summary>
+        /// <returns>
+        /// Return True if the adding new teacher is successful.
+        /// </returns>
+        /// <param name="name">String Name.</param>
+        /// <param name="surname">String Surname.</param>
+        /// <param name="gender">Char Gender.</param>
+        /// <param name="dateOfBirth">DateTime birth date.</param>
+        /// <param name="mobilePhone">String mobilePhone.</param>
+        /// <param name="email">String email.</param>
+        /// <param name="courseId">Integer containing the course Id.</param>
+        /// <param name="address">String address.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool AddNewTeacher(string name, string surname, char gender, DateTime dateOfBirth, string mobilePhone, string email, int courseId, string address, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("AddNewTeacher", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("AddNewTeacher", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -83,7 +135,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -103,17 +155,23 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
-        }        
+        }
 
-        // Select all teachers.
+        /// <summary>
+        /// Select all teachers.
+        /// </summary>
+        /// <returns>
+        /// Return table with all teachers.
+        /// </returns>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetTeachersData(out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectAllTeachers", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectAllTeachers", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -123,7 +181,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -134,7 +192,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -142,12 +200,19 @@
             return table;
         }
 
-        // Select current teacher by teacher id.
+        /// <summary>
+        /// Select current teacher by teacher id.
+        /// </summary>
+        /// <returns>
+        /// Return table with the data for the selected teacher.
+        /// </returns>
+        /// <param name="teacherId">Integer containing teacher Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal DataTable GetTeacherById(int teacherId, out string errorMsg)
         {
             DataTable table = new DataTable();
 
-            using (SqlCommand command = new SqlCommand("SelectTeacherById", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("SelectTeacherById", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -158,7 +223,7 @@
                 {
                     try
                     {
-                        db.OpenConnection();
+                        this.db.OpenConnection();
 
                         adapter.Fill(table);
                         errorMsg = string.Empty;
@@ -169,7 +234,7 @@
                     }
                     finally
                     {
-                        db.CloseConnection();
+                        this.db.CloseConnection();
                     }
                 }
             }
@@ -177,10 +242,17 @@
             return table;
         }
 
-        // Delete teacher by Id.
+        /// <summary>
+        /// Delete teacher by Id.
+        /// </summary>
+        /// <returns>
+        /// Return True if the process is successful.
+        /// </returns>
+        /// <param name="teacherId">Integer containing teacher Id.</param>
+        /// <param name="errorMsg">String containing message with error.</param>
         internal bool DeleteTeacher(int teacherId, out string errorMsg)
         {
-            using (SqlCommand command = new SqlCommand("DeleteTeacherById", db.GetConnection))
+            using (SqlCommand command = new SqlCommand("DeleteTeacherById", this.db.GetConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -189,7 +261,7 @@
 
                 try
                 {
-                    db.OpenConnection();
+                    this.db.OpenConnection();
 
                     if (command.ExecuteNonQuery() == 1)
                     {
@@ -209,7 +281,7 @@
                 }
                 finally
                 {
-                    db.CloseConnection();
+                    this.db.CloseConnection();
                 }
             }
         }

@@ -1,8 +1,25 @@
-﻿
+﻿// <copyright file="Form_SelectTeacher.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_SelectTeacher
+    /// <summary>
+    /// The partial Form_SelectTeacher class.
+    /// Contains all controllers for Form_SelectTeacher class.
+    /// </summary>
+    public partial class Form_SelectTeacher
     {
+        /// <summary>
+        /// Panel panelBody.
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// DataGridView dataGridViewTeachers.
+        /// </summary>
+        private System.Windows.Forms.DataGridView dataGridViewTeachers;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +31,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,14 +48,14 @@ namespace CollegeManagementSystem
         private void InitializeComponent()
         {
             this.panelBody = new System.Windows.Forms.Panel();
-            this.dataGridView_Teachers = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTeachers = new System.Windows.Forms.DataGridView();
             this.panelBody.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Teachers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBody
             // 
-            this.panelBody.Controls.Add(this.dataGridView_Teachers);
+            this.panelBody.Controls.Add(this.dataGridViewTeachers);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(0, 0);
             this.panelBody.Name = "panelBody";
@@ -46,15 +64,15 @@ namespace CollegeManagementSystem
             // 
             // dataGridView_Teachers
             // 
-            this.dataGridView_Teachers.AllowUserToAddRows = false;
-            this.dataGridView_Teachers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Teachers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Teachers.Location = new System.Drawing.Point(10, 10);
-            this.dataGridView_Teachers.Name = "dataGridView_Teachers";
-            this.dataGridView_Teachers.Size = new System.Drawing.Size(780, 410);
-            this.dataGridView_Teachers.TabIndex = 0;
-            this.dataGridView_Teachers.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_Teachers_ColumnHeaderMouseClick);
-            this.dataGridView_Teachers.DoubleClick += new System.EventHandler(this.DataGridView_Teachers_DoubleClick);
+            this.dataGridViewTeachers.AllowUserToAddRows = false;
+            this.dataGridViewTeachers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewTeachers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTeachers.Location = new System.Drawing.Point(10, 10);
+            this.dataGridViewTeachers.Name = "dataGridView_Teachers";
+            this.dataGridViewTeachers.Size = new System.Drawing.Size(780, 410);
+            this.dataGridViewTeachers.TabIndex = 0;
+            this.dataGridViewTeachers.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewTeachers_ColumnHeaderMouseClick);
+            this.dataGridViewTeachers.DoubleClick += new System.EventHandler(this.DataGridViewTeachers_DoubleClick);
             // 
             // Form_SelectTeacher
             // 
@@ -67,14 +85,11 @@ namespace CollegeManagementSystem
             this.Text = "Select Teacher";
             this.Load += new System.EventHandler(this.Form_SelectTeacher_Load);
             this.panelBody.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Teachers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panelBody;
-        private System.Windows.Forms.DataGridView dataGridView_Teachers;
+        #endregion        
     }
 }

@@ -1,8 +1,160 @@
-﻿
+﻿// <copyright file="Form_NewAdmission.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_NewAdmission
+    /// <summary>
+    /// The partial Form_NewAdmission class.
+    /// Contains all controllers for Form_NewAdmission class.
+    /// </summary>
+    public partial class Form_NewAdmission
     {
+        /// <summary>
+        /// Label labelRegistrationNO.
+        /// </summary>
+        private System.Windows.Forms.Label labelRegistrationNO;
+
+        /// <summary>
+        /// Label labelName.
+        /// </summary>
+        private System.Windows.Forms.Label labelName;
+
+        /// <summary>
+        /// Label labelSurname.
+        /// </summary>
+        private System.Windows.Forms.Label labelSurname;
+
+        /// <summary>
+        /// Label labelGender.
+        /// </summary>
+        private System.Windows.Forms.Label labelGender;
+
+        /// <summary>
+        /// Label labelDateOfBirth.
+        /// </summary>
+        private System.Windows.Forms.Label labelDateOfBirth;
+
+        /// <summary>
+        /// Label labelMobilePhone.
+        /// </summary>
+        private System.Windows.Forms.Label labelMobilePhone;
+
+        /// <summary>
+        /// Label labelSemester.
+        /// </summary>
+        private System.Windows.Forms.Label labelSemester;
+
+        /// <summary>
+        /// Label labelCourse.
+        /// </summary>
+        private System.Windows.Forms.Label labelCourse;
+
+        /// <summary>
+        /// Label labelSchoolName.
+        /// </summary>
+        private System.Windows.Forms.Label labelSchoolName;
+
+        /// <summary>
+        /// Label labelDate.
+        /// </summary>
+        private System.Windows.Forms.Label labelDate;
+
+        /// <summary>
+        /// Label labelAddress.
+        /// </summary>
+        private System.Windows.Forms.Label labelAddress;
+
+        /// <summary>
+        /// Label labelEmail.
+        /// </summary>
+        private System.Windows.Forms.Label labelEmail;
+
+        /// <summary>
+        /// PictureBox pictureBox.
+        /// </summary>
+        private System.Windows.Forms.PictureBox pictureBox;
+
+        /// <summary>
+        /// Panel panelBody.
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// TextBox textBoxName.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxName;
+
+        /// <summary>
+        /// Button buttonReset.
+        /// </summary>
+        private System.Windows.Forms.Button buttonReset;
+
+        /// <summary>
+        /// Button buttonSubmit.
+        /// </summary>
+        private System.Windows.Forms.Button buttonSubmit;
+
+        /// <summary>
+        /// RichTextBox richTextBoxAddress.
+        /// </summary>
+        private System.Windows.Forms.RichTextBox richTextBoxAddress;
+
+        /// <summary>
+        /// ComboBox comboBoxCourse.
+        /// </summary>
+        private System.Windows.Forms.ComboBox comboBoxCourse;
+
+        /// <summary>
+        /// DateTimePicker dateTimePickerBirthDate.
+        /// </summary>
+        private System.Windows.Forms.DateTimePicker dateTimePickerBirthDate;
+
+        /// <summary>
+        /// RadioButton radioButtonFemale.
+        /// </summary>
+        private System.Windows.Forms.RadioButton radioButtonFemale;
+
+        /// <summary>
+        /// RadioButton radioButtonMale.
+        /// </summary>
+        private System.Windows.Forms.RadioButton radioButtonMale;
+
+        /// <summary>
+        /// TextBox textBoxSchoolName.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxSchoolName;
+
+        /// <summary>
+        /// TextBox textBoxEmail.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxEmail;
+
+        /// <summary>
+        /// TextBox textBoxMobilePhone.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxMobilePhone;
+
+        /// <summary>
+        /// TextBox textBoxSurname.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxSurname;
+
+        /// <summary>
+        /// Label labelRegistrationId.
+        /// </summary>
+        private System.Windows.Forms.Label labelRegistrationId;
+
+        /// <summary>
+        /// TextBox textBoxSemester.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBoxSemester;
+
+        /// <summary>
+        /// ComboBox comboBoxDate.
+        /// </summary>
+        private System.Windows.Forms.ComboBox comboBoxDate;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +166,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -41,25 +194,25 @@ namespace CollegeManagementSystem
             this.labelDate = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.panel_Body = new System.Windows.Forms.Panel();
-            this.comboBox_Date = new System.Windows.Forms.ComboBox();
-            this.textBox_Semester = new System.Windows.Forms.TextBox();
+            this.panelBody = new System.Windows.Forms.Panel();
+            this.comboBoxDate = new System.Windows.Forms.ComboBox();
+            this.textBoxSemester = new System.Windows.Forms.TextBox();
             this.labelRegistrationId = new System.Windows.Forms.Label();
-            this.Button_Reset = new System.Windows.Forms.Button();
-            this.Button_Submit = new System.Windows.Forms.Button();
-            this.richTextBox_Address = new System.Windows.Forms.RichTextBox();
-            this.comboBox_Course = new System.Windows.Forms.ComboBox();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.richTextBoxAddress = new System.Windows.Forms.RichTextBox();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.textBox_SchoolName = new System.Windows.Forms.TextBox();
-            this.textBox_Email = new System.Windows.Forms.TextBox();
-            this.textBox_MobilePhone = new System.Windows.Forms.TextBox();
-            this.textBox_Surname = new System.Windows.Forms.TextBox();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel_Body.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.textBoxSchoolName = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxMobilePhone = new System.Windows.Forms.TextBox();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.panelBody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // labelRegistrationNO
@@ -184,59 +337,59 @@ namespace CollegeManagementSystem
             // 
             // panel_Body
             // 
-            this.panel_Body.BackColor = System.Drawing.Color.White;
-            this.panel_Body.Controls.Add(this.comboBox_Date);
-            this.panel_Body.Controls.Add(this.textBox_Semester);
-            this.panel_Body.Controls.Add(this.labelRegistrationId);
-            this.panel_Body.Controls.Add(this.Button_Reset);
-            this.panel_Body.Controls.Add(this.Button_Submit);
-            this.panel_Body.Controls.Add(this.richTextBox_Address);
-            this.panel_Body.Controls.Add(this.comboBox_Course);
-            this.panel_Body.Controls.Add(this.dateTimePickerBirthDate);
-            this.panel_Body.Controls.Add(this.radioButtonFemale);
-            this.panel_Body.Controls.Add(this.radioButtonMale);
-            this.panel_Body.Controls.Add(this.textBox_SchoolName);
-            this.panel_Body.Controls.Add(this.textBox_Email);
-            this.panel_Body.Controls.Add(this.textBox_MobilePhone);
-            this.panel_Body.Controls.Add(this.textBox_Surname);
-            this.panel_Body.Controls.Add(this.textBox_Name);
-            this.panel_Body.Controls.Add(this.labelDate);
-            this.panel_Body.Controls.Add(this.pictureBox1);
-            this.panel_Body.Controls.Add(this.labelSemester);
-            this.panel_Body.Controls.Add(this.labelMobilePhone);
-            this.panel_Body.Controls.Add(this.labelEmail);
-            this.panel_Body.Controls.Add(this.labelDateOfBirth);
-            this.panel_Body.Controls.Add(this.labelCourse);
-            this.panel_Body.Controls.Add(this.labelGender);
-            this.panel_Body.Controls.Add(this.labelAddress);
-            this.panel_Body.Controls.Add(this.labelSurname);
-            this.panel_Body.Controls.Add(this.labelSchoolName);
-            this.panel_Body.Controls.Add(this.labelName);
-            this.panel_Body.Controls.Add(this.labelRegistrationNO);
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(0, 0);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(800, 475);
-            this.panel_Body.TabIndex = 13;
+            this.panelBody.BackColor = System.Drawing.Color.White;
+            this.panelBody.Controls.Add(this.comboBoxDate);
+            this.panelBody.Controls.Add(this.textBoxSemester);
+            this.panelBody.Controls.Add(this.labelRegistrationId);
+            this.panelBody.Controls.Add(this.buttonReset);
+            this.panelBody.Controls.Add(this.buttonSubmit);
+            this.panelBody.Controls.Add(this.richTextBoxAddress);
+            this.panelBody.Controls.Add(this.comboBoxCourse);
+            this.panelBody.Controls.Add(this.dateTimePickerBirthDate);
+            this.panelBody.Controls.Add(this.radioButtonFemale);
+            this.panelBody.Controls.Add(this.radioButtonMale);
+            this.panelBody.Controls.Add(this.textBoxSchoolName);
+            this.panelBody.Controls.Add(this.textBoxEmail);
+            this.panelBody.Controls.Add(this.textBoxMobilePhone);
+            this.panelBody.Controls.Add(this.textBoxSurname);
+            this.panelBody.Controls.Add(this.textBoxName);
+            this.panelBody.Controls.Add(this.labelDate);
+            this.panelBody.Controls.Add(this.pictureBox);
+            this.panelBody.Controls.Add(this.labelSemester);
+            this.panelBody.Controls.Add(this.labelMobilePhone);
+            this.panelBody.Controls.Add(this.labelEmail);
+            this.panelBody.Controls.Add(this.labelDateOfBirth);
+            this.panelBody.Controls.Add(this.labelCourse);
+            this.panelBody.Controls.Add(this.labelGender);
+            this.panelBody.Controls.Add(this.labelAddress);
+            this.panelBody.Controls.Add(this.labelSurname);
+            this.panelBody.Controls.Add(this.labelSchoolName);
+            this.panelBody.Controls.Add(this.labelName);
+            this.panelBody.Controls.Add(this.labelRegistrationNO);
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Location = new System.Drawing.Point(0, 0);
+            this.panelBody.Name = "panel_Body";
+            this.panelBody.Size = new System.Drawing.Size(800, 475);
+            this.panelBody.TabIndex = 13;
             // 
             // comboBox_Date
             // 
-            this.comboBox_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_Date.FormattingEnabled = true;
-            this.comboBox_Date.Location = new System.Drawing.Point(570, 295);
-            this.comboBox_Date.Name = "comboBox_Date";
-            this.comboBox_Date.Size = new System.Drawing.Size(85, 26);
-            this.comboBox_Date.TabIndex = 11;
+            this.comboBoxDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxDate.FormattingEnabled = true;
+            this.comboBoxDate.Location = new System.Drawing.Point(570, 295);
+            this.comboBoxDate.Name = "comboBox_Date";
+            this.comboBoxDate.Size = new System.Drawing.Size(85, 26);
+            this.comboBoxDate.TabIndex = 11;
             // 
             // textBox_Semester
             // 
-            this.textBox_Semester.Enabled = false;
-            this.textBox_Semester.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Semester.Location = new System.Drawing.Point(570, 159);
-            this.textBox_Semester.Name = "textBox_Semester";
-            this.textBox_Semester.Size = new System.Drawing.Size(170, 24);
-            this.textBox_Semester.TabIndex = 29;
-            this.textBox_Semester.Text = "First Semester";
+            this.textBoxSemester.Enabled = false;
+            this.textBoxSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSemester.Location = new System.Drawing.Point(570, 159);
+            this.textBoxSemester.Name = "textBox_Semester";
+            this.textBoxSemester.Size = new System.Drawing.Size(170, 24);
+            this.textBoxSemester.TabIndex = 29;
+            this.textBoxSemester.Text = "First Semester";
             // 
             // labelRegistrationId
             // 
@@ -251,45 +404,45 @@ namespace CollegeManagementSystem
             // 
             // Button_Reset
             // 
-            this.Button_Reset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Reset.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Button_Reset.Location = new System.Drawing.Point(434, 425);
-            this.Button_Reset.Name = "Button_Reset";
-            this.Button_Reset.Size = new System.Drawing.Size(80, 25);
-            this.Button_Reset.TabIndex = 14;
-            this.Button_Reset.Text = "Reset";
-            this.Button_Reset.UseVisualStyleBackColor = true;
-            this.Button_Reset.Click += new System.EventHandler(this.Button_Reset_Click);
+            this.buttonReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonReset.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonReset.Location = new System.Drawing.Point(434, 425);
+            this.buttonReset.Name = "Button_Reset";
+            this.buttonReset.Size = new System.Drawing.Size(80, 25);
+            this.buttonReset.TabIndex = 14;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.ButtonReset_Click);
             // 
             // Button_Submit
             // 
-            this.Button_Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Submit.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Button_Submit.Location = new System.Drawing.Point(290, 425);
-            this.Button_Submit.Name = "Button_Submit";
-            this.Button_Submit.Size = new System.Drawing.Size(80, 25);
-            this.Button_Submit.TabIndex = 13;
-            this.Button_Submit.Text = "Submit";
-            this.Button_Submit.UseVisualStyleBackColor = true;
-            this.Button_Submit.Click += new System.EventHandler(this.Button_Submit_Click);
+            this.buttonSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSubmit.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSubmit.Location = new System.Drawing.Point(290, 425);
+            this.buttonSubmit.Name = "Button_Submit";
+            this.buttonSubmit.Size = new System.Drawing.Size(80, 25);
+            this.buttonSubmit.TabIndex = 13;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.ButtonSubmit_Click);
             // 
             // richTextBox_Address
             // 
-            this.richTextBox_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_Address.Location = new System.Drawing.Point(570, 340);
-            this.richTextBox_Address.Name = "richTextBox_Address";
-            this.richTextBox_Address.Size = new System.Drawing.Size(170, 66);
-            this.richTextBox_Address.TabIndex = 12;
-            this.richTextBox_Address.Text = "";
+            this.richTextBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxAddress.Location = new System.Drawing.Point(570, 340);
+            this.richTextBoxAddress.Name = "richTextBox_Address";
+            this.richTextBoxAddress.Size = new System.Drawing.Size(170, 66);
+            this.richTextBoxAddress.TabIndex = 12;
+            this.richTextBoxAddress.Text = string.Empty;
             // 
             // comboBox_Course
             // 
-            this.comboBox_Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_Course.FormattingEnabled = true;
-            this.comboBox_Course.Location = new System.Drawing.Point(570, 205);
-            this.comboBox_Course.Name = "comboBox_Course";
-            this.comboBox_Course.Size = new System.Drawing.Size(170, 26);
-            this.comboBox_Course.TabIndex = 9;
+            this.comboBoxCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(570, 205);
+            this.comboBoxCourse.Name = "comboBox_Course";
+            this.comboBoxCourse.Size = new System.Drawing.Size(170, 26);
+            this.comboBoxCourse.TabIndex = 9;
             // 
             // dateTimePickerBirthDate
             // 
@@ -325,101 +478,71 @@ namespace CollegeManagementSystem
             // 
             // textBox_SchoolName
             // 
-            this.textBox_SchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_SchoolName.Location = new System.Drawing.Point(570, 250);
-            this.textBox_SchoolName.Name = "textBox_SchoolName";
-            this.textBox_SchoolName.Size = new System.Drawing.Size(170, 24);
-            this.textBox_SchoolName.TabIndex = 10;
+            this.textBoxSchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSchoolName.Location = new System.Drawing.Point(570, 250);
+            this.textBoxSchoolName.Name = "textBox_SchoolName";
+            this.textBoxSchoolName.Size = new System.Drawing.Size(170, 24);
+            this.textBoxSchoolName.TabIndex = 10;
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Email.Location = new System.Drawing.Point(200, 385);
-            this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(170, 24);
-            this.textBox_Email.TabIndex = 7;
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEmail.Location = new System.Drawing.Point(200, 385);
+            this.textBoxEmail.Name = "textBox_Email";
+            this.textBoxEmail.Size = new System.Drawing.Size(170, 24);
+            this.textBoxEmail.TabIndex = 7;
             // 
             // textBox_MobilePhone
             // 
-            this.textBox_MobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_MobilePhone.Location = new System.Drawing.Point(200, 340);
-            this.textBox_MobilePhone.Name = "textBox_MobilePhone";
-            this.textBox_MobilePhone.Size = new System.Drawing.Size(170, 24);
-            this.textBox_MobilePhone.TabIndex = 6;
+            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMobilePhone.Location = new System.Drawing.Point(200, 340);
+            this.textBoxMobilePhone.Name = "textBox_MobilePhone";
+            this.textBoxMobilePhone.Size = new System.Drawing.Size(170, 24);
+            this.textBoxMobilePhone.TabIndex = 6;
             // 
             // textBox_Surname
             // 
-            this.textBox_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Surname.Location = new System.Drawing.Point(200, 205);
-            this.textBox_Surname.Name = "textBox_Surname";
-            this.textBox_Surname.Size = new System.Drawing.Size(170, 24);
-            this.textBox_Surname.TabIndex = 2;
+            this.textBoxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSurname.Location = new System.Drawing.Point(200, 205);
+            this.textBoxSurname.Name = "textBox_Surname";
+            this.textBoxSurname.Size = new System.Drawing.Size(170, 24);
+            this.textBoxSurname.TabIndex = 2;
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Name.Location = new System.Drawing.Point(200, 159);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(170, 24);
-            this.textBox_Name.TabIndex = 1;
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxName.Location = new System.Drawing.Point(200, 159);
+            this.textBoxName.Name = "textBox_Name";
+            this.textBoxName.Size = new System.Drawing.Size(170, 24);
+            this.textBoxName.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CollegeManagementSystem.Properties.Resources.Admission_banner;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(550, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.Image = global::CollegeManagementSystem.Properties.Resources.Admission_banner;
+            this.pictureBox.Location = new System.Drawing.Point(125, 20);
+            this.pictureBox.Name = "pictureBox1";
+            this.pictureBox.Size = new System.Drawing.Size(550, 85);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 12;
+            this.pictureBox.TabStop = false;
             // 
             // Form_NewAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 475);
-            this.Controls.Add(this.panel_Body);
+            this.Controls.Add(this.panelBody);
             this.Name = "Form_NewAdmission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Admission";
             this.Load += new System.EventHandler(this.Form_NewAdmission_Load);
-            this.panel_Body.ResumeLayout(false);
-            this.panel_Body.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelBody.ResumeLayout(false);
+            this.panelBody.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Label labelRegistrationNO;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelSurname;
-        private System.Windows.Forms.Label labelGender;
-        private System.Windows.Forms.Label labelDateOfBirth;
-        private System.Windows.Forms.Label labelMobilePhone;
-        private System.Windows.Forms.Label labelSemester;
-        private System.Windows.Forms.Label labelCourse;
-        private System.Windows.Forms.Label labelSchoolName;
-        private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel_Body;
-        private System.Windows.Forms.TextBox textBox_Name;
-        private System.Windows.Forms.Button Button_Reset;
-        private System.Windows.Forms.Button Button_Submit;
-        private System.Windows.Forms.RichTextBox richTextBox_Address;
-        private System.Windows.Forms.ComboBox comboBox_Course;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBirthDate;
-        private System.Windows.Forms.RadioButton radioButtonFemale;
-        private System.Windows.Forms.RadioButton radioButtonMale;
-        private System.Windows.Forms.TextBox textBox_SchoolName;
-        private System.Windows.Forms.TextBox textBox_Email;
-        private System.Windows.Forms.TextBox textBox_MobilePhone;
-        private System.Windows.Forms.TextBox textBox_Surname;
-        private System.Windows.Forms.Label labelRegistrationId;
-        private System.Windows.Forms.TextBox textBox_Semester;
-        private System.Windows.Forms.ComboBox comboBox_Date;
+        #endregion        
     }
 }

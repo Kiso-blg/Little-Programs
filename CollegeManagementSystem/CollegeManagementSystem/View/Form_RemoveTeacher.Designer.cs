@@ -1,8 +1,110 @@
-﻿
+﻿// <copyright file="Form_RemoveTeacher.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_RemoveTeacher
+    /// <summary>
+    /// The partial Form_RemoveTeacher class.
+    /// Contains all controllers for Form_RemoveTeacher class.
+    /// </summary>
+    public partial class Form_RemoveTeacher
     {
+        /// <summary>
+        /// Panel panelBody
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// Label labelRegistrationId
+        /// </summary>
+        private System.Windows.Forms.Label labelRegistrationId;
+
+        /// <summary>
+        /// Label labelEmail
+        /// </summary>
+        private System.Windows.Forms.Label labelEmail;
+
+        /// <summary>
+        /// Button buttonSelectRegistrationId
+        /// </summary>
+        private System.Windows.Forms.Button buttonSelectRegistrationId;
+
+        /// <summary>
+        /// Label labelMobilePhone
+        /// </summary>
+        private System.Windows.Forms.Label labelMobilePhone;
+
+        /// <summary>
+        /// Label mobilePhone
+        /// </summary>
+        private System.Windows.Forms.Label mobilePhone;
+
+        /// <summary>
+        /// Button buttonRemove
+        /// </summary>
+        private System.Windows.Forms.Button buttonRemove;
+
+        /// <summary>
+        /// Label labelBirthDate
+        /// </summary>
+        private System.Windows.Forms.Label labelBirthDate;
+
+        /// <summary>
+        /// Label labelSurname
+        /// </summary>
+        private System.Windows.Forms.Label labelSurname;
+
+        /// <summary>
+        /// Label labelName
+        /// </summary>
+        private System.Windows.Forms.Label labelName;
+
+        /// <summary>
+        /// Label email
+        /// </summary>
+        private System.Windows.Forms.Label email;
+
+        /// <summary>
+        /// Label birthDate
+        /// </summary>
+        private System.Windows.Forms.Label birthDate;
+
+        /// <summary>
+        /// Label surname
+        /// </summary>
+        private System.Windows.Forms.Label surname;
+
+        /// <summary>
+        /// Label name
+        /// </summary>
+        private System.Windows.Forms.Label name;
+
+        /// <summary>
+        /// PictureBox pictureBoxRemove
+        /// </summary>
+        private System.Windows.Forms.PictureBox pictureBoxRemove;
+
+        /// <summary>
+        /// Label labelCourse
+        /// </summary>
+        private System.Windows.Forms.Label labelCourse;
+
+        /// <summary>
+        /// Label course
+        /// </summary>
+        private System.Windows.Forms.Label course;
+
+        /// <summary>
+        /// Button buttonClear
+        /// </summary>
+        private System.Windows.Forms.Button buttonClear;
+
+        /// <summary>
+        /// Label labelInformation
+        /// </summary>
+        private System.Windows.Forms.Label labelInformation;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +116,11 @@ namespace CollegeManagementSystem
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,24 +133,24 @@ namespace CollegeManagementSystem
         private void InitializeComponent()
         {
             this.panelBody = new System.Windows.Forms.Panel();
-            this.button_Clear = new System.Windows.Forms.Button();
-            this.label_Course = new System.Windows.Forms.Label();
+            this.labelInformation = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.labelCourse = new System.Windows.Forms.Label();
-            this.label_RegistrationId = new System.Windows.Forms.Label();
-            this.label_Email = new System.Windows.Forms.Label();
-            this.button_SelectRegistrationId = new System.Windows.Forms.Button();
-            this.label_MobilePhone = new System.Windows.Forms.Label();
-            this.labelMobilePhone = new System.Windows.Forms.Label();
-            this.button_Remove = new System.Windows.Forms.Button();
-            this.label_BirthDate = new System.Windows.Forms.Label();
-            this.label_Surname = new System.Windows.Forms.Label();
-            this.label_Name = new System.Windows.Forms.Label();
+            this.course = new System.Windows.Forms.Label();
+            this.labelRegistrationId = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.labelInlistBirthDate = new System.Windows.Forms.Label();
+            this.buttonSelectRegistrationId = new System.Windows.Forms.Button();
+            this.labelMobilePhone = new System.Windows.Forms.Label();
+            this.mobilePhone = new System.Windows.Forms.Label();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.labelBirthDate = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.Label();
+            this.birthDate = new System.Windows.Forms.Label();
+            this.surname = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             this.pictureBoxRemove = new System.Windows.Forms.PictureBox();
-            this.labelInformation = new System.Windows.Forms.Label();
             this.panelBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRemove)).BeginInit();
             this.SuspendLayout();
@@ -55,205 +158,28 @@ namespace CollegeManagementSystem
             // panelBody
             // 
             this.panelBody.Controls.Add(this.labelInformation);
-            this.panelBody.Controls.Add(this.button_Clear);
-            this.panelBody.Controls.Add(this.label_Course);
+            this.panelBody.Controls.Add(this.buttonClear);
             this.panelBody.Controls.Add(this.labelCourse);
-            this.panelBody.Controls.Add(this.label_RegistrationId);
-            this.panelBody.Controls.Add(this.label_Email);
-            this.panelBody.Controls.Add(this.button_SelectRegistrationId);
-            this.panelBody.Controls.Add(this.label_MobilePhone);
-            this.panelBody.Controls.Add(this.labelMobilePhone);
-            this.panelBody.Controls.Add(this.button_Remove);
-            this.panelBody.Controls.Add(this.label_BirthDate);
-            this.panelBody.Controls.Add(this.label_Surname);
-            this.panelBody.Controls.Add(this.label_Name);
+            this.panelBody.Controls.Add(this.course);
+            this.panelBody.Controls.Add(this.labelRegistrationId);
             this.panelBody.Controls.Add(this.labelEmail);
-            this.panelBody.Controls.Add(this.labelInlistBirthDate);
+            this.panelBody.Controls.Add(this.buttonSelectRegistrationId);
+            this.panelBody.Controls.Add(this.labelMobilePhone);
+            this.panelBody.Controls.Add(this.mobilePhone);
+            this.panelBody.Controls.Add(this.buttonRemove);
+            this.panelBody.Controls.Add(this.labelBirthDate);
             this.panelBody.Controls.Add(this.labelSurname);
             this.panelBody.Controls.Add(this.labelName);
+            this.panelBody.Controls.Add(this.email);
+            this.panelBody.Controls.Add(this.birthDate);
+            this.panelBody.Controls.Add(this.surname);
+            this.panelBody.Controls.Add(this.name);
             this.panelBody.Controls.Add(this.pictureBoxRemove);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(0, 0);
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(470, 550);
             this.panelBody.TabIndex = 0;
-            // 
-            // button_Clear
-            // 
-            this.button_Clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_Clear.Location = new System.Drawing.Point(243, 485);
-            this.button_Clear.Name = "button_Clear";
-            this.button_Clear.Size = new System.Drawing.Size(100, 30);
-            this.button_Clear.TabIndex = 43;
-            this.button_Clear.Text = "Clear";
-            this.button_Clear.UseVisualStyleBackColor = true;
-            this.button_Clear.Click += new System.EventHandler(this.Button_Clear_Click);
-            // 
-            // label_Course
-            // 
-            this.label_Course.AutoSize = true;
-            this.label_Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Course.Location = new System.Drawing.Point(269, 440);
-            this.label_Course.Name = "label_Course";
-            this.label_Course.Size = new System.Drawing.Size(89, 20);
-            this.label_Course.TabIndex = 42;
-            this.label_Course.Text = "________";
-            // 
-            // labelCourse
-            // 
-            this.labelCourse.AutoSize = true;
-            this.labelCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCourse.Location = new System.Drawing.Point(40, 440);
-            this.labelCourse.Name = "labelCourse";
-            this.labelCourse.Size = new System.Drawing.Size(83, 24);
-            this.labelCourse.TabIndex = 41;
-            this.labelCourse.Text = "Course:";
-            // 
-            // label_RegistrationId
-            // 
-            this.label_RegistrationId.AutoSize = true;
-            this.label_RegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_RegistrationId.Location = new System.Drawing.Point(270, 170);
-            this.label_RegistrationId.Name = "label_RegistrationId";
-            this.label_RegistrationId.Size = new System.Drawing.Size(89, 20);
-            this.label_RegistrationId.TabIndex = 40;
-            this.label_RegistrationId.Text = "________";
-            // 
-            // label_Email
-            // 
-            this.label_Email.AutoSize = true;
-            this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Email.Location = new System.Drawing.Point(269, 395);
-            this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(89, 20);
-            this.label_Email.TabIndex = 39;
-            this.label_Email.Text = "________";
-            // 
-            // button_SelectRegistrationId
-            // 
-            this.button_SelectRegistrationId.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_SelectRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_SelectRegistrationId.Location = new System.Drawing.Point(40, 170);
-            this.button_SelectRegistrationId.Name = "button_SelectRegistrationId";
-            this.button_SelectRegistrationId.Size = new System.Drawing.Size(175, 26);
-            this.button_SelectRegistrationId.TabIndex = 38;
-            this.button_SelectRegistrationId.Text = "Select Teacher ID:";
-            this.button_SelectRegistrationId.UseVisualStyleBackColor = true;
-            this.button_SelectRegistrationId.Click += new System.EventHandler(this.Button_SelectRegistrationId_Click);
-            // 
-            // label_MobilePhone
-            // 
-            this.label_MobilePhone.AutoSize = true;
-            this.label_MobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_MobilePhone.Location = new System.Drawing.Point(269, 350);
-            this.label_MobilePhone.Name = "label_MobilePhone";
-            this.label_MobilePhone.Size = new System.Drawing.Size(89, 20);
-            this.label_MobilePhone.TabIndex = 37;
-            this.label_MobilePhone.Text = "________";
-            // 
-            // labelMobilePhone
-            // 
-            this.labelMobilePhone.AutoSize = true;
-            this.labelMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMobilePhone.Location = new System.Drawing.Point(40, 350);
-            this.labelMobilePhone.Name = "labelMobilePhone";
-            this.labelMobilePhone.Size = new System.Drawing.Size(146, 24);
-            this.labelMobilePhone.TabIndex = 36;
-            this.labelMobilePhone.Text = "Mobile Phone:";
-            // 
-            // button_Remove
-            // 
-            this.button_Remove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_Remove.ForeColor = System.Drawing.Color.DarkRed;
-            this.button_Remove.Location = new System.Drawing.Point(128, 485);
-            this.button_Remove.Name = "button_Remove";
-            this.button_Remove.Size = new System.Drawing.Size(100, 30);
-            this.button_Remove.TabIndex = 29;
-            this.button_Remove.Text = "Remove";
-            this.button_Remove.UseVisualStyleBackColor = true;
-            this.button_Remove.Click += new System.EventHandler(this.Button_Remove_Click);
-            // 
-            // label_BirthDate
-            // 
-            this.label_BirthDate.AutoSize = true;
-            this.label_BirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_BirthDate.Location = new System.Drawing.Point(270, 305);
-            this.label_BirthDate.Name = "label_BirthDate";
-            this.label_BirthDate.Size = new System.Drawing.Size(89, 20);
-            this.label_BirthDate.TabIndex = 35;
-            this.label_BirthDate.Text = "________";
-            // 
-            // label_Surname
-            // 
-            this.label_Surname.AutoSize = true;
-            this.label_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Surname.Location = new System.Drawing.Point(270, 260);
-            this.label_Surname.Name = "label_Surname";
-            this.label_Surname.Size = new System.Drawing.Size(89, 20);
-            this.label_Surname.TabIndex = 34;
-            this.label_Surname.Text = "________";
-            // 
-            // label_Name
-            // 
-            this.label_Name.AutoSize = true;
-            this.label_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Name.Location = new System.Drawing.Point(270, 215);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(89, 20);
-            this.label_Name.TabIndex = 33;
-            this.label_Name.Text = "________";
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEmail.Location = new System.Drawing.Point(40, 395);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(68, 24);
-            this.labelEmail.TabIndex = 32;
-            this.labelEmail.Text = "Email:";
-            // 
-            // labelInlistBirthDate
-            // 
-            this.labelInlistBirthDate.AutoSize = true;
-            this.labelInlistBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelInlistBirthDate.Location = new System.Drawing.Point(40, 305);
-            this.labelInlistBirthDate.Name = "labelInlistBirthDate";
-            this.labelInlistBirthDate.Size = new System.Drawing.Size(106, 24);
-            this.labelInlistBirthDate.TabIndex = 31;
-            this.labelInlistBirthDate.Text = "Birth Date:";
-            // 
-            // labelSurname
-            // 
-            this.labelSurname.AutoSize = true;
-            this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSurname.Location = new System.Drawing.Point(40, 260);
-            this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(100, 24);
-            this.labelSurname.TabIndex = 30;
-            this.labelSurname.Text = "Surname:";
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(40, 215);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(71, 24);
-            this.labelName.TabIndex = 28;
-            this.labelName.Text = "Name:";
-            // 
-            // pictureBoxRemove
-            // 
-            this.pictureBoxRemove.Image = global::CollegeManagementSystem.Properties.Resources._1;
-            this.pictureBoxRemove.Location = new System.Drawing.Point(40, 15);
-            this.pictureBoxRemove.Name = "pictureBoxRemove";
-            this.pictureBoxRemove.Size = new System.Drawing.Size(130, 130);
-            this.pictureBoxRemove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxRemove.TabIndex = 27;
-            this.pictureBoxRemove.TabStop = false;
             // 
             // labelInformation
             // 
@@ -265,6 +191,183 @@ namespace CollegeManagementSystem
             this.labelInformation.Size = new System.Drawing.Size(228, 24);
             this.labelInformation.TabIndex = 44;
             this.labelInformation.Text = "Delete Teacher Record";
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClear.Location = new System.Drawing.Point(243, 485);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(100, 30);
+            this.buttonClear.TabIndex = 43;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
+            // 
+            // labelCourse
+            // 
+            this.labelCourse.AutoSize = true;
+            this.labelCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCourse.Location = new System.Drawing.Point(269, 440);
+            this.labelCourse.Name = "labelCourse";
+            this.labelCourse.Size = new System.Drawing.Size(89, 20);
+            this.labelCourse.TabIndex = 42;
+            this.labelCourse.Text = "________";
+            // 
+            // course
+            // 
+            this.course.AutoSize = true;
+            this.course.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.course.Location = new System.Drawing.Point(40, 440);
+            this.course.Name = "course";
+            this.course.Size = new System.Drawing.Size(83, 24);
+            this.course.TabIndex = 41;
+            this.course.Text = "Course:";
+            // 
+            // labelRegistrationId
+            // 
+            this.labelRegistrationId.AutoSize = true;
+            this.labelRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegistrationId.Location = new System.Drawing.Point(270, 170);
+            this.labelRegistrationId.Name = "labelRegistrationId";
+            this.labelRegistrationId.Size = new System.Drawing.Size(89, 20);
+            this.labelRegistrationId.TabIndex = 40;
+            this.labelRegistrationId.Text = "________";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEmail.Location = new System.Drawing.Point(269, 395);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(89, 20);
+            this.labelEmail.TabIndex = 39;
+            this.labelEmail.Text = "________";
+            // 
+            // buttonSelectRegistrationId
+            // 
+            this.buttonSelectRegistrationId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSelectRegistrationId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSelectRegistrationId.Location = new System.Drawing.Point(40, 170);
+            this.buttonSelectRegistrationId.Name = "buttonSelectRegistrationId";
+            this.buttonSelectRegistrationId.Size = new System.Drawing.Size(175, 26);
+            this.buttonSelectRegistrationId.TabIndex = 38;
+            this.buttonSelectRegistrationId.Text = "Select Teacher ID:";
+            this.buttonSelectRegistrationId.UseVisualStyleBackColor = true;
+            this.buttonSelectRegistrationId.Click += new System.EventHandler(this.ButtonSelectRegistrationId_Click);
+            // 
+            // labelMobilePhone
+            // 
+            this.labelMobilePhone.AutoSize = true;
+            this.labelMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMobilePhone.Location = new System.Drawing.Point(269, 350);
+            this.labelMobilePhone.Name = "labelMobilePhone";
+            this.labelMobilePhone.Size = new System.Drawing.Size(89, 20);
+            this.labelMobilePhone.TabIndex = 37;
+            this.labelMobilePhone.Text = "________";
+            // 
+            // mobilePhone
+            // 
+            this.mobilePhone.AutoSize = true;
+            this.mobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mobilePhone.Location = new System.Drawing.Point(40, 350);
+            this.mobilePhone.Name = "mobilePhone";
+            this.mobilePhone.Size = new System.Drawing.Size(146, 24);
+            this.mobilePhone.TabIndex = 36;
+            this.mobilePhone.Text = "Mobile Phone:";
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemove.ForeColor = System.Drawing.Color.DarkRed;
+            this.buttonRemove.Location = new System.Drawing.Point(128, 485);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(100, 30);
+            this.buttonRemove.TabIndex = 29;
+            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.ButtonRemove_Click);
+            // 
+            // labelBirthDate
+            // 
+            this.labelBirthDate.AutoSize = true;
+            this.labelBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBirthDate.Location = new System.Drawing.Point(270, 305);
+            this.labelBirthDate.Name = "labelBirthDate";
+            this.labelBirthDate.Size = new System.Drawing.Size(89, 20);
+            this.labelBirthDate.TabIndex = 35;
+            this.labelBirthDate.Text = "________";
+            // 
+            // labelSurname
+            // 
+            this.labelSurname.AutoSize = true;
+            this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSurname.Location = new System.Drawing.Point(270, 260);
+            this.labelSurname.Name = "labelSurname";
+            this.labelSurname.Size = new System.Drawing.Size(89, 20);
+            this.labelSurname.TabIndex = 34;
+            this.labelSurname.Text = "________";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName.Location = new System.Drawing.Point(270, 215);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(89, 20);
+            this.labelName.TabIndex = 33;
+            this.labelName.Text = "________";
+            // 
+            // email
+            // 
+            this.email.AutoSize = true;
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.email.Location = new System.Drawing.Point(40, 395);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(68, 24);
+            this.email.TabIndex = 32;
+            this.email.Text = "Email:";
+            // 
+            // birthDate
+            // 
+            this.birthDate.AutoSize = true;
+            this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthDate.Location = new System.Drawing.Point(40, 305);
+            this.birthDate.Name = "birthDate";
+            this.birthDate.Size = new System.Drawing.Size(106, 24);
+            this.birthDate.TabIndex = 31;
+            this.birthDate.Text = "Birth Date:";
+            // 
+            // surname
+            // 
+            this.surname.AutoSize = true;
+            this.surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surname.Location = new System.Drawing.Point(40, 260);
+            this.surname.Name = "surname";
+            this.surname.Size = new System.Drawing.Size(100, 24);
+            this.surname.TabIndex = 30;
+            this.surname.Text = "Surname:";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name.Location = new System.Drawing.Point(40, 215);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(71, 24);
+            this.name.TabIndex = 28;
+            this.name.Text = "Name:";
+            // 
+            // pictureBoxRemove
+            // 
+            this.pictureBoxRemove.Image = global::CollegeManagementSystem.Properties.Resources._1;
+            this.pictureBoxRemove.Location = new System.Drawing.Point(40, 15);
+            this.pictureBoxRemove.Name = "pictureBoxRemove";
+            this.pictureBoxRemove.Size = new System.Drawing.Size(130, 130);
+            this.pictureBoxRemove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxRemove.TabIndex = 27;
+            this.pictureBoxRemove.TabStop = false;
             // 
             // Form_RemoveTeacher
             // 
@@ -282,26 +385,6 @@ namespace CollegeManagementSystem
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panelBody;
-        private System.Windows.Forms.Label label_RegistrationId;
-        private System.Windows.Forms.Label label_Email;
-        private System.Windows.Forms.Button button_SelectRegistrationId;
-        private System.Windows.Forms.Label label_MobilePhone;
-        private System.Windows.Forms.Label labelMobilePhone;
-        private System.Windows.Forms.Button button_Remove;
-        private System.Windows.Forms.Label label_BirthDate;
-        private System.Windows.Forms.Label label_Surname;
-        private System.Windows.Forms.Label label_Name;
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Label labelInlistBirthDate;
-        private System.Windows.Forms.Label labelSurname;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.PictureBox pictureBoxRemove;
-        private System.Windows.Forms.Label label_Course;
-        private System.Windows.Forms.Label labelCourse;
-        private System.Windows.Forms.Button button_Clear;
-        private System.Windows.Forms.Label labelInformation;
+        #endregion        
     }
 }

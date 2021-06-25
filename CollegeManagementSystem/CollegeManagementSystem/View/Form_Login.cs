@@ -1,32 +1,75 @@
-﻿namespace CollegeManagementSystem
+﻿// <copyright file="Form_Login.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
+namespace CollegeManagementSystem
 {
     using System;
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// The main Form_AddTeacher class.
+    /// Performing login in into the system.
+    /// </summary>
     public partial class Form_Login : Form
     {
-        private const int WM_NCLBUTTONDOWN = 0xA1;
-        private const int HT_CAPTIOM = 0X2;
+        /// <summary>
+        /// Probably reserve information if the mouse button is clicked in hexadecimal number.
+        /// </summary>
+        private const int WMNCLBUTTONDOWN = 0xA1;
 
+        /// <summary>
+        /// Probably reserve information if the mouse button is clicked in hexadecimal number.
+        /// </summary>
+        private const int HTCAPTIOM = 0X2;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form_Login" /> class.
+        /// </summary>
+        public Form_Login()
+        {
+            this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Send message.
+        /// </summary>
+        /// <param name="hwnd">Integer parameter.</param>
+        /// <param name="msg">Message result in integer.</param>
+        /// <param name="paramW">Parameter W.</param>
+        /// <param name="paramL">Parameter L.</param>
+        /// <returns>
+        /// Returns integer as a result.
+        /// </returns>
         [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hwnd, int Msg, int wParam, int lParam);
+        public static extern int SendMessage(IntPtr hwnd, int msg, int paramW, int paramL);
+
+        /// <summary>
+        /// Returns True if the visual object is captures with the mouse button and false if it is not.
+        /// </summary>
+        /// <returns>
+        /// Returns True or False depending if the moving object is captures.
+        /// </returns>
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public Form_Login()
-        {
-            InitializeComponent();
-        }
-
-        // Exit from the application.
-        private void Button_Close_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Exit from the application.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        // Go to register Form.
-        private void Button_RegisterCollete_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Go to register Form.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonRegisterCollege_Click(object sender, EventArgs e)
         {
             this.Hide();
 
@@ -36,21 +79,29 @@
             }
         }
 
-        // Move the form method.
-        private void Panel_Login_MouseMove(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Move the form method.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void PanelLogin_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTIOM, 0);
+                SendMessage(Handle, WMNCLBUTTONDOWN, HTCAPTIOM, 0);
             }
         }
 
-        // Login to the application.
-        private void Button_Login_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Login to the application.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            string administrator = this.textBox_Administrator.Text.Trim();
-            string password = this.textBox_Password.Text.Trim();
+            string administrator = this.textBoxAdministrator.Text.Trim();
+            string password = this.textBoxPassword.Text.Trim();
             Colleges colleges = new Colleges();
 
             if (colleges.IsDataValid(administrator, password, out string errorMsg))
@@ -62,7 +113,8 @@
                 }
                 else
                 {
-                    MessageBox.Show(errorMsg,
+                    MessageBox.Show(
+                        errorMsg,
                         "Login",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -70,23 +122,32 @@
             }
             else
             {
-                MessageBox.Show("The next Fields are incorrect: " + errorMsg,
+                MessageBox.Show(
+                    "The next Fields are incorrect: " + errorMsg,
                     "Login",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
         }
 
-        // Show characters on Mouse Enter event.
-        private void TextBox_Password_MouseEnter(object sender, EventArgs e)
+        /// <summary>
+        /// Show characters on Mouse Enter event.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void TextBoxPassword_MouseEnter(object sender, EventArgs e)
         {
-            this.textBox_Password.UseSystemPasswordChar = false;
+            this.textBoxPassword.UseSystemPasswordChar = false;
         }
 
-        // Hide caracters on Mouse Leave event.
-        private void TextBox_Password_MouseLeave(object sender, EventArgs e)
+        /// <summary>
+        /// Hide characters on Mouse Leave event.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Contains event arguments.</param>
+        private void TextBoxPassword_MouseLeave(object sender, EventArgs e)
         {
-            this.textBox_Password.UseSystemPasswordChar = true;
+            this.textBoxPassword.UseSystemPasswordChar = true;
         }
     }
 }

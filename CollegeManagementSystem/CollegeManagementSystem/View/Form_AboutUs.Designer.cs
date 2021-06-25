@@ -1,7 +1,14 @@
-﻿
+﻿// <copyright file="Form_AboutUs.Designer.cs" company="CompanyName">
+// Copyright (c) Kiso. All Rights Reserved.
+// </copyright>
+
 namespace CollegeManagementSystem
 {
-    partial class Form_AboutUs
+    /// <summary>
+    /// The partial Form_AboutUs class.
+    /// Contains components for Form_AboutUs class.
+    /// </summary>
+    public partial class Form_AboutUs
     {
         /// <summary>
         /// Required designer variable.
@@ -9,15 +16,51 @@ namespace CollegeManagementSystem
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
+        /// Panel panelBody.
+        /// </summary>
+        private System.Windows.Forms.Panel panelBody;
+
+        /// <summary>
+        /// Label labelInformationContent.
+        /// </summary>
+        private System.Windows.Forms.Label labelInformationContent;
+
+        /// <summary>
+        /// Label labelNotes.
+        /// </summary>
+        private System.Windows.Forms.Label labelNotes;
+
+        /// <summary>
+        /// LinkLabel linkLabelSource.
+        /// </summary>
+        private System.Windows.Forms.LinkLabel linkLabelSource;
+
+        /// <summary>
+        /// Label labelVideoInformation.
+        /// </summary>
+        private System.Windows.Forms.Label labelVideoInformation;
+
+        /// <summary>
+        /// PictureBox pictureBox.
+        /// </summary>
+        private System.Windows.Forms.PictureBox pictureBox;
+
+        /// <summary>
+        /// Button button_Close.
+        /// </summary>
+        private System.Windows.Forms.Button buttonClose;
+
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,7 +73,7 @@ namespace CollegeManagementSystem
         private void InitializeComponent()
         {
             this.panelBody = new System.Windows.Forms.Panel();
-            this.button_Close = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.labelInformationContent = new System.Windows.Forms.Label();
             this.labelNotes = new System.Windows.Forms.Label();
             this.linkLabelSource = new System.Windows.Forms.LinkLabel();
@@ -43,7 +86,7 @@ namespace CollegeManagementSystem
             // panelBody
             // 
             this.panelBody.BackColor = System.Drawing.SystemColors.Control;
-            this.panelBody.Controls.Add(this.button_Close);
+            this.panelBody.Controls.Add(this.buttonClose);
             this.panelBody.Controls.Add(this.labelInformationContent);
             this.panelBody.Controls.Add(this.labelNotes);
             this.panelBody.Controls.Add(this.linkLabelSource);
@@ -55,16 +98,16 @@ namespace CollegeManagementSystem
             this.panelBody.Size = new System.Drawing.Size(740, 500);
             this.panelBody.TabIndex = 0;
             // 
-            // button_Close
+            // buttonClose
             // 
-            this.button_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_Close.Location = new System.Drawing.Point(330, 450);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(80, 25);
-            this.button_Close.TabIndex = 5;
-            this.button_Close.Text = "Close";
-            this.button_Close.UseVisualStyleBackColor = true;
-            this.button_Close.Click += new System.EventHandler(this.Button_Close_Click);
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClose.Location = new System.Drawing.Point(330, 450);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(80, 25);
+            this.buttonClose.TabIndex = 5;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
             // labelInformationContent
             // 
@@ -136,14 +179,6 @@ namespace CollegeManagementSystem
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panelBody;
-        private System.Windows.Forms.Label labelInformationContent;
-        private System.Windows.Forms.Label labelNotes;
-        private System.Windows.Forms.LinkLabel linkLabelSource;
-        private System.Windows.Forms.Label labelVideoInformation;
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Button button_Close;
+        #endregion        
     }
 }
