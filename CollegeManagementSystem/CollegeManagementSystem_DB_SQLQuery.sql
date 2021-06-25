@@ -526,6 +526,35 @@ AND AT.CollegeId = @CollegeId
 END
 GO
 
+CREATE PROCEDURE [SelectStudentDataById]
+(
+	@AdmissionId INT,
+	@CollegeId INT
+)
+AS
+BEGIN
+SELECT AT.AdmissionId AS [Student Id],
+	   AT.Name,
+	   AT.Surname,
+	   AT.Gender,
+	   AT.BirthDate AS [Birth Date],
+	   AT.MobilePhone AS [Mobile Phone],
+	   AT.Email,
+	   SE.SemesterName AS [Semester],
+	   CT.CourseName AS [Course Name],
+	   AT.SchoolName AS [School Name],
+	   AT.EnlistDate AS [Start year],
+	   AT.Address
+FROM [AdmissionsTable] AS AT
+INNER JOIN [Semesters] AS SE
+ON AT.SemesterId = SE.SemesterId
+INNER JOIN [CoursesTable] AS CT
+ON AT.CourseId = CT.CourseId
+WHERE AT.AdmissionId = @AdmissionId
+AND AT.CollegeId = @CollegeId
+END
+GO
+
 CREATE PROCEDURE [DeleteStudentById]
 (
 	@AdmissionId INT,
